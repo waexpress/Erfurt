@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.966101, 11.040901);
+   var currentLocationMap = new google.maps.LatLng(50.960931, 11.014622);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.966101, lng: 11.040901},
+    position: {lat: 50.960931, lng: 11.014622},
     map: geolocationDetails
   	});
 
@@ -103,18 +103,18 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="wegerich.jpg" width="100%" />
-    			<h3>Pension Wegerich <sup>••••</sup></h3>
-    			<p align="justify">Inmitten des ruhig gelegenen Villengürtels in der südlichen Vorstadt finden Sie unsere familengeführte Pension. Alle Zimmer in unserem Haus sind Nichtraucherzimmer und verfügen, je nach Kategorie, über Dusche/WC oder Badewanne/WC. Auch ein TV-Gerät sowie Radiowecker und Telefon gehören zur Ausstattung jedes Zimmers. Auf jeder Etage befindet sich im Flur eine Minibar und im gesamten Haus haben Sie einen schnellen Internetanschluß über WLAN.<br>
-Wir würden uns freuen, auch Sie bald persönlich als Gast bei uns willkommen heißen zu dürfen!</p>
+                <img src="kresse.jpg" width="100%" />
+    			<h3>Kressepark</h3>
+    			<p align="justify">Entdecken Sie das vielseitige Angebot im Natur- & Erlebnispark im Erfurter Süden.<br>
+Spazieren, Spielen oder Entspannen, der Kressepark ist bei Jung und Alt als Ausflugsziel gleichermaßen beliebt! Inmitten des idyllischen Kressepark-Geländes liegt das Restaurant & Café die Villa Haage. Wir haben es uns zur Aufgabe gemacht, Ihre Gaumen mit unseren kulinarischen und saisonal abgestimmten Spezialitäten zu erfreuen. Seit Langem ist die Villa Haage, der Mandala Beachclub und der Loft Club im Kressppark renommiert für Feierlichkeiten jeder Art und Größe.</p>
 
-				<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493613457558" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.pension-wegerich.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493617894413" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.kressepark-erfurt.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
            
             
 <!-- Ausgabe Map -->            
             
             	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="50.966101, 11.040901">
+					<input type="hidden" id="end" value="50.960931, 11.014622">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
