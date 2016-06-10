@@ -1,12 +1,12 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="de.wa-express.erfurt" version="2.1.4" versionCode="474">
   <name>Erfurt App</name>
-  <description>Schon Martin Luther fand gefallen an Thüringens Landeshauptstadt. Heute überrascht Erfurt mit einem historischen Zentrum, einer vielfältigen Kulturszene und einem der schönsten Weihnachtsmärkte Deutschlands. Die Erfurt-App ist sowohl für Erfurter als auch für Besucher Erfurts interessant. Ob Restaurants, Hotels, Veranstaltungen, Sehenswürdigkeiten, Museen oder Shopping-Tipps - in der Erfurt-App ist alles nur einen Klick entfernt.</description>
+  <description>Schön Martin Luther fand gefallen an Thüringens Landeshauptstadt. Heute überrascht Erfurt mit einem historischen Zentrum, einer vielfältigen Kulturszene und einem der schönsten Weihnachtsmärkte Deutschlands. Die Erfurt-App ist sowohl für Erfurter als auch für Besucher Erfurts interessant. Ob Restaurants, Hotels, Veranstaltungen, Sehenswürdigkeiten, Museen oder Shopping-Tipps - in der Erfurt-App ist alles nur einen Klick entfernt.</description>
   <author href="http://www.wa-express.de" email="kontakt@wa-express.de">Weimann/Schmidt GbR</author>
   <content src="index.html"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
   <preference name="SplashScreen" value="screen" />
-  <preference name="SplashScreenDelay" value="7500" />
+  <preference name="SplashScreenDelay" value="8000" />
   <plugin name="cordova-plugin-device" source="npm" spec="~1.1.1"/>
   <plugin name="cordova-plugin-device-motion" source="npm" spec="~1.2.0"/>
   <plugin name="cordova-plugin-device-orientation" source="npm" spec="~1.0.2"/>
