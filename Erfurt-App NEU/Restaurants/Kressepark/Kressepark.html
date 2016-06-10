@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.964727, 11.043062);
+   var currentLocationMap = new google.maps.LatLng(50.960931, 11.014622);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.964727, lng: 11.043062},
+    position: {lat: 50.960931, lng: 11.014622},
     map: geolocationDetails
   	});
 
@@ -103,21 +103,18 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="brille1.jpg" width="100%" />
-    			<h3>Südpark-Optik</h3>
-    			<p align="justify">Blaulicht, ausgehend von Displays, stört den Biorhythmus, kann die Netzhaut schädigen und belastet die Augenmuskeln. Relaxe Brillengläser Ferne Plus mit Blaufilter schaffen hier Abhilfe. Vermeiden Sie digitalen Augenstress und vereinbaren Sie am besten gleich einen Termin.<br>
-Darüber hinaus bieten wir:<br>
-3D-Augenprüfung, Individuelle Gleitsichtgläser, Anpassung mit modernstem Video-ZentrierSystem, deutsche Qualitätsprodukte, Brillenanfertigung, -änderung und -reparatur in eigener Werkstatt, Brillen-ABO und -Finanzierung u.v.m.<br><br>
-    			<span class="rot">50,-€ Nachlass auf Marken-Brillengläser mit Blaufilter.*</span><br>
-                <span class="kleineschrift">* bei Vorlage der Erfurt-App</span></p>
+                <img src="kresse.jpg" width="100%" />
+    			<h3>Kressepark</h3>
+    			<p align="justify">Entdecken Sie das vielseitige Angebot im Natur- & Erlebnispark im Erfurter Süden.<br>
+Spazieren, Spielen oder Entspannen, der Kressepark ist bei Jung und Alt als Ausflugsziel gleichermaßen beliebt! Inmitten des idyllischen Kressepark-Geländes liegt das Restaurant & Café die Villa Haage. Wir haben es uns zur Aufgabe gemacht, Ihre Gaumen mit unseren kulinarischen und saisonal abgestimmten Spezialitäten zu erfreuen. Seit Langem ist die Villa Haage, der Mandala Beachclub und der Loft Club im Kressppark renommiert für Feierlichkeiten jeder Art und Größe.</p>
 
-				<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493616537810" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.augustiner-optik.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
-			
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493617894413" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.kressepark-erfurt.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+           
             
 <!-- Ausgabe Map -->            
-              
-            <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-				<input type="hidden" id="end" value="50.964727, 11.043062">
+            
+            	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+					<input type="hidden" id="end" value="50.960931, 11.014622">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
