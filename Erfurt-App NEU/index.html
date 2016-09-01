@@ -40,6 +40,38 @@
 
     <link rel="stylesheet" type="text/css" href="www/css/index.css" />
     <title>Hello World</title>
+    
+    
+    
+    <script>
+        document.addEventListener("deviceready", onDeviceReady, false); 
+function onDeviceReady() {
+            // Now safe to use the Codova API
+
+  // Enable to debug issues.
+  alert("teste0");
+  window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+  alert("teste1");
+
+  var notificationOpenedCallback = function(jsonData) {
+    console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+  };
+alert("teste2");
+  window.plugins.OneSignal.init("971d115a-ad05-4a9b-b6a2-971dc9ada326",
+                                 {googleProjectNumber: "175787334223"},
+                                 notificationOpenedCallback);
+  alert("teste3");
+  // Show an alert box if a notification comes in when the user is in your app.
+  window.plugins.OneSignal.enableInAppAlertNotification(true);
+  //alert("teste4");
+     window.location="http://zumitapp.com/App"; 
+//alert("teste5");
+}
+    </script>
+    
+    
+    
+    
 </head>
 
 <body>
