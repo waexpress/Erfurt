@@ -14,19 +14,7 @@
     
     <script type="text/javascript" src="cordova.js">// Wait for device API libraries to load
     function onLoad() {
-        document.addEventListener("deviceready", onDeviceReady, false);
-    }
-    // device APIs are available
-    function onDeviceReady() {
-        alert("device ready event occured");
-    }</script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
-    
-    <script type="text/javascript">
-	document.addEventListener('deviceready', function () {
+        document.addEventListener('deviceready', function () {
   // Enable to debug issues.
   // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
   
@@ -41,7 +29,13 @@
   // Show an alert box if a notification comes in when the user is in your app.
   window.plugins.OneSignal.enableInAppAlertNotification(true);
 }, false);
-	</script>
+    }</script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    
+    
     
 </head>
 <body onLoad="onLoad()">
@@ -50,7 +44,7 @@
 		<div data-role="content">
     
     		<img src="images/Erfurt_Jedermann_Logo.png" width="100%" />
-    		<p align="justify">Schon Martin Luther fand Gefallen an Thüringens Landeshauptstadt. Heute überrascht Erfurt mit einem historischen Zentrum, einer vielfältigen Kulturszene und einem der schönsten Weihnachtsmärkte Deutschlands.
+    		<p align="justify">chon Martin Luther fand Gefallen an Thüringens Landeshauptstadt. Heute überrascht Erfurt mit einem historischen Zentrum, einer vielfältigen Kulturszene und einem der schönsten Weihnachtsmärkte Deutschlands.
 			</p>
         
   			<div class="ui-grid-c">
