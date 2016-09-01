@@ -38,6 +38,9 @@
     <splash src="res/screen/android/drawable-port-xhdpi-screen.png" density="port-xhdpi"/>
     <splash src="res/screen/android/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
     <splash src="res/screen/android/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
+<gap:plugin name="onesignal-cordova-plugin-pgb-compat" source="npm" />
+<gap:plugin name="cordova-plugin-googleplayservices" source="npm" />
+<gap:plugin name="cordova-plugin-android-support-v4" source="npm" />
   </platform>
   <platform name="ios">
     <icon src="res/icon2/ios/icon.png" platform="ios" width="57" height="57"/>
