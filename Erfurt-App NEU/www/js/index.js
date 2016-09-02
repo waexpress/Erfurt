@@ -16,22 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
- document.addEventListener('deviceready', function () {
-  // Enable to debug issues.
-  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-  
-  var notificationOpenedCallback = function(jsonData) {
-    console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
-  };
-
-  window.plugins.OneSignal.init("971d115a-ad05-4a9b-b6a2-971dc9ada326",
-                                 {googleProjectNumber: "175787334223"},
-                                 notificationOpenedCallback);
-  
-  // Show an alert box if a notification comes in when the user is in your app.
-  window.plugins.OneSignal.enableInAppAlertNotification(true);
-}, false);
-
+ 
 var app = {
     // Application Constructor
     initialize: function() {
@@ -61,5 +46,27 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+        
+        // Enable to debug issues.
+        // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+
+        window.plugins.OneSignal.init( "971d115a-ad05-4a9b-b6a2-971dc9ada326",
+                                        {googleProjectNumber: "175787334223"},
+                                        app.didReceiveRemoteNotificationCallBack);
+    },
+    didReceiveRemoteNotificationCallBack : function(jsonData) {
+        alert("Notification received:\n" + JSON.stringify(jsonData));
+        console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
     }
 };
+
+function sendTag() {
+    window.plugins.OneSignal.sendTag("PhoneGapKey", "PhoneGapValue");
+}
+function getIds() {
+    window.plugins.OneSignal.getIds(function(ids) {
+        document.getElementById("OneSignalUserId").innerHTML = "UserId: " + ids.userId;
+        document.getElementById("OneSignalPushToken").innerHTML = "PushToken: " + ids.pushToken;
+        console.log('getIds: ' + JSON.stringify(ids));
+    });
+}
