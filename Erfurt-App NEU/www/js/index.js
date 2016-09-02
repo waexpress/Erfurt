@@ -27,7 +27,21 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('deviceready', function () {
+  // Enable to debug issues.
+  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+  
+  var notificationOpenedCallback = function(jsonData) {
+    console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+  };
+
+  window.plugins.OneSignal.init("971d115a-ad05-4a9b-b6a2-971dc9ada326",
+                                 {googleProjectNumber: "175787334223"},
+                                 notificationOpenedCallback);
+  
+  // Show an alert box if a notification comes in when the user is in your app.
+  window.plugins.OneSignal.enableInAppAlertNotification(true);
+}, false);
     },
     // deviceready Event Handler
     //
@@ -46,17 +60,5 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-        
-        // Enable to debug issues.
-        // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-
-        window.plugins.OneSignal.init( "971d115a-ad05-4a9b-b6a2-971dc9ada326",
-                                        {googleProjectNumber: "175787334223"},
-                                        app.didReceiveRemoteNotificationCallBack);
-    },
-    didReceiveRemoteNotificationCallBack : function(jsonData) {
-        alert("Notification received:\n" + JSON.stringify(jsonData));
-        console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
     }
 };
-
