@@ -60,13 +60,3 @@ var app = {
     }
 };
 
-function sendTag() {
-    window.plugins.OneSignal.sendTag("PhoneGapKey", "PhoneGapValue");
-}
-function getIds() {
-    window.plugins.OneSignal.getIds(function(ids) {
-        document.getElementById("OneSignalUserId").innerHTML = "UserId: " + ids.userId;
-        document.getElementById("OneSignalPushToken").innerHTML = "PushToken: " + ids.pushToken;
-        console.log('getIds: ' + JSON.stringify(ids));
-    });
-}
