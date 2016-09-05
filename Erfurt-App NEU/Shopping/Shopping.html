@@ -1,0 +1,412 @@
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+	<title>Erfurt-App</title>
+	<link rel="stylesheet" href="../themes/ErfurtApp1.min.css" />
+	<link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../jquery.mobile.structure-1.4.5.min.css" />
+	<script src="../jquery-1.11.1.min.js"></script>
+	<script src="../jquery.mobile-1.4.5.min.js"></script>
+    
+    <script type="text/javascript" src="../cordova.js">// Wait for device API libraries to load
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+    // device APIs are available
+    function onDeviceReady() {
+        alert("device ready event occured");
+    }</script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    
+</head>
+<body onLoad="onLoad()">
+	<div data-role="page" data-theme="a">
+		
+		<div data-role="content">
+    
+    		<img src="shopping.jpg" width="100%" />
+    		<span class="photosBy">© Andres Rodriguez | <a href="#" onClick="var ref = window.open('http://www.123rf.com', '_blank', 'closebuttoncaption=fertig');">www.123rf.com</a></span>
+    
+    		<h3>Shopping</h3>
+    		<p align="justify">Einkaufen in Erfurt heißt Shopping mit Flair. Elegante Geschäfte, Boutiquen, Kaufhäuser und kleine individuelle Läden verteilen sich entlang schmucker Fußgängerzonen und machen das Einkaufen in der Altstadt besonders reizvoll.</p>
+            
+        
+        <ul data-role="listview" data-inset="true" data-filter="true">
+        
+        
+        <li data-role="list-divider">
+            Baby-, Kinder- & Spielwaren
+        </li>
+        
+        <li data-filtertext="Baby Life Babyausstatter Kinderwagen Kinderbetten Babykleidung Stillkissen Bauchtrage Autositze">
+                <h3>Baby-Life der Babyausstatter</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Juri-Gagarin-Ring 41, 99084 Erfurt</span><br>
+				<a href="Babylife/Babylife.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Dr. Gruber Kinderschuhe Jugendschuhe">
+                <h3>Dr. Gruber - Die Kinder- & Jugendschuhspezialisten</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Lange Brücke 24 - 15, 99084 Erfurt</span><br>
+				<a href="Gruber/Gruber.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Bücher & Schreibwaren
+        </li>
+        
+        <li data-filtertext="Buch Stapp, Bücher, Kalender, Geschenkideen">
+                <h3>Buch Stapp</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Marktstr. 5, 99084 Erfurt</span><br>
+				<a href="Stapp/Stapp.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Buchhandlung Hugendubel Bücher Kalender Buch">
+                <h3>Buchhandlung Hugendubel</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Anger 62, 99084 Erfurt</span><br>
+				<a href="Hugendubel/hugendubel.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Buchhandlung Peterknecht Bücher Romane Kinderbücher Reise Kalender Buch">
+                <h3>Buchhandlung Peterknecht</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Anger 28, 99084 Erfurt</span><br>
+				<a href="Peterknecht/Peterknecht.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Dienstleistungen
+        </li>
+        
+        <li data-filtertext="Rad-Art radart Fahrrad E-Bike Reparatur ">
+                <h3>Rad-Art</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Klostergang 2, 99084 Erfurt</span><br>
+				<a href="Radart/radart.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="kaulenoptik GmbH Kontaktlinsen Brille Sonnenbrille">
+                <h3>kaulenoptik GmbH</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Am Drosselberg 49, 99097 Erfurt</span><br>
+				<a href="Kaulenoptik/Kaulenoptik.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Malermeister Korsa Fußboden">
+                <h3>Malermeister Korsa</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Jenaer Str. 2, 99099 Erfurt</span><br>
+				<a href="Korsa/Korsa.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="WBG Zukunft e.G. Wohnung Immobilien">
+                <h3>WBG Zukunft e.G.</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Mittelhäuser Straße 22, 99089 Erfurt</span><br>
+				<a href="Zukunft/Zukunft.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="DIZ Immobilienmanagement GmbH Wohnung Immobilien Dienstleistungen Verwaltung">
+            	<h3>DIZ Immobilienmanagement GmbH</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Mittelhäuser Straße 22, 99089 Erfurt</span><br>
+				<a href="../Immobilien/DIZ/Diz.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Südparkoptik Optiker Brille Relaxbrille Sehtest Kontaktlinsen ">
+                <h3>Südpark-Optik</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Häßlerstr. 6, 99096 Erfurt</span><br>
+				<a href="../Shopping/Augustiner/Augustiner.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Elektrogeräte
+        </li>
+        
+        <li data-filtertext="Elektro Hellmann, Lampen, Leuchten, Elektromaterial, Haushaltsgeräten, Lichttechnik, Lichtberatung, Montage, Lichtsysteme, Kleinreparaturen, Lieferservice">
+                <h3>Elektro Hellmann</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Lange Brücke 6/7, 99084 Erfurt</span><br>
+				<a href="Hellmann/Hellmann.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Essen & Trinken
+        </li>
+        
+        <li data-filtertext="Vinho Feinkost Wein Käse Schinken Olivenöl Öl Spezialitäten Italien Portugal Spanien Honig">
+                <h3>Vinho Feinkost</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Große Arche 2, 99084 Erfurt</span><br>
+				<a href="Vinho/Vinho.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Fahrrad
+        </li>
+        
+        <li data-filtertext="Rad-Art radart Fahrrad E-Bike Reparatur ">
+                <h3>Rad-Art</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Klostergang 2, 99084 Erfurt</span><br>
+				<a href="Radart/radart.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Fashion & Mode
+        </li>
+        
+        <li data-filtertext="Angeletta La Moda italienische internationale Mode Damen, Designermode, Frauenmode, Boutique Taschen">
+                <h3>Angeletta La Moda</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Anger 45, 99084 Erfurt</span><br>
+				<a href="Angeletta/Angeletta.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Cado Exclusive, Mode, Designermode, Frauenmode, Boutique">
+                <h3>Cado Exclusive</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Taschengasse 4, 99084 Erfurt</span><br>
+				<a href="Cado/Cado.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="House of Gerry Weber, Mode, Designermode, Frauenmode, Damenmode, Taifun, Samoon, Konsum">
+                <h3>House of Gerry Weber</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Anger 32, 99084 Erfurt</span><br>
+				<a href="GerryWeber/Gerryweber.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Kauflust Erfurt by Anja Scheinpflug, Mode, Designermode, Frauenmode, Boutique">
+                <h3>Kauflust Erfurt by Anja Scheinpflug</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Schlösserstr. 33, 99084 Erfurt</span><br>
+				<a href="Scheinpflug/scheinpflug2.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Margit Jürgel, Mode, Designermode, Frauenmode, Boutique, Italien, italienisch, Made in Italy, BRUNELLO CUCINELLI, MONCLER, HERNO, HOGAN, AGL ATTILIO GIUSTI LEOMBRUNI, FABIANA FILIPPI, ODEEH">
+                <h3>Margit Jürgel</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Lange Brücke 39-42, 99084 Erfurt</span><br>
+				<a href="Juergel/Juergel.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Schmuckstücke Kauflust by Anja Scheinpflug, Mode, Designermode, Frauenmode, Boutique, Wohnaccessoires, Schmuck, Schuhe">
+                <h3>SCHMUCKSTÜCKE by KAUFLUST</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Marktstr. 3, 99084 Erfurt</span><br>
+				<a href="Scheinpflug/scheinpflug1.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Labellounge Xquisit, Comma, Opus, Hallhuber, Betty & Co., Cartoon, YaYa, Tom Tailor, Mode, Designermode, Frauenmode, Damenmode, Konsum">
+                <h3>Labellounge Xquisit</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Schlösserstr. 11, 99084 Erfurt</span><br>
+				<a href="Xquisit/xquisit.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Fitness & Freizeit
+        </li>
+        
+        <li data-filtertext="Avenida-Therme Sauna Schwimmbad Freizeit">
+                <h3>Avenida-Therme</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Am Stausee 1, 99448 Hohenfelden</span><br>
+				<a href="Avenida/Avenida.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Body fit Fitness Sport Freizeit">
+                <h3>Body fit</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Mainzerstraße 38a, 99089 Erfurt</span><br>
+				<a href="Bodyfit/Bodyfit.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="egapark Erfurt Garten Freizeit">
+                <h3>egapark Erfurt</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Gothaer Straße 38, 99094 Erfurt</span><br>
+				<a href="Ega/Ega.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Karstadt Bekleidung Schuhe Sport Freizeit">
+                <h3>Karstadt Sports</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Anger 2, 99084 Erfurt</span><br>
+				<a href="Karstadt/Karstadt.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Erfurter Bäder Schwimmbad Schwimmhalle Sport Freizeit">
+                <h3>Erfurter Bäder</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Magdeburger Allee 34, 99086 Erfurt</span><br>
+				<a href="Baeder/Baeder.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Friseur & Kosmetik
+        </li>
+        
+        <li data-filtertext="Atelier Sophia Marschall & Robert Zimmermann Friseur Haar">
+            	<h3>Atelier S. Marschall & R. Zimmermann</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Predigerstr. 12, 99084 Erfurt</span><br>
+				<a href="../Dienstleistung/AtelierSMRZ/AtelierMZ.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Salon Schön & Fit Friseur Kosmetik">
+                <h3>Salon Schön & Fit</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Eislebener Str. 1g, 99086 Erfurt</span><br>
+				<a href="Linke/Linke.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Friseursalon Straube Friseur Kosmetik">
+                <h3>Friseursalon Straube</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Budapester Str. 37, 99091 Erfurt</span><br>
+				<a href="Straube/Straube.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Juwelier & Schmuck
+        </li>
+        
+        <li data-filtertext="Denner GmbH & Co. KG Juwelier Goldschmied Schmuck Eheringe Diamanten Silber Uhren">
+                <h3>Denner GmbH & Co. KG</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Wenigemarkt 6, 99084 Erfurt</span><br>
+				<a href="Denner/Denner.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Kinder- & Jugendschuhe
+        </li>
+        
+        <li data-filtertext="Dr. Gruber Kinderschuhe Jugendschuhe">
+                <h3>Dr. Gruber - Die Kinder- & Jugendschuhspezialisten</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Lange Brücke 24 - 15, 99084 Erfurt</span><br>
+				<a href="Gruber/Gruber.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Kfz / Zubehör
+        </li>
+        
+        <li data-filtertext="Reifen-Schäfer GmbH KFZ Zubehör">
+                <h3>Reifen-Schäfer GmbH</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Osterlange Gewerbegebiet, 99189 Elxleben</span><br>
+				<a href="Reifenschaefer/Schaefer.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Küchen
+        </li>
+        
+        <li data-filtertext="1a Küchenstore Einbauküchen Herde">
+                <h3>1a GOSS Küchenmanufaktur</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Kalkreiße 6, 99085 Erfurt</span><br>
+				<a href="1a/1a.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Optiker
+        </li>
+        
+        <li data-filtertext="Südpark Optik Brille Kontaktlinse Lesebrille">
+                <h3>Südpark-Optik</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Häßlerstr. 6, 99096 Erfurt</span><br>
+				<a href="Augustiner/Augustiner.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="kaulenoptik GmbH Kontaktlinsen Brille Sonnenbrille">
+                <h3>kaulenoptik GmbH</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Am Drosselberg 49, 99097 Erfurt</span><br>
+				<a href="Kaulenoptik/Kaulenoptik.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Reisebüro
+        </li>
+        
+        <li data-filtertext="Reisebüro SUN & FLY Urlaub Reisen AIDA Schiffsreisen AIDA Spezialist Kreuzfahrten Flugreisen Hotels Busreisen Fernreisen Städtereisen">
+                <h3>Reisebüro SUN & FLY</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Kranichfelder Str. 157, 99097 Erfurt</span><br>
+				<a href="Lojewski/Lojewski.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Schuhe
+        </li>
+        
+        <li data-filtertext="Antilope Lust auf schöne Schuhe, Damenschuhe, Herrenschuhe, Gabor, Ecco, Gerry Weber, Vagabond, Marc, Högl, Maripe, Hispanitas, Konsum">
+                <h3>Antilope - Lust auf schöne Schuhe</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Anger 43, 99084 Erfurt</span><br>
+				<a href="Antilope/Antilope.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Dr. Gruber Kinderschuhe Jugendschuhe">
+                <h3>Dr. Gruber - Die Kinder- & Jugendschuhspezialisten</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Lange Brücke 24 - 15, 99084 Erfurt</span><br>
+				<a href="Gruber/Gruber.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Shoppingcenter
+        </li>
+        
+        <li data-filtertext="Einkaufsgalerie ANGER1, Einkaufscenter, Shoppingcenter, Stadt, Zentrum, Friseur, Schuhe, Lederwaren, Lebensmittel, Cafe, Restaurant, Optiker, Apotheke, Elektronik, Unterhaltung, Mode, Karstadt, Warenhaus">
+                <h3>Einkaufsgalerie ANGER1</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Anger 1, 99084 Erfurt</span><br>
+				<a href="Anger1/Anger.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Thüringen Park, Einkaufscenter, Shoppingcenter, Stadt">
+                <h3>Thüringen-Park Erfurt</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Nordhäuser Str. 73 t, 99091 Erfurt</span><br>
+				<a href="Thpark/Thpark.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        
+   </ul>
+    
+    
+            
+    </div>
+          
+    <footer id="main-footer">
+  		<div data-role="navbar">
+  		<ul>
+        <li><a data-role="button" data-rel="back" data-direction="reverse">zurück</a></li>
+        <li><a href="#" onClick="var ref = window.open('https://www.facebook.com/ErfurtApp?fref=ts', '_blank', 'closebuttoncaption=fertig');">Facebook</a></li>
+        <li><a href="../Impressum.html" rel="external">Impressum</a></li>
+        <li><a href="../index.html" rel="external">home</a></li>
+      </ul>
+      </div>
+  	</footer>
+    
+	</div>
+</body>
+</html>
