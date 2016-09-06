@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.988969, 11.034800);
+   var currentLocationMap = new google.maps.LatLng(51.053510, 11.043269);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.988969, lng: 11.034800},
+    position: {lat: 51.053510, lng: 11.043269},
     map: geolocationDetails
   	});
 
@@ -103,18 +103,19 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="schmidt.jpg" width="100%" />
-    			<h3>Schmidt Küchen und Wohnwelten</h3>
-    			<p align="justify">Bei uns steht Ihnen ein Team aus Konzeptverkäufern bei der Umsetzung Ihres Projekts tatkräftig zur Seite. Unter Beachtung Ihres Budgets und Ihre Vorlieben beraten wir Sie individuell und professionell.<br>
-Gleich bei Ihrem ersten Besuch im Studio freuen wir uns darauf, Ihnen ein Willkommensgeschenk überreichen zu dürfen.<br><br></p>
+                <img src="Zumba.jpg" width="100%" />
+    
+    			<h3>Zumb Erfurt</h3>
+    			<p align="justify">Ein Zumba-Kurs - auch ZUMBA Fintess-Party genannt - verbindet schnellere und langsamere Rhythmen sowie Bewegungsabläufe zu einem Aerobic- und Fitness-Workout, das die optimale Balance zwischen Ausdauertraining und körperformenden Muskelaufbau bietet.<br>
+Tauchen Sie ein in das Latino Lebensgefühl und lassen Sie sich begeistern von diesem dynamischen und gleichzeitig sehr effektiven Fitnessprogramm. </p>
 
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493616027613" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.s-kw.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
-			
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+491787265240" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.zumba-erfurt.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+           
             
 <!-- Ausgabe Map -->            
-              
-            <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-				<input type="hidden" id="end" value="50.988969, 11.034800">
+            
+            	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+					<input type="hidden" id="end" value="51.053510, 11.043269">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
