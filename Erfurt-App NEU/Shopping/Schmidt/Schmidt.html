@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.979946, 11.052569);
+   var currentLocationMap = new google.maps.LatLng(50.988969, 11.034800);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.979946, lng: 11.052569},
+    position: {lat: 50.988969, lng: 11.034800},
     map: geolocationDetails
   	});
 
@@ -103,18 +103,18 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="SC.jpg" width="100%" />
-    			<h3>schildercenter.de</h3>
-    			<p align="justify">Willkommen bei www.schildercenter.de, Ihrem günstigen Online-Shop auf dem Sie Schilder online bestellen, kaufen und sogar selber gestalten können. Es erwarten Sie nicht nur ein großes  Produktsortiment an Schildern, sondern auch günstige Preise, kurze Lieferzeiten (80% der Artikel sind auf Lager) und eine Herstellung in Deutschland.<br>
-Wir freuen uns auf Ihre Bestellung, egal ob für private, öffentliche oder gewerbliche Zwecke.</p>
+                <img src="schmidt.jpg" width="100%" />
+    			<h3>Schmidt Küchen und Wohnwelten</h3>
+    			<p align="justify">Bei uns steht Ihnen ein Team aus Konzeptverkäufern bei der Umsetzung Ihres Projekts tatkräftig zur Seite. Unter Beachtung Ihres Budgets und Ihre Vorlieben beraten wir Sie individuell und professionell.<br>
+Gleich bei Ihrem ersten Besuch im Studio freuen wir uns darauf, Ihnen ein Willkommensgeschenk überreichen zu dürfen.<br><br></p>
 
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493643422699" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.schildercenter.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
-           
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493616027613" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.s-kw.de.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+			
             
 <!-- Ausgabe Map -->            
-            
-            	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="50.979946, 11.052569">
+              
+            <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+				<input type="hidden" id="end" value="50.988969, 11.034800">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
