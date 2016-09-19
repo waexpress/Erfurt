@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.988969, 11.034800);
+   var currentLocationMap = new google.maps.LatLng(50.966485, 11.069497);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.988969, lng: 11.034800},
+    position: {lat: 50.966485, lng: 11.069497},
     map: geolocationDetails
   	});
 
@@ -103,18 +103,25 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="schmidt.jpg" width="100%" />
-    			<h3>Schmidt Küchen und Wohnwelten</h3>
-    			<p align="justify">Bei uns steht Ihnen ein Team aus Konzeptverkäufern bei der Umsetzung Ihres Projekts tatkräftig zur Seite. Unter Beachtung Ihres Budgets und Ihrer Vorlieben beraten wir Sie individuell und professionell.<br>
-Gleich bei Ihrem ersten Besuch im Studio freuen wir uns darauf, Ihnen ein Willkommensgeschenk überreichen zu dürfen.<br><br></p>
-
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493616027613" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.s-kw.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+                <img src="fischer.jpg" width="100%" />
+    			<h3>Fischer Gemüse</h3>
+    			<p align="justify">Frisch, frischer, Fischer – unser Unternehmen steht seit 1874 im Dienst der gesunden Ernährung. Mehr als 30 Gemüsesorten aus eigenem Anbau können Sie regelmäßig an den folgenden Orten in Erfurt erwerben:
+                <ul>
+                  <li>Hofladen, Rudolstädter Straße 93, 99099 Erfurt<br>
+					Di. – Fr. 9.00–18.30 Uhr, Sa. 8.00–12.30 Uhr</li>
+                  <li>Wochenmarkt-Stand, Moskauer Platz, 99089 Erfurt<br>
+					Di. & Do. 8.00–17.00 Uhr, Sa. 8.00–12.00 Uhr</li>
+                  <li>Vilniuspassage, Mainzer Straße 36/37, 99089 Erfurt<br>
+					Di. – Fr. 8.00–18.00 Uhr, Sa. 8.00–13.00 Uhr</li>
+                </ul>
+</p>
+<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493615514885" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.fischergemuese-erfurt.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
 			
             
 <!-- Ausgabe Map -->            
               
             <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-				<input type="hidden" id="end" value="50.988969, 11.034800">
+				<input type="hidden" id="end" value="50.966485, 11.069497">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
