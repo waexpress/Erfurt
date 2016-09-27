@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.977616, 11.025569);
+   var currentLocationMap = new google.maps.LatLng(50.973212, 11.029471);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.977616, lng: 11.025569},
+    position: {lat: 50.973212, lng: 11.029471},
     map: geolocationDetails
   	});
 
@@ -103,25 +103,20 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="eis.jpg" width="100%" />
-    			<h3>Eiscafé "San Remo"</h3>
-    			<p align="justify">Die Stars unserer Eismanufaktur sind die wahrhaft GROSSEN Becher.<br>
-Bei uns können Sie aus mehr als 140 verschiedenen Eisbechern wählen. Jeder einzelne wird täglich frisch, mit natürlichen Zutaten, viel Liebe und in Handarbeit zubereitet.
-<br>
-<br>
-Öffnungszeiten Sommer (1.4. bis 31.10.):<br>
-Mo.-Sa. 10:00 bis 21:30 Uhr, So.: 11:00 – 21:30 Uhr<br>
+                <img src="illgen.jpg" width="100%" />
+    			
+    
+    			<h3>Buchführungs- & Büroservice Heike Illgen</h3>
+    			<p align="justify">Mit unserer Hilfe können Sie sich auf Ihre unternehmerischen Aufgaben konzentrieren.<br>
+Zuverlässig und individuell übernehmen wir für Sie die kaufmännische Betreuung Ihres Unternehmens. Regelmäßig erhalten Sie von uns einen Zahlenüberlick und eine umfassende betriebswirtschaftliche Auswertung. Unser Leistungsangebot, das wir lt. Steuerberatungsgesetz § 6 Nr. 3 und 4 übernehmen dürfen, stellen wir Ihnen gern in einem persönlichen Gespräch vor.</p>
 
-Öffnungszeiten Winter (1.11. bis 31.03.):<br>
-Mo.-Do. 10:00 – 20:30 Uhr, Fr./Sa. 10:00 – 21:30 Uhr, So. 11:00 – 20:30 Uhr</p>
-
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493616430449" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.san-remo.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+491704039654" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;Mobil&nbsp;&nbsp;</a><a href="tel:+4936178928906" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;Festnetz&nbsp;&nbsp;</a></div>
            
             
 <!-- Ausgabe Map -->            
             
             	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="50.977616, 11.025569">
+					<input type="hidden" id="end" value="50.973212, 11.029471">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
