@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.974615, 11.031494);
+   var currentLocationMap = new google.maps.LatLng(50.961531, 11.013656);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.974615, lng: 11.031494},
+    position: {lat: 50.961531, lng: 11.013656},
     map: geolocationDetails
   	});
 
@@ -103,18 +103,17 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="angeletta.jpg" width="100%" />
-    			<h3>Angeletta La Moda</h3>
-    			<p align="justify">ANGELETTA - Erfurts erste „La Moda“ Adresse für italienische und internationale First Lady Fashion und Taschen. Gern trifft „Frau“ sich hier auf 160 m² bei  Kaffee und Sekt  zum  stöbern, staunen und genießen. Strass & Glamour, Business-, Abend- und Festmode, selbst Jeans stehen in den Styles extravagant, mondän oder klassisch und elegant zur Auswahl.<br>
-Angeletta La Moda ist das besondere Shoppingerlebnis mit  Erinnerungswert! Himmlisch einkaufen mit königlichem Service zu bürgerlichen Preisen.</p>
-
-				<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+4936124029303" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.angeletta-erfurt.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+                <img src="fisch.jpg" width="100%" />
+    			<h3>Fisch Hofladen Kressepark Erfurt</h3>
+    			<p align="justify">Für uns gibt es nichts Herrlicheres als täglich unseren frischgefangenen Fisch an unsere Kunden zu verkaufen oder diesen direkt für unsere Speisen und Gerichte in unserem Bistro weiterzuverarbeiten. Das sieht man nicht nur, sondern das schmeckt man auch. Hinzu kommt, dass wir jeden Tag unseren Räucherofen mit Buchenholz anheizen und unsere Fische frisch für Sie räuchern. Ein Genuss für alle Sinne.<br><br><span class="rot">Bei Vorlage der Erfurt-App erhalten Sie 10% auf das gesamte Verkaufssortiment!</span>
+</p>
+<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493617894773" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.fisch-hofladen.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
 			
             
 <!-- Ausgabe Map -->            
               
             <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-				<input type="hidden" id="end" value="50.974615, 11.031494">
+				<input type="hidden" id="end" value="50.961531, 11.013656">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
