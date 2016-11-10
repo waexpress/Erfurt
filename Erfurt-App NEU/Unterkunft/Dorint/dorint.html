@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.973350, 11.032300);
+   var currentLocationMap = new google.maps.LatLng(50.975499, 11.018696);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.973350, lng: 11.032300},
+    position: {lat: 50.975499, lng: 11.018696},
     map: geolocationDetails
   	});
 
@@ -103,20 +103,19 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="Baby.jpg" width="100%" />
-    
-    			<h3>Baby-Life der Babyausstatter</h3>
-    			<p align="justify">Ihr Fachgeschäft für Babyausstattung in Erfurt. Auf 600 qm finden sie Babykonfektion in den Größen 44-92, alles für die Mobilität, vom Kinderwagen bis zum Kinderautositz und für zu Hause alles, von der Babywanne über Babys ersten Löffel bis zum Kinderzimmer.<br><br>
-    			<span class="rot">Ab einem Wareneinkauf von 50 Euro gibt es einen Einkaufsgutschein über 5 Euro*</span><br>
-      			<span class="kleineschrift">*bei Vorlage der Erfurt-App, keine Barauszahlung, nur 1 Gutschein pro Kunde einlösbar</span></p>
+                <img src="arcadia.jpg" width="100%" />
+    			<h3>Dorint Hotel Am Dom *****</h3>
+    			<p align="justify">Direkt in der Mitte Deutschlands in Thüringens Landeshauptstadt gelegen, erwartet Sie das Arcadia Grand Hotel Am Dom Erfurt.<br>
+Das außergewöhnliche Haus mit persönlichem Service bildet dank bester Lage den idealen Ausgangspunkt, die Schönheiten Erfurts zu erkunden. Es erwarten Sie unsere großzügigen Zimmer, die durch eine moderne Ausstattung, edle Stoffe und eine sanfte Beleuchtung überzeugen.<br>
+Unser Küchenchef freut sich über Ihren Besuch in unserem Restaurant „Gloriosa“. Genießen Sie hier regionale und internationale Gerichte.</p>
 
-				<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493615504222" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.baby-life.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
-			
+				<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+4936164450" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.dorint.com/erfurt', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+           
             
 <!-- Ausgabe Map -->            
-              
-            <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-				<input type="hidden" id="end" value="50.973350, 11.032300">
+            
+            	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+					<input type="hidden" id="end" value="50.975499, 11.018696">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
