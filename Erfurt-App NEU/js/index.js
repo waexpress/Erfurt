@@ -32,15 +32,17 @@ var app = {
   // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
   
   var notificationOpenedCallback = function(jsonData) {
-    console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
   };
 
-  window.plugins.OneSignal.init("971d115a-ad05-4a9b-b6a2-971dc9ada326",
-                                 {googleProjectNumber: "175787334223"},
-                                 notificationOpenedCallback);
+  window.plugins.OneSignal
+    .startInit("971d115a-ad05-4a9b-b6a2-971dc9ada326", "175787334223")
+    .handleNotificationOpened(notificationOpenedCallback)
+    .endInit();
   
-  // Show an alert box if a notification comes in when the user is in your app.
-  window.plugins.OneSignal.enableInAppAlertNotification(true);
+  // Sync hashed email if you have a login system or collect it.
+  //   Will be used to reach the user at the most optimal time of day.
+  // window.plugins.OneSignal.syncHashedEmail(userEmail);
 }, false);
     },
     // deviceready Event Handler
