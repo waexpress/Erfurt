@@ -27,21 +27,7 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener('deviceready', function () {
-  // Enable to debug issues.
-  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
-  
-  var notificationOpenedCallback = function(jsonData) {
-    console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
-  };
-
-  window.plugins.OneSignal.init("971d115a-ad05-4a9b-b6a2-971dc9ada326",
-                                 {googleProjectNumber: "175787334223"},
-                                 notificationOpenedCallback);
-  
-  // Show an alert box if a notification comes in when the user is in your app.
-  window.plugins.OneSignal.enableInAppAlertNotification(true);
-}, false);
+        document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
     //
@@ -60,5 +46,41 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+        
+        // Enable to debug issues.
+        // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+
+        var iosSettings = {};
+        iosSettings["kOSSettingsKeyAutoPrompt"] = true;
+        iosSettings["kOSSettingsKeyInAppLaunchURL"] = false;
+
+        window.plugins.OneSignal.startInit( "971d115a-ad05-4a9b-b6a2-971dc9ada326", "175787334223")
+                                .handleNotificationReceived(didReceiveRemoteNotificationCallBack)
+                                .handleNotificationOpened(didOpenRemoteNotificationCallBack)
+                                .inFocusDisplaying(window.plugins.OneSignal.OSInFocusDisplayOption.Notification)
+                                .iOSSettings(iosSettings)
+                                .endInit();
     }
 };
+
+function didReceiveRemoteNotificationCallBack(jsonData) {
+        alert("Notification received:\n" + JSON.stringify(jsonData));
+        console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+    }
+function didOpenRemoteNotificationCallBack (jsonData) {
+        alert("Notification opened:\n" + JSON.stringify(jsonData));
+        console.log('didOpenRemoteNotificationCallBack: ' + JSON.stringify(jsonData));   
+    }
+
+function sendTag() {
+    window.plugins.OneSignal.sendTag("PhoneGapKey", "PhoneGapValue");
+}
+function getIds() {
+    window.plugins.OneSignal.getIds(function(ids) {
+        document.getElementById("OneSignalUserId").innerHTML = "UserId: " + ids.userId;
+        document.getElementById("OneSignalPushToken").innerHTML = "PushToken: " + ids.pushToken;
+        console.log('getIds: ' + JSON.stringify(ids));
+    });
+}
+
+app.initialize();
