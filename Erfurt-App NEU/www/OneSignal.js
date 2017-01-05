@@ -27,8 +27,8 @@
 
 
 var OneSignal = function() {
-    var _appID = "";
-    var _googleProjectNumber = "";
+    var _appID = "971d115a-ad05-4a9b-b6a2-971dc9ada326";
+    var _googleProjectNumber = "175787334223";
     var _iOSSettings = {};
     var _notificationReceivedDelegate = function() {};
     var _notificationOpenedDelegate = function() {};
