@@ -1,0 +1,61 @@
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+	<title>Erfurt-App</title>
+	<link rel="stylesheet" href="../../themes/ErfurtApp1.min.css" />
+	<link rel="stylesheet" href="../../themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../jquery.mobile.structure-1.4.5.min.css" />
+	<script src="../../jquery-1.11.1.min.js"></script>
+	<script src="../../jquery.mobile-1.4.5.min.js"></script>
+    
+    <script type="text/javascript" src="../../cordova.js">// Wait for device API libraries to load
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+    // device APIs are available
+    function onDeviceReady() {
+        alert("device ready event occured");
+    }</script>
+    <script type="text/javascript" src="../../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    
+</head>
+<body onLoad="onLoad()">
+	<div data-role="page" data-theme="a">
+		
+		<div data-role="content">
+    
+			<img src="velotaxi.jpg" width="100%" />
+            <span class="photosBy">© WA-EXPRESS | <a href="#" onClick="var ref = window.open('http://www.wa-express.de', '_blank', 'closebuttoncaption=fertig');">www.wa-express.de</a></span>
+			<h3>Velolimousine</h3>
+    		<p align="justify">Haben Sie Lust auf eine extravagante, bequeme und beeindruckende Fahrt durch Erfurt, geleitet von einem ausgebildeten Stadtführer?<br>
+			Dann buchen Sie eine Tour mit der "Velolimousine" und begeben Sie sich auf eine unvergesslichen Reise durch Erfurt, so wie Sie es zu Fuß nie erkunden könnten.
+			</p>
+        
+        	<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+4915227765609" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a>
+            <a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('https://www.facebook.com/Velolimousine', '_blank', 'closebuttoncaption=fertig');">Facebook</a></div>
+    
+    
+            
+    </div>
+          
+    <footer id="main-footer">
+  		<div data-role="navbar">
+  		<ul>
+        <li><a data-role="button" data-rel="back" data-direction="reverse">zurück</a></li>
+        <li><a href="#" onClick="var ref = window.open('https://www.facebook.com/ErfurtApp?fref=ts', '_blank', 'closebuttoncaption=fertig');">Facebook</a></li>
+        <li><a href="../../Impressum.html" rel="external">Impressum</a></li>
+        <li><a href="../../index.html" rel="external">home</a></li>
+      </ul>
+      </div>
+  	</footer>
+    
+	</div>
+</body>
+</html>

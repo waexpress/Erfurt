@@ -1,0 +1,454 @@
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+	<title>Erfurt-App</title>
+	<link rel="stylesheet" href="../themes/ErfurtApp1.min.css" />
+	<link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../jquery.mobile.structure-1.4.5.min.css" />
+	<script src="../jquery-1.11.1.min.js"></script>
+	<script src="../jquery.mobile-1.4.5.min.js"></script>
+    
+    <script type="text/javascript" src="../cordova.js">// Wait for device API libraries to load
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+    // device APIs are available
+    function onDeviceReady() {
+        alert("device ready event occured");
+    }</script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    
+</head>
+<body onLoad="onLoad()">
+	<div data-role="page" data-theme="a">
+		
+		<div data-role="content">
+    
+			<img src="hotel.jpg" width="100%" />
+    		<span class="photosBy">© WA-EXPRESS . <a href="#" onClick="var ref = window.open('http://www.wa-express.de', '_blank', 'closebuttoncaption=fertig');">www.wa-express.de</a> . Axel Schmidt</span>
+			<h3>Übernachtung</h3>
+    <p align="justify">Lassen Sie sich Zeit! Erfurt bietet mit fast 5000 Betten für jeden eine geeignete Unterkunft. Ob im 5-Sterne Hotel oder privat, Sie werden hier sicher die für Sie passende Übernachtungsmöglichkeit finden.
+			</p>
+        
+        <ul data-role="listview" data-inset="true" data-filter="true">
+        
+        <li data-role="list-divider">
+            B
+        </li>
+        <li data-filtertext="BEST WESTERN PLUS Hotel Excelsior **** 4 Stadtzentrum">
+                <h3>BEST WESTERN PLUS Hotel Excelsior ****</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Bahnhofstraße 35, 99084 Erfurt</span><br>
+				<a href="Bestwestern/Bestwestern.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            D
+        </li>
+        <li data-filtertext="Arcadia Grand Hotel Am Dom ***** 5 Sterne Stadtzentrum">
+                <h3>Dorint Hotel Am Dom Erfurt *****</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Theaterplatz 2, 99084 Erfurt</span><br>
+				<a href="Dorint/dorint.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            F
+        </li>
+        <li data-filtertext="Ferienwohnungen Zum Schildchen & Zum Eisernen Handschuh Innenstadt Zentrum">
+                <h3>Ferienwohnungen "Zum Schildchen & Zum Eisernen Handschuh"</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Schildgasse 3 & 4, 99084 Erfurt</span><br>
+				<a href="Schildchen/Schildchen.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            G
+        </li>
+        <li data-filtertext="Gasthaus zu Melchendorf Komforthotel verkehrsgünstig">
+                <h3>Gasthaus zu Melchendorf</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Haarbergstraße 2, 99097 Erfurt</span><br>
+				<a href="Melchendorf/Melchendorf.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Gästewohnungen WBG Zukunft e.G.">
+                <h3>Gästewohnungen - WBG Zukunft e.G.</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Eislebener Str., Rigaer Str., Karl-Reimann-Ring</span><br>
+				<a href="Zukunft/Zukunft.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            H
+        </li>
+        <li data-filtertext="Hotel ibis Erfurt Altstadt ruhig Innenstadt">
+                <h3>Hotel ibis Erfurt Altstadt</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Barfüsserstrasse 9, 99084 Erfurt </span><br>
+				<a href="Ibisaltstadt/Ibisaltstadt.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Hotel ibis Erfurt Ost Stadtrand">
+                <h3>Hotel ibis Erfurt Ost</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Über dem Feldgarten 9, 99198 Erfurt-Linderbach</span><br>
+				<a href="Ibisost/Ibisost.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Hotel & Restaurant Gartenstadt *** 3 Stadtrand WLAN">
+                <h3>Hotel & Restaurant Gartenstadt ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Binderslebener Landstraße 212, 99092 Erfurt</span><br>
+				<a href="Gartenstadt/Gartenstadt.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Hotel Wilna *** 3 Stadtrand">
+                <h3>Hotel Wilna ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Vilniuser Straße 2, 99089 Erfurt</span><br>
+				<a href="Wilna/Wilna.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            I
+        </li>
+        <li data-filtertext="InterCityHotel Erfurt **** 4 Bahnhof Business">
+                <h3>InterCityHotel Erfurt ****</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Willy-Brandt-Platz 11, 99084 Erfurt</span><br>
+				<a href="Intercity/Intercity.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            L
+        </li>
+        <li data-filtertext="Landidyll-Hotel-LinderHof **** 4 Stadtrand WLAN">
+                <h3>Landidyll-Hotel-LinderHof ****</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Azmannsdorfer Strasse 27, 99098 Erfurt-Linderbach</span><br>
+				<a href="Linderhof/Linderhof.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            P
+        </li>
+        <li data-filtertext="Pension Wegerich **** 4 WLAN">
+                <h3>Pension Wegerich <sup>••••</sup></h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Windthorststr.29, 99096 Erfurt</span><br>
+				<a href="Wegerich/Wegerich.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            weitere
+        </li>
+        <li data-icon="false">
+            	<h3>Hotel Park Inn by Radisson Erfurt - Apfelstädt ****</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99192 Erfurt, Riedweg 1</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Hotel Töpferhof</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99438 Meckfeld/Bad Berka, Im Dorfe 5</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Müllers Restaurant & Hotel</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99099 Erfurt, Zum Haun 10</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Ramada Hotel Erfurt ****</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99098 Erfurt, Auf der großen Mühle 4</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Landgasthof und Hotel Krone ** superior</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99334 Ichtershausen/OT Eischleben, Erfurter Landstraße 22</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Hotel Landvogt ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99195 Riethnordhausen, Erfurter Straße 29</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Hotel Erfurtblick ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99092 Erfurt, Nibelungenweg 20</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Victor's Residenz-Hotel Erfurt ****</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99096 Erfurt, Häßlerstraße 17</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Hotel Carat ****</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99099 Erfurt, Hans-Grundig-Straße 40</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>IBB Hotel Erfurt ****</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Gotthardtstraße 27</span><br>
+				</font></p>
+        </li>
+        
+        
+        
+        <li data-icon="false">
+            	<h3>Hotel Zumnorde am Anger **** superior</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Anger 50/51</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Airport Hotel Erfurt ****</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99092 Erfurt, Binderslebener Landstraße 100</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Mercure Hotel Erfurt-Altstadt ****</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Meienbergstraße 26/27</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Apartmenthotel Lindeneck ****</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99086 Erfurt, Triftstraße 36</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Hotel am Kaisersaal ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Futterstraße 8</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Hotel Garni Am Domplatz G***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Andreasstraße 29</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Hotel "Weisser Schwan"</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99098 Erfurt-Kerspleben, Zum Sulzenberg 1</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Hotel Alt-Erfurt</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99089 Erfurt, Nordhäuser Straße 12</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Villa am Park ****</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99094 Erfurt, Tettaustraße 5</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension Gerber ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Dalbergsweg 24</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Altstadtpension am Dom ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Pergamentergasse 42</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension "Am Dom" ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Lange Brücke 57</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension "Lindner" ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99189 Kühnhausen, Zur Lachmühle 9</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension Reuss ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99089 Erfurt, Spittelgartenstraße 15</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension Germania ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99099 Erfurt, Rudolstädter Straße 151</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Bauernhof und Pension Kronenburghof ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99100 Erfurt-Salomonsborn, Kronenburgstraße 4</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension Kalunov ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99099 Erfurt, Stadtweg 22</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension Pirol ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99086 Erfurt, Magdeburger Allee 23</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension Renate Braun ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99192 Gamstädt, Die Vorstadt 80 a</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension Schaar ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99189 Kühnhausen, Himmelspfortenweg 1</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension Sonja Müller ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99428 Nohra, Günthergasse 66a</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension Domblick ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Domplatz 20</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension Sackpfeifenmühle ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Lange Brücke 53</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Haus der Athleten **</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99096 Erfurt, Friedrich-Ebert-Str. 61</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension Grünes Herz ***</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99438 Tonndorf, Untere Töpferstraße 11</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension "Zum Bären"</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Andreasstraße 26</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Gaststätte & Pension Zum Feldschlösschen</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99086 Erfurt, Magdeburger Allee 214</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Fürstenhof Gasthaus und Pension</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99192 Erfurt-Frienstedt, Dietendorfer Str. 50</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension und Gasthaus "Gute Quelle"</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99195 Erfurt-Schwerborn, Kastanienstraße 27</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pension und Gasthaus "Zur Linde"</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99094 Erfurt-Schmira, Breite Straße 13</span><br>
+				</font></p>
+        </li>
+        
+		</ul>
+    
+    
+            
+    </div>
+          
+    <footer id="main-footer">
+  		<div data-role="navbar">
+  		<ul>
+        <li><a data-role="button" data-rel="back" data-direction="reverse">zurück</a></li>
+        <li><a href="#" onClick="var ref = window.open('https://www.facebook.com/ErfurtApp?fref=ts', '_blank', 'closebuttoncaption=fertig');">Facebook</a></li>
+        <li><a href="../Impressum.html" rel="external">Impressum</a></li>
+        <li><a href="../index.html" rel="external">home</a></li>
+      </ul>
+      </div>
+  	</footer>
+    
+	</div>
+</body>
+</html>

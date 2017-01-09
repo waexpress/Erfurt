@@ -1,0 +1,588 @@
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+	<title>Erfurt-App</title>
+	<link rel="stylesheet" href="../themes/ErfurtApp1.min.css" />
+	<link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../jquery.mobile.structure-1.4.5.min.css" />
+	<script src="../jquery-1.11.1.min.js"></script>
+	<script src="../jquery.mobile-1.4.5.min.js"></script>
+    
+    <script type="text/javascript" src="../cordova.js">// Wait for device API libraries to load
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+    // device APIs are available
+    function onDeviceReady() {
+        alert("device ready event occured");
+    }</script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    
+</head>
+<body onLoad="onLoad()">
+	<div data-role="page" data-theme="a">
+		
+		<div data-role="content">
+    
+    		<img src="restaurant.jpg" width="100%" />
+    		<span class="photosBy">© WA-EXPRESS . <a href="#" onClick="var ref = window.open('www.wa-express.de', '_blank', 'closebuttoncaption=fertig');">www.wa-express.de</a> . Axel Schmidt</span>
+    
+    		<h3>Essen & Trinken</h3>
+    		<p align="justify">Ob Blick auf den Dom oder mittelalterlicher Keller, ob Sterneküche oder Traditionslokal, ob italienisch oder asiatisch - die Erfurter Gastronomie hat für jeden etwas zu bieten.
+Bei einem Spaziergang durch Erfurts Innenstadt, sollten Sie aber auch unbedingt an einem der zahlreichen Holzkohlegrills stoppen und eine echte Thüringer Rostbratwurst probieren!</p>
+            
+        
+        <ul data-role="listview" data-inset="true" data-filter="true">
+        
+        
+        <li data-role="list-divider">
+            B
+        </li>
+        
+        <li data-filtertext="Bombay indisch vegetarisch scharf Lamm Fisch">
+                <h3>Bombay</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Domplatz 35, 99084 Erfurt </span><br>
+				<a href="Bombay/Bombay.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            C
+        </li>
+        
+        <li data-filtertext="Restaurant Pizza and Grill Charleston italienisch Grill Pizza Pasta mediteran">
+                <h3>Restaurant Pizza and Grill Charleston</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Anger 41, 99084 Erfurt </span><br>
+				<a href="Charleston/Charleston.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Curry & More, Burger, Currywurst, Hamburger, vegetarisch, Bratwurst, Sandwich, Pommes Frites">
+                <h3>Curry & More</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Kürschnergasse 9, 99084 Erfurt </span><br>
+				<a href="Curry/curry.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            D
+        </li>
+        
+        <li data-filtertext="Donut King Kaffee Donut Kings & Coffee">
+                <h3>Donut Kings & Coffee</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Marktstr. 34/35, 99084 Erfurt </span><br>
+				<a href="Donut/Donut.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Dubliner Irish Pub, Stew, Burger, Snacks, Guinness">
+                <h3>Dubliner Irish Pub</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Neuwerkstr. 47a, 99084 Erfurt </span><br>
+				<a href="Dubliner/Dubliner.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            E
+        </li>
+        
+        <li data-filtertext="Eiscafé Riva Eisspezialitäten italienisch Kaffee Kuchen">
+                <h3>Eiscafé Riva</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Rathausbrücke 10, 99084 Erfurt </span><br>
+				<a href="Riva/Riva.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            F
+        </li>
+        
+        <li data-filtertext="Bar-Restaurant-Cafe Faustus mediteran Cocktail">
+                <h3>Bar-Restaurant-Cafe Faustus</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Wenigemarkt 5, 99084 Erfurt </span><br>
+				<a href="Faustus/Faustus.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Feuerkugel Erfurter Gasthaustradition historisch Thüringer Klöße Altstadt bürgerlich">
+                <h3>Feuerkugel Erfurter Gasthaustradition</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Michaelisstraße 3-4, 99084 Erfurt </span><br>
+				<a href="Feuerkugel/Feuerkugel.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            G
+        </li>
+        
+        <li data-filtertext="Galerie Salatbar Paulinchen Bistro Salate frisch Bistro Suppe Kneipe Kunst Kommunikation">
+                <h3>Galerie & Salatbar Paulinchen</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Paulstraße 17/18, 99084 Erfurt </span><br>
+				<a href="Paulinchen/Paulinchen.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Gasthaus zu Melchendorf thüringer Küche hausgemacht regional">
+                <h3>Gasthaus zu Melchendorf</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Haarbergstr. 2, 99097 Erfurt</span><br>
+				<a href="../Unterkunft/Melchendorf/Melchendorf.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            K
+        </li>
+        
+        <li data-filtertext="Kressepark Villa Haage Loft Club Mandala Beachclub Restaurant Café saisonal Fisch">
+                <h3>Kressepark</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Motzstr. 8, 99094 Erfurt</span><br>
+				<a href="Kressepark/Kressepark.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            L
+        </li>
+        
+        <li data-filtertext="La Piazzetta Ristorante Pizzeria italienisch Pizza Pasta Restaurant Innenstadt Wein">
+                <h3>La Piazzetta</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Wenigemarkt 12, 99084 Erfurt</span><br>
+				<a href="LaPiazzetta/Piazzetta.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            M
+        </li>
+        
+        <li data-filtertext="Molly Malone Irish Pub, Stew, Burger, Snacks, Guinness">
+                <h3>Molly Malone Irish Pub</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Kürschnergasse 3, 99084 Erfurt </span><br>
+				<a href="Molly/Molly.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            N
+        </li>
+        
+        <li data-filtertext="Nerly, Cafe, Restaurant, Bar, nostalgisch, Kaffee, 20er Jahre">
+                <h3>Nerly - Cafe • Restaurant • Bar</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Marktstraße 6, 99084 Erfurt </span><br>
+				<a href="Nerly/nerly.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            P
+        </li>
+        
+        <li data-filtertext="Patricks Irish Pub, Stew, Burger, Snacks, Guinness">
+                <h3>Patricks Irish Pub</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Johannesstraße 39, 99084 Erfurt </span><br>
+				<a href="Patricks/Patricks.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Pier 37, Spargel, Thüringer Küche, saisonale Spezialitäten, Terrasse, Fluss">
+                <h3>Pier 37</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Lange Brücke 37a, 99084 Erfurt </span><br>
+				<a href="Pier37/Pier37.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            R
+        </li>
+        
+        <li data-filtertext="Roma italienisch Pizza Pasta">
+                <h3>Roma</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Schlösserstraße 5, 99084 Erfurt</span><br>
+				<a href="Roma/Roma.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            S
+        </li>
+        
+        <li data-filtertext="San Remo, Eis, Café, italienisch, Kaffee, Eisbecher">
+                <h3>Eiscafé "San Remo"</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Marktstr. 21, 99084 Erfurt</span><br>
+				<a href="SanRemo/sanremo.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Schnitzler Schnitzelhaus am Dom">
+                <h3>"Schnitzler" Schnitzelhaus am Dom</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Domplatz 32-33, 99084 Erfurt</span><br>
+				<a href="Schnitzler/Schnitzler.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Caféhaus Spiegler Kaffee Cafe Kuchen Tee Brot Brötchen Kuchen Torte">
+                <h3>Spieglers – Cafè am Wenigemarkt</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Wenigemarkt 20, 99084 Erfurt </span><br>
+				<a href="Spiegler/spiegler.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            U
+        </li>
+        
+        <li data-filtertext="Restaurant Café & Bar ÜBERSEE Altstadt Sonnenterrasse Steaks Thüringer Spezialitäten">
+                <h3>ÜBERSEE Restaurant Café & Bar</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Kürschnergasse 7-8, 99084 Erfurt</span><br>
+				<a href="Uebersee/Uebersee.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            W
+        </li>
+        
+        <li data-filtertext="Wirtshaus Zum Schildchen & Zum Eisernen Handschuh Altstadt Biergarten Mittelalter historisch Rittermahl">
+                <h3>Wirtshaus "Zum Schildchen & Zum Eisernen Handschuh"</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Schildgasse 3-4, 99084 Erfurt</span><br>
+				<a href="Schildchen/Schildchen.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Wirtshaus Christoffel Altstadt Biergarten Mittelalter historisch Rittermahl Grill Ritteressen">
+                <h3>Wirtshaus Christoffel</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Michaelisstr. 41, 99084 Erfurt</span><br>
+				<a href="Christoffel/Christoffel.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Z
+        </li>
+        
+        <li data-filtertext="Zum Goldenen Schwan Altstadt Biergarten historisch Gasthausbrauerei selbstgebrautes Bier deutsche thüringische Küche Spezialitäten">
+                <h3>Zum Goldenen Schwan</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Michaelisstr. 9, 99084 Erfurt</span><br>
+				<a href="Schwan/schwan.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            weitere
+        </li>
+        
+        <li data-icon="false" data-filtertext="Passta">
+            	<h3>alles passt da</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Lange Brücke 64</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Café Rommel</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Johannesstr. 34</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Füchsen</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Hütergasse 13</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Henners</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Weitergasse 8</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Restaurant zum Rebstock</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Futterstraße 2</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>il Cortile</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Johannesstr. 150</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Klara Grün</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Predigerstr. 12</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>La Gondola</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Kürschnergasse 1/2</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Mathilda</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Barfüßerstr. 1-2</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Mundlandung</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Krämerbrücke 28</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>NUMA - Die Nudelmacher</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Pilse 8 und Andreasstr. 37</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Osteria Il Ponte</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Wenigemarkt 2</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Palais Wachsberg</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Futterstr. 13</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Castillo Catalana</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Marktstraße 34b</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Pavarotti</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Fischmarkt 13/16</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Waldhaus</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99094 Erfurt, Rhodaer Chaussee 12</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Hopfenberg</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99096 Erfurt, Am Hopfenberg 14</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Billes Restaurant</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Anger 80a</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>FAM</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Fischmarkt 19</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Si Ju</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Fischmarkt 1</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false" data-filtertext="Praktiker baumarkt">
+            	<h3>Meyfartstube</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Meyfartstr. 12</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Restaurant Zum Bürgerhof</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Bahnhofstr. 35</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>drei&vierzig</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Michaelisstr. 43</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Köstritzer „Zum güldenen Rade“</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Marktstr. 50</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>double B</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Marbacher Gasse 10</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Augustiner an der Krämerbrücke</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Horngasse 3/4</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Café und Restaurant Nüsslein</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Krämerbrücke 17</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Kartoffelkult(ur)</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99085 Erfurt, Leipziger Straße 75b</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Wirtshaus am Dom</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Domplatz 12</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Mittelalter-Restaurant Luther-Keller</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Futterstr. 15/16</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Gasthaus Zum Alten Schwan</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Gotthardtstr. 27</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Schwarzburger Hof</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Michaelisstraße 32/33</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Rassmann’s in der Sackpfeifenmühle</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Lange Brücke 53</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false" data-filtertext="Praktiker baumarkt">
+            	<h3>Zur Börse</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Wenigemarkt 19</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Haus zum Naumburgischen Keller</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Michaelisstr. 49</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Louisiana Grill & Bar</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Futterstr. 14</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Cafe & Ristorante da Vinci</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Bahnhofstraße 2</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>La Gora</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Michaelisstr. 29</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Paparazzi</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Benediktsplatz 4</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Gasthof Schloss Hubertus</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99096 Erfurt, Arnstädter Chaussee 9</span><br>
+				</font></p>
+        </li>
+        
+        <li data-icon="false">
+            	<h3>Ballenberger</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">99084 Erfurt, Gotthardtstraße 25/26</span><br>
+				</font></p>
+        </li>
+        
+        
+   </ul>
+    
+    
+            
+    </div>
+          
+    <footer id="main-footer">
+  		<div data-role="navbar">
+  		<ul>
+        <li><a data-role="button" data-rel="back" data-direction="reverse">zurück</a></li>
+        <li><a href="#" onClick="var ref = window.open('https://www.facebook.com/ErfurtApp?fref=ts', '_blank', 'closebuttoncaption=fertig');">Facebook</a></li>
+        <li><a href="../Impressum.html" rel="external">Impressum</a></li>
+        <li><a href="../index.html" rel="external">home</a></li>
+      </ul>
+      </div>
+  	</footer>
+    
+	</div>
+</body>
+</html>
