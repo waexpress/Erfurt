@@ -26,7 +26,7 @@ document.addEventListener('deviceready', function () {
   };
 
   window.plugins.OneSignal
-    .startInit("YOUR_APPID", "YOUR_GOOGLE_PROJECT_NUMBER_IF_ANDROID")
+    .startInit("971d115a-ad05-4a9b-b6a2-971dc9ada326", "175787334223")
     .handleNotificationOpened(notificationOpenedCallback)
     .endInit();
   
