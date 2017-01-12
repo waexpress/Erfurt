@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.977173, 11.036023);
+   var currentLocationMap = new google.maps.LatLng(50.974734, 11.037785);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.977173, lng: 11.036023},
+    position: {lat: 50.974734, lng: 11.037785},
     map: geolocationDetails
   	});
 
@@ -103,22 +103,31 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="karstadt.jpg" width="100%" />
-    
-    			<h3>Karstadt Sports</h3>
-    			<p align="justify">Erleben Sie echtes Einkaufsvergnügen auf über 2500m² in Ihrem Karstadt Sports am Anger. Über 3 Etagen verteilt, bieten wir Ihnen ein sportliches Shopping-Erlebnis. Eine Laufbandanalyse für Lauf- oder Walkingschuhe ist bei uns genauso selbstverständlich wie eine Vermessung Ihrer Beckenknochen beim Kauf eines Fahrradsattels. Dank computerunterstützter Fußvermessung finden wir für Sie mit Sicherheit auch den optimalen Berg- oder Skischuh.<br>
-Sollte mal etwas nicht vorrätig sein, versuchen wir über unsere iPads Ihren Wunsch zu erfüllen.<br>
-Wir haben für Sie Mo.–Sa. von 10:00 – 20:00 Uhr geöffnet.<br><br>
-    			<span class="rot">10% Rabatt auf alle Sporttextilien*</span><br>
-      			<span class="kleineschrift">*Nur gültig bei Vorlage der Erfurt-App in der Filiale KARSTADT sports Erfurt, nicht kombinierbar mit anderen Aktionsvorteilen</span></p>
+                <img src="erfurtlogo.jpg" width="100%" />
+    			<h3>Öffnungszeiten im Bürgeramt</h3>
+    			<p align="justify">Einwohner- und Meldeangelegenheiten, Kfz-Zulassung:<br><br>
+Montag, Mittwoch, Freitag, Samstag:<br>
+09:00 Uhr - 12:30 Uhr<br>
+Dienstag, Donnerstag:<br>
+09:00 Uhr - 18:00 Uhr<br><br>
+Fahrerlaubnisangelegenheiten, Bußgeldstelle, Fundbüro, Gewerbe/Sondernutzungen, Ordnungsangelegenheiten, Versammlungen/Veranstaltungen, Waffen, Jagd und Fischerei, Standesamt/Urkundenstelle, Ausländerbehörde:<br><br>
+Montag: 09:00 - 12:30 Uhr<br>
+(Urkundenstelle geschlossen)<br>
+Dienstag: 09:00 - 12:30 Uhr u. 14:00 - 18:00 Uhr<br>
+Mittwoch: geschlossen<br>
+Donnerstag: 09:00 - 12:30 Uhr u. 14:00 - 16:00 Uhr<br>
+(Ausländerbehörde 09:00 - 12:30 Uhr)<br>
+Freitag: 09:00 - 12:30 Uhr<br>
+Samstag: geschlossen
+</p>
 
-				<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493616768414" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.karstadtsports.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
-			
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493616555444" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.stoeberhaus.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+           
             
 <!-- Ausgabe Map -->            
-              
-            <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-				<input type="hidden" id="end" value="50.977173, 11.036023">
+            
+            	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+					<input type="hidden" id="end" value="50.974734, 11.037785">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
