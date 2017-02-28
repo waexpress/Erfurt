@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(51.007170, 10.997716);
+   var currentLocationMap = new google.maps.LatLng(50.973048, 11.036523);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 51.007170, lng: 10.997716},
+    position: {lat: 50.973048, lng: 11.036523},
     map: geolocationDetails
   	});
 
@@ -103,23 +103,22 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="straube.jpg" width="100%" />
-    			<span class="photosBy">© [Denis Raev] 123RF Stock Foto</span>
-    
-    			<h3>Friseursalon Straube</h3>
-    			<p align="justify">Unser kleiner, sehr persönlicher Friseursalon am Moskauerplatz bietet Ihnen Service rund um Ihr Haar.<br>
-				Unser Team ist ständig bemüht Ihren Besuch bei uns zu einer kleinen Auszeit vom Alltag werden zu lassen.<br><br>
-    			<span class="rot">Unser Spezialangebot: Jeden letzten Donnerstag im Monat frisieren wir zur alten Preisliste vom Juli 2013<br>
-				Seniorentag: waschen + föhnen oder waschen + legen statt 17,80 Euro nur 15,00 Euro*</span><br>
-      			<span class="kleineschrift">* bei Vorlage der Erfurt-App</span></p>
+                <img src="bierothek.jpg" width="100%" />
+    			<h3>Bierothek Erfurt</h3>
+    			<p align="justify">
+                Kuba, Kanada und Island in Erfurt? In der  Bierothek® Erfurt finden Sie mehr als 350 verschiedene Sorten rund um den Globus. Darunter auch ausgefallene Craftbeer und interessante Bierstile, von nah und fern. Nicht einfach, bei dieser Auswahl seinen Favoriten zu finden. Hierfür hat die Bierothek® eine Lösung parat. Bierseminare sowie Themenverkostungen in regelmäßigen Abständen geben Ihnen den Überblick über die Vielfalt der Braukunst. Kommen Sie vorbei und lassen Sie sich in die wunderbare Welt der Biere entführen.<br><br>
+    			Öffnungszeiten:<br>
+Mo, Di, Sa: 10 - 20 Uhr<br>
+Mi, Do, Fr: 10 - 22 Uhr<br><br>
+Außerhalb der Öffnungszeiten finden Sie uns auf <a href="#" onClick="var ref = window.open('http://bierothek.de/ladengeschaefte/erfurt/', '_blank', 'closebuttoncaption=fertig');">www.bierothek.de</a> sowie auf <a href="#" onClick="var ref = window.open('http://www.facebook.com/DieBierothek.Erfurt/', '_blank', 'closebuttoncaption=fertig');">Facebook</a>.</p>
 
-				<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493617452186" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('https://www.facebook.com/FriseursalonStraube', '_blank', 'closebuttoncaption=fertig');">Fanpage</a></div>
+				<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+4936143023696" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.facebook.com/DieBierothek.Erfurt/', '_blank', 'closebuttoncaption=fertig');">Facebook</a></div>
 			
             
 <!-- Ausgabe Map -->            
               
             <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-				<input type="hidden" id="end" value="51.007170, 10.997716">
+				<input type="hidden" id="end" value="50.973048, 11.036523">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
