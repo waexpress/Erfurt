@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(51.006662, 11.022513);
+   var currentLocationMap = new google.maps.LatLng(50.960276, 10.988486);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 51.006662, lng: 11.022513},
+    position: {lat: 50.960276, lng: 10.988486},
     map: geolocationDetails
   	});
 
@@ -103,19 +103,19 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="basic.jpg" width="100%" />
-    			<h3>basic change</h3>
-    			<p align="justify">Wir sind eine familiäre Auto Werkstatt in Erfurt.
-Reparaturen von A bis Z gehören genauso zu unserem Aufgabengebiet, wie Partikelfilter Reinigung oder Fahrzeugumgestaltung mit Sprühfolie.<br>
-Überzeugen Sie sich von unserer Kompetenz und erleben Sie eine Werkstatt, bei der Kundenservice noch GROSS geschrieben wird.</p>
+                <img src="messe.jpg" width="100%" />
+    
+    			<h3>Messe Erfurt</h3>
+    			<p align="justify">Als zweitgrößter Messestandort in den neuen Bundesländern hat sich die Messe Erfurt GmbH als Forum für Unternehmen und Verbraucher in der Mitte Deutschlands etabliert. Jährlich finden hier rund 200 Veranstaltungen mit über 7.000 Ausstellern und etwa 600.000 Besuchern statt.<br>
+Alle Events der Messe Erfurt finden Sie auf unserer Homepage oder unter "Veranstaltungen" hier in der App.</p>
 
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+491602371257" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.basic-change.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493614000" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.messe-erfurt.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
            
             
 <!-- Ausgabe Map -->            
             
             	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="51.006662, 11.022513">
+					<input type="hidden" id="end" value="50.960276, 10.988486">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
