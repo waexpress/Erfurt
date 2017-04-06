@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(51.000531, 11.029029);
+   var currentLocationMap = new google.maps.LatLng(50.989575, 11.043530);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 51.000531, lng: 11.029029},
+    position: {lat: 50.989575, lng: 11.043530},
     map: geolocationDetails
   	});
 
@@ -103,18 +103,18 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="hopf.jpg" width="100%" />
-    			<h3>Verwalten - Vermieten - Verkaufen</h3>
-    			<p align="justify">Eigentum braucht Pflege, damit Werte erhalten bleiben. Getreu unserer Maxime verwalten wir Wohn- und Gewerbeimmobilien sowie Eigentümergemeinschaften (WEG) mit größter Sorgfalt. Auch die Vermietung und der Verkauf von Geschäfts- und Wohnhäusern sowie Eigentumswohnungen gehören zu unserem Spezialgebiet. Mit höchster Professionalität sorgen wir für den Werterhalt der uns anvertrauten Immobilien – in Erfurt, Thüringen und Sachsen.<br>
-Wenn Sie ein Objekt vermieten, verkaufen, es zur Verwaltung in gute Hände geben möchten oder kompetente Beratung benötigen, melden Sie sich bei uns!</p>
+                <img src="lehmann.jpg" width="100%" />
+    			<h3>Farben Lehmann</h3>
+    			<p align="justify">Farben Lehmann ist seit 1938 permanent und kompetent für seine Kunden da. Durchgängig als Familienunternehmen geführt, sind wir der perfekte Servicepartner und beraten Sie umfassend. Ob Mieter, Vermieter, gewerblich oder privat - Wir lösen fast jedes Ihrer Probleme. Autolacke, Wand- und Fassadenfarben, sowie Lasuren können wir nach fast allen Wünschen an unseren 4 Mischanlagen herstellen.<br>
+Ob Fachberatung bei Ihnen zu Hause, Tipps zur Selbsthilfe oder Urlaubsrenovierung - Äußern Sie Ihre Wünsche, wir kümmern uns darum.<br><br><span class="rot">Bei Vorlage der Erfurt-App erhalten Sie 5% Rabatt auf das gesamte Verkaufssortiment!</span></p>
 
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+49361749730" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.hopf-immobilien.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493616421513" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.farben-lehmann.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
            
             
 <!-- Ausgabe Map -->            
             
             	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="51.000531, 11.029029">
+					<input type="hidden" id="end" value="50.989575, 11.043530">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
