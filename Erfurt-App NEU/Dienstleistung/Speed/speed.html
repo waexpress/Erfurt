@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.993111, 11.040635);
+   var currentLocationMap = new google.maps.LatLng(50.975125, 11.034500);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.993111, lng: 11.040635},
+    position: {lat: 50.975125, lng: 11.034500},
     map: geolocationDetails
   	});
 
@@ -103,24 +103,18 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="stoeber.jpg" width="100%" />
-    			<h3>Stöberhaus Erfurt</h3>
-    			<p align="justify">Sie brauchen eine komplette Wohnzimmereinrichtung? Wir bieten sie. 
-				Das alte Bett passt nicht mehr in die neue Wohnung? Wir holen es ab.
-				In unserem ständig wechselnden Warenangebot werden Sie bestimmt fündig - öfter mal reingucken lohnt sich!<br><br>
+                <img src="kuehn.jpg" width="100%" />
+    			<h3>Fahrschule Speed</h3>
+    			<p align="justify">Deinen Führerschein in 4 Wochen...mach es einfach!<br>
+Du findest uns in der Erfurter City, am Hirschlachufer 1. Wir bilden dich auf dem Motorrad, dem PKW sowie für die Anhängererlaubnis aus. Aufbauseminare werden von uns auch durchgeführt.</p>
 
-                Stöberzeiten April bis September:<br>
-                Mo. - Fr. 9 - 18 Uhr<br>
-                Stöberzeiten Oktober bis März:<br>
-                Mo. - Fr. 10 - 18 Uhr & Sa. 10 - 14 Uhr</p>
-
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493614171794" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.stoeberhaus.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493616547971" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.speed-for-fun.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
            
             
 <!-- Ausgabe Map -->            
             
             	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="50.993111, 11.040635">
+					<input type="hidden" id="end" value="50.975125, 11.034500">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
