@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.975125, 11.034500);
+   var currentLocationMap = new google.maps.LatLng(51.011143, 11.015148);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.975125, lng: 11.034500},
+    position: {lat: 51.011143, lng: 11.015148},
     map: geolocationDetails
   	});
 
@@ -103,18 +103,19 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="speed.jpg" width="100%" />
-    			<h3>Fahrschule Speed</h3>
-    			<p align="justify">Deinen Führerschein in 4 Wochen...mach es einfach!<br>
-Du findest uns in der Erfurter City, am Hirschlachufer 1. Wir bilden dich auf dem Motorrad, dem PKW sowie für die Anhängererlaubnis aus. Aufbauseminare werden von uns auch durchgeführt.</p>
+                <img src="michel.jpg" width="100%" />
+    			<h3>MICHEL Umzüge</h3>
+    			<p align="justify">Bei Umzügen steht Ihnen die Firma Michel mit kompetenter und freundlicher Unterstützung gern zur Seite. Zu unserem Service gehören Beratung und Kostenkalkulation, Transport, Be- und Entladen, Möbelmontage, Küchenschreinerei, Haushaltsauflösungen, moderne Umzugstechnik und geschultes Personal.<br><br>
+    			<span class="rot">Unser Spezialangebot: 5% Rabatt und kostenlose Umzugskisten*</span><br>
+      			<span class="kleineschrift">*bei Vorlage der Erfurt-App</span></p>
 
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493616547971" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.speed-for-fun.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+49361430680" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.michel-umzuege.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
            
             
 <!-- Ausgabe Map -->            
             
             	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="50.975125, 11.034500">
+					<input type="hidden" id="end" value="51.011143, 11.015148">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
