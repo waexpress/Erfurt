@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.971632, 11.024598);
+   var currentLocationMap = new google.maps.LatLng(50.980957, 11.040182);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.971632, lng: 11.024598},
+    position: {lat: 50.980957, lng: 11.040182},
     map: geolocationDetails
   	});
 
@@ -103,21 +103,19 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="presseclub.png" width="100%" />
-    
-    			<h3>Presseklub</h3>
-    			<p align="justify">Der Presseklub liegt im Herzen von Erfurt und ist zu Fuß, Bahn oder mit dem Rad gut erreichbar. Der Klub wurde 1999 umgebaut und ist fast täglich mit einer guten Mischung aus Cocktailbar, Lounge und Musikklub geöffnet. Ob auf der Empore oder auf dem Dancefloor - bei uns findet jeder den geeigneten Platz zum relaxen oder tanzen.<br>
-Für Feierlichkeiten jeglicher Art stehen insgesamt bis zu 120 Sitzplätze zur Verfügung. Je nach Bedarf und Absprache können Buffets in allen Variationen realisiert werden.<br><br>
+                <img src="apfel.jpg" width="100%" />
+    			<h3>Apfeltechniker</h3>
+    			<p align="justify">Wir bieten Ihnen einen professionellen Reparaturservice für iPhone, iPad & iPod!<br>
+Ihr Gerät hat kleine optische Fehler des Alltags, gravierende Hardwaredefekte oder Softwareprobleme? Dann haben Sie für die Reparatur den richtigen Ansprechpartner in Erfurt gefunden!<br>
+Keine Zeit vorbei zukommen? Kein Problem! Für einen Pauschalbetrag von 19€ holen wir Ihr Gerät im Stadtgebiet von Erfurt und im Umkeis von 15km ab und bringen es Ihnen direkt nach der Reparatur wieder persönlich vorbei!</p>
 
-				Geöffnet: Di. 21:00 - 2:00 Uhr, Mi. 19:00 - 1:00 Uhr, Fr. 21:00 - 4:00 Uhr, Sa. 20:00 - 04.30 Uhr</p>
-
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('https://www.facebook.com/Presseklub.Erfurt', '_blank', 'closebuttoncaption=fertig');">Fanpage</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.presseklub.net', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+4936134948081" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.apfeltechniker.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
            
             
 <!-- Ausgabe Map -->            
             
             	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="50.971632, 11.024598">
+					<input type="hidden" id="end" value="50.980957, 11.040182">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
