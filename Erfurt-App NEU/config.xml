@@ -8,7 +8,7 @@
   <preference name="SplashScreen" value="screen" />
   <preference name="SplashScreenDelay" value="8000" />
   
-<gap:plugin name="onesignal-cordova-plugin" spec="^2.0.10" source="npm" />
+<gap:plugin name="onesignal-cordova-plugin" spec="^2.1.1" source="npm" />
 
 <!--Requires cli-5.1.1+ for gradle Android but we recommend using the latest version. -->
 <preference name="android-build-tool" value="gradle" />
