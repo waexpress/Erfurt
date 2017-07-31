@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.975824, 11.026477);
+   var currentLocationMap = new google.maps.LatLng(50.974527, 11.038848);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.975824, lng: 11.026477},
+    position: {lat: 50.974527, lng: 11.038848},
     map: geolocationDetails
   	});
 
@@ -103,25 +103,19 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="hellmann.jpg" width="100%" />
+                <img src="fif.jpg" width="100%" />
     
-    			<h3>Elektro Hellmannn</h3>
-    			<p align="justify">"Persönlicher Kundenkontakt, kompetente Beratung und individuelle Gespräche, das bietet Ihnen unser Elektro-Fachgeschäft in unmittelbarer Nähe zum Erfurter Dom in einer freundlichen und angenehmen Atmosphäre.<br> 
-Unser Angebot umfasst neben Elektromaterial, Haushaltsgeräten und Lichttechnik für Privatpersonen und Unternehmen auch besondere Dienstleistungen wie Lichtberatung, Montage eigener Leuchten und Lichtsysteme, Kleinreparaturen, Lieferservice und Anschluss unserer Neugeräte u.v.m.<br>
-Schauen Sie bei uns einfach mal herein, Sie finden ein tolles breites  Angebot und auch den einen oder anderen Exoten. Seien Sie herzlich willkommen, wir freuen uns auf Sie.<br><br>
-                Öffnungszeiten:
-                Mo.-Fr. 09.00 – 19.00 Uhr<br>
-				Sa. 09.00 – 16.00 Uhr<br><br>
-				<span class="rot">Unser Spezialangebot: Für einen Einkauf bei uns erhalten Sie einmalig eine kleine Taschenlampe.*</span><br>
-      			<span class="kleineschrift">* bei Vorlage der Erfurt-App				</span></p>
+    			<h3>Frau in Form</h3>
+    			<p align="justify">„Frau in Form“ gilt als das bekannteste Erfurter Fitness-Studio nur für Frauen jeglichen Alters. Es ist der Ansprechpartner für erfolgreiches gesundes Abnehmen. Frauen werden in ihrer persönlichen Zielerreichung motiviert und unterstützt.<br>
+Ausgezeichnet wurde „Frau in Form“ zum  Myline-Premium- und Polar-Experten-Studio. Darüber hinaus bietet es eine professionelle Kinderbetreuung an.</p>
 
-				<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493616422068" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.elektro-hellmann.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
-			
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493616546999" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.fif-erfurt.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+           
             
 <!-- Ausgabe Map -->            
-              
-            <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-				<input type="hidden" id="end" value="50.975824, 11.026477">
+            
+            	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+					<input type="hidden" id="end" value="50.974527, 11.038848">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
