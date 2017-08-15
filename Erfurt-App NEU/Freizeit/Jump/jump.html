@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.982055, 11.031580);
+   var currentLocationMap = new google.maps.LatLng(51.009514, 11.030672);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.982055, lng: 11.031580},
+    position: {lat: 51.009514, lng: 11.030672},
     map: geolocationDetails
   	});
 
@@ -103,21 +103,20 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="patricks.jpg" width="100%" />
-    			<h3>Patricks Irish Pub</h3>
-    			<p align="justify">Tauchen Sie ein in eine Welt von großartigen Whisk(e)ys, randvoll gezapften Pints of Guinness, Gerstensäften aus Kilkenny und gepflegtem Riebeck Premium Pils. Das alles in einer Atmosphäre, wie sie sonst nur auf der Grünen Insel selbst zu erleben ist.<br>
-In unserem stilvoll eingerichteten Gewölbekeller finden regelmäßig Whisk(e)y-Seminare statt. Großer  Biergarten im Hof.
-Good Beer - Good Food - Good Entertainment<br><br>
+                <img src="jump.jpg" width="100%" />
+    
+    			<h3>MYJUMP Trampolinpark Thüringen</h3>
+    			<p align="justify">Du willst hoch hinaus? Dann bist du bei uns genau richtig!<br>
+Auf über 1.600 m² kannst du dich mit deinen Freunden richtig austoben. Komm vorbei und hüpf nach Lust und Laune in unserer Freestyle Zone, fordere deine Freunde in unsere Dodgeball Zone oder geht an eure Grenzen in unserem Ninja-Parcour. Diese und viele weitere Attraktionen erwarten dich im MYJUMP Trampolinpark Thüringen.<br>
+Wir freuen uns auf dich!</p>
 
-Öffnungszeiten: täglich ab 17:00 Uhr</p>
-
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+4936178924888" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://patricks.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('https://booking.myjump.de/erfurt', '_blank', 'closebuttoncaption=fertig');">Reservieren</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://myjump.de/', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
            
             
 <!-- Ausgabe Map -->            
             
             	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="50.982055, 11.031580">
+					<input type="hidden" id="end" value="51.009514, 11.030672">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
