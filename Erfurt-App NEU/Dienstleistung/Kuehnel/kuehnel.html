@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.973088, 11.028418);
+   var currentLocationMap = new google.maps.LatLng(51.007232, 10.999321);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.973088, lng: 11.028418},
+    position: {lat: 51.007232, lng: 10.999321},
     map: geolocationDetails
   	});
 
@@ -103,24 +103,19 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="dubliner.jpg" width="100%" />
-    			<h3>Dubliner Irish Pub</h3>
-    			<p align="justify">Hier trifft man sich um entspannt ein Guinness zu genießen, neue Freunde zu finden oder der Live-Musik zu lauschen.<br>
-An warmen Sommerabenden können Sie mit Ihren Freunden auf eleganten und edlen Loungemöbeln in unserem Biergarten entspannen. Neben dem irischen Nationalgericht "Sheperd's Pie" servieren wir Ihnen saftige Burger, Steaks in verschiedenen Variationen und Bier begleitende Speisen.<br>
-Also bis bald. Slàinte!<br><br>
+                <img src="kuehnel.jpg" width="100%" />
+    			<h3>Fahrschule Kühnel</h3>
+    			<p align="justify">Seit über 25 Jahren begleitet die Fahrschule Kühnel Menschen auf ihrem Weg zum Führerschein.<br>
+Egal ob Auto, Motorrad, Moped oder - deutlich größer - LKW und Bus.<br>
+Die Ausbildung ist für alle Klassen möglich.</p>
 
-<span class="rot">Nur montags und bei Vorlage der Erfurt-App: 0,5l geschenkt - das erste Guinness geht auf uns!</span><br><br>
-
-Öffnungszeiten: täglich ab 16:00 Uhr<br>
-Zur Bundesliga ab 15:00 Uhr</p>
-
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493617892595" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.dublinererfurt.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+4915123035656" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.fs-kuehnel.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
            
             
 <!-- Ausgabe Map -->            
             
             	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="50.973088, 11.028418">
+					<input type="hidden" id="end" value="51.007232, 10.999321">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
