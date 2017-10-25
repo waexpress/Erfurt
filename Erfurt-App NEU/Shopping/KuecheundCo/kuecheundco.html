@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.977740, 11.025803);
+   var currentLocationMap = new google.maps.LatLng(50.973703, 11.035231);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.977740, lng: 11.025803},
+    position: {lat: 50.973703, lng: 11.035231},
     map: geolocationDetails
   	});
 
@@ -103,20 +103,20 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="donut.jpg" width="100%" />
-    			<h3>Donut Kings & Coffee</h3>
-    			<p align="justify">Wenn Du Donuts liebst bist Du bei uns genau richtig. Wir bereiten jeden Tag bis zu 18 verschiedene Sorten Donuts frisch zu.<br>
-Egal ob einzeln oder in der 6er-Box - unsere leckeren Kreationen werden Dir den Alltag versüßen. Übrigens: Falls Du den runden Leckerbissen nicht erst nach Hause tragen möchtest - einen Kaffee zum Donut gibt es bei uns natürlich auch.<br><br>
+                <img src="KUECHECo.jpg" width="100%" />
+                
+                
+    			<h3>Küche & Co Erfurt</h3>
+    			<p align="justify">Das Küchenteam von Herrn Mike Kormann berät Sie gern zu Ihrer neuen Einbauküche - bei uns im Küchenstudio oder bequem bei Ihnen zu Hause. Besuchen Sie uns in Erfurt Juri-Gagarin-Ring 96/98 oder vereinbaren Sie gleich einen kostenlosen Beratungstermin.<br><br>
+Das Team von Küche & Co freut sich auf Sie.</p>
 
-Mo. - Sa. 11:00 - 18:00 Uhr, Sonn- und Feiertag 13:00 - 18:00 Uhr</p>
-
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+491727187681" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.donut-kings-erfurt.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
-           
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493615400800" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('https://www.kueche-co.de/erfurt', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+			
             
 <!-- Ausgabe Map -->            
-            
-            	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="50.977740, 11.025803">
+              
+            <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+				<input type="hidden" id="end" value="50.973703, 11.035231">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
