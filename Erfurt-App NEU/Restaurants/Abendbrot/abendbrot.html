@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(51.010899, 11.038438);
+   var currentLocationMap = new google.maps.LatLng(50.981948, 11.030514);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 51.010899, lng: 11.038438},
+    position: {lat: 50.981948, lng: 11.030514},
     map: geolocationDetails
   	});
 
@@ -103,25 +103,23 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="ebz.jpg" width="100%" />
-    			<h3>ERFURT Bildungszentrum gGmbH</h3>
-    			<p align="justify">Wir sind ein Innovativer Bildungs- und Personaldienstleister im technisch-gewerblichen Bereich in Thüringen und bundesweit.<br>
-            <ul>
-            <li>Berufsorientierung</li>
-            <li>Aus- und Weiterbildung</li>
-            <li>Firmenschulungen</li>
-            <li>Aufstiegsbildung</li>
-            <li>Gewerblich-technische Dienstleistungen</li>
-            <li>Internationale Projekte</li></ul>
-            Informieren Sie sich noch heute auf unserer Homepage.</p>
+                <img src="Abendbrot.jpg" width="100%" />
+    			<h3>Abendbrot</h3>
+    			<p align="justify">Das kleine, gemütliche Bistro, mit ungarischen Spezialitäten rund um das Schornsteinbrot, warm serviert und köstlich, die täglich wechselnde Suppe, ungarisches Bier, Wein und natürlich Palinka, machen es zu einem Geheimtip für Erfurt! Auf jeden Fall einen Besuch wert!<br>
+Jeden Mittwoch 11:30 Uhr – 14:00 Uhr Schnitzel „Wiener Art“ mit hausgemachtem Kartoffelsalat
+<br>
+<br>
+Di.– Do. 17:00 Uhr - 22:00 Uhr<br>
+Fr. – Sa. 17:00 Uhr - 24:00 Uhr<br>
+Mo. & So. Ruhetag</p>
 
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+4936151807500" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.ebz-verbund.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493616003687" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.facebook.com/Abendbrot-Bistro-mit-ung-Spezialit%C3%A4ten-329907590548865/', '_blank', 'closebuttoncaption=fertig');">Facebook</a></div>
            
             
 <!-- Ausgabe Map -->            
             
             	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="51.010899, 11.038438">
+					<input type="hidden" id="end" value="50.981948, 11.030514">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>

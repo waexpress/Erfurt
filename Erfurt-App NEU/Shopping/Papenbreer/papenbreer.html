@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(51.010899, 11.038438);
+   var currentLocationMap = new google.maps.LatLng(50.975222, 11.033233);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 51.010899, lng: 11.038438},
+    position: {lat: 50.975222, lng: 11.033233},
     map: geolocationDetails
   	});
 
@@ -103,25 +103,18 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="ebz.jpg" width="100%" />
-    			<h3>ERFURT Bildungszentrum gGmbH</h3>
-    			<p align="justify">Wir sind ein Innovativer Bildungs- und Personaldienstleister im technisch-gewerblichen Bereich in Thüringen und bundesweit.<br>
-            <ul>
-            <li>Berufsorientierung</li>
-            <li>Aus- und Weiterbildung</li>
-            <li>Firmenschulungen</li>
-            <li>Aufstiegsbildung</li>
-            <li>Gewerblich-technische Dienstleistungen</li>
-            <li>Internationale Projekte</li></ul>
-            Informieren Sie sich noch heute auf unserer Homepage.</p>
+                <img src="Papenbreer.jpg" width="100%" />
+    			<h3>PAPENBREER Modehaus</h3>
+    			<p align="justify">Ihr erster Ansprechpartner für individuelle Damen-, Herren- und Kindermode in Erfurt. Fühlen Sie die besondere Qualität <a href="#" onClick="var ref = window.open('http://bit.ly/2kp5cBe', '_blank', 'closebuttoncaption=fertig');">exklusiver Marken</a> und erleben Sie die außergewöhnliche Beratungs- und Servicequalität unseres Personals. Mit einem feinen Gespür für Trends und dem ausgeprägten Gefühl für die Bedürfnisse unserer Kunden, erfüllen wir Ihre Wünsche nach einem eleganten und zeitgemäßen Outfit. Unsere Auswahl erstreckt sich von festlichen Kleidern sowie Casual bis Business Ware für Damen und Herren. Die <a href="#" onClick="var ref = window.open('http://bit.ly/2nzEjMv', '_blank', 'closebuttoncaption=fertig');">aktuellen Trends</a> spiegeln sich auch in unserer Kinderabteilung wieder.<br>
+Besuchen Sie unser Modehaus in der Erfurter Innenstadt am Anger 23.</p>
 
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+4936151807500" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.ebz-verbund.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
-           
+				<div align="center" data-role="controlgroup" data-type="horizontal"><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://bit.ly/2BBH3L5', '_blank', 'closebuttoncaption=fertig');">Homepage</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://bit.ly/2BCXoPE', '_blank', 'closebuttoncaption=fertig');">Facebook</a></div>
+			
             
 <!-- Ausgabe Map -->            
-            
-            	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="51.010899, 11.038438">
+              
+            <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+				<input type="hidden" id="end" value="50.975222, 11.033233">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>

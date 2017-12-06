@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(51.010899, 11.038438);
+   var currentLocationMap = new google.maps.LatLng(50.974989, 11.032495);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 51.010899, lng: 11.038438},
+    position: {lat: 50.974989, lng: 11.032495},
     map: geolocationDetails
   	});
 
@@ -103,25 +103,17 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="ebz.jpg" width="100%" />
-    			<h3>ERFURT Bildungszentrum gGmbH</h3>
-    			<p align="justify">Wir sind ein Innovativer Bildungs- und Personaldienstleister im technisch-gewerblichen Bereich in Thüringen und bundesweit.<br>
-            <ul>
-            <li>Berufsorientierung</li>
-            <li>Aus- und Weiterbildung</li>
-            <li>Firmenschulungen</li>
-            <li>Aufstiegsbildung</li>
-            <li>Gewerblich-technische Dienstleistungen</li>
-            <li>Internationale Projekte</li></ul>
-            Informieren Sie sich noch heute auf unserer Homepage.</p>
+                <img src="Stylefully.jpg" width="100%" />
+    			<h3>Stylefully – Damenmode ab Größe 42</h3>
+    			<p align="justify">Ihr erster Ansprechpartner für individuelle Damenmode ab Größe 42. Fühlen Sie die besondere Qualität exklusiver Marken und erleben Sie die außergewöhnliche Beratungs- und Servicequalität unseres Personals. Mit einem feinen Gespür für Trends und dem ausgeprägten Gefühl für die Bedürfnisse unserer Kunden, erfüllen wir Ihre Wünsche nach einem <a href="#" onClick="var ref = window.open('http://bit.ly/2AS8WCe', '_blank', 'closebuttoncaption=fertig');">eleganten und zeitgemäßen Outfit</a>. Unsere Auswahl erstreckt sich von festlichen Kleidern sowie Casual bis Business Ware für Damenmode, ab Größe 42. Besuchen Sie das Stylefully by Papenbreer in der Erfurter Innenstadt am Anger 50.</p>
 
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+4936151807500" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.ebz-verbund.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
-           
+				<div align="center" data-role="controlgroup" data-type="horizontal"><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://bit.ly/2AzxLQR', '_blank', 'closebuttoncaption=fertig');">Onlineshop</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://bit.ly/2zPA2G8', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+			
             
 <!-- Ausgabe Map -->            
-            
-            	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="51.010899, 11.038438">
+              
+            <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+				<input type="hidden" id="end" value="50.974989, 11.032495">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>

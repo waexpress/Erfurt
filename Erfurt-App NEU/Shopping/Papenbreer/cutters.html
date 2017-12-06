@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(51.010899, 11.038438);
+   var currentLocationMap = new google.maps.LatLng(50.974630, 11.032071);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 51.010899, lng: 11.038438},
+    position: {lat: 50.974630, lng: 11.032071},
     map: geolocationDetails
   	});
 
@@ -103,25 +103,17 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="ebz.jpg" width="100%" />
-    			<h3>ERFURT Bildungszentrum gGmbH</h3>
-    			<p align="justify">Wir sind ein Innovativer Bildungs- und Personaldienstleister im technisch-gewerblichen Bereich in Thüringen und bundesweit.<br>
-            <ul>
-            <li>Berufsorientierung</li>
-            <li>Aus- und Weiterbildung</li>
-            <li>Firmenschulungen</li>
-            <li>Aufstiegsbildung</li>
-            <li>Gewerblich-technische Dienstleistungen</li>
-            <li>Internationale Projekte</li></ul>
-            Informieren Sie sich noch heute auf unserer Homepage.</p>
+                <img src="Cutters.jpg" width="100%" />
+    			<h3>CUTTERS – Store | Urban | Streetwear</h3>
+    			<p align="justify">Wir leben den urbanen Style – du auch? CUTTERS - dein erster Ansprechpartner für Frauen-  sowie Männer Streetwear und die aktuellen Trends bspw. von Adidas, Fila, Puma, Lee, Replay, Pepe, Herschel, Eastpak, Alpha Industrie, Review u.a.</p>
 
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+4936151807500" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.ebz-verbund.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
-           
+				<div align="center" data-role="controlgroup" data-type="horizontal"><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://bit.ly/2AYFTgL', '_blank', 'closebuttoncaption=fertig');">Facebook</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://bit.ly/2jSPavz', '_blank', 'closebuttoncaption=fertig');">Instagram</a></div>
+			
             
 <!-- Ausgabe Map -->            
-            
-            	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="51.010899, 11.038438">
+              
+            <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+				<input type="hidden" id="end" value="50.974630, 11.032071">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>

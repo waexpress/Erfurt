@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(51.008652, 10.994226);
+   var currentLocationMap = new google.maps.LatLng(51.003732, 11.013970);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 51.008652, lng: 10.994226},
+    position: {lat: 51.003732, lng: 11.013970},
     map: geolocationDetails
   	});
 
@@ -103,19 +103,19 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="stones.jpg" width="100%" />
-    			<h3>STONES by Mock Herrenmode</h3>
-   				 <p align="justify">Stones by Mock bietet urbane Männermode namenhafter Marken für den modischen Mann. Egal ob sportliche Mode, hochwertige Businesskleidung oder Anzüge für festliche Anlässe, Schulabschluss oder Berufsstart – Wir kleiden Sie perfekt ein.<br>
-Marken & Labels:<br>
-Digel, G.O.L., Hatico, MAC, Milestone, Monte Carlo, Pierre Cardin, Pure, Schiesser, Siguum</p>
+                <img src="swe.jpg" width="100%" />
+    
+    			<h3>SWE Volley-Team</h3>
+    			<p align="justify">Das Damen-Team Schwarz-Weiss-Erfurt spielt seit der Saison 2016/17 in der 1. Volleyball Bundesliga und gehört zum SWE-Volley-Team e.V.<br>
+Alle Heimspiele unserer Mannschaft sind hier in der App unter "Veranstaltungen" aufgelistet. Wir laden Sie ein, uns durch lautstarke Unterstützung, als Mitglied oder Sponsor auf dem Weg durch die Bundesliga zu begleiten.</p>
 
-				<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493617463338" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.mode-mock.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
-			
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493616016871" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.schwarz-weiss-erfurt.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+           
             
 <!-- Ausgabe Map -->            
-              
-            <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-				<input type="hidden" id="end" value="51.008652, 10.994226">
+            
+            	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+					<input type="hidden" id="end" value="51.003732, 11.013970">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
