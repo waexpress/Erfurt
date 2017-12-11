@@ -9,13 +9,13 @@
     
 		<title>Erfurt-App</title>
 		
-		<link rel="stylesheet" href="../../themes/ErfurtApp1.min.css" />
-	<link rel="stylesheet" href="../../themes/jquery.mobile.icons.min.css" />
-	<link rel="stylesheet" href="../../jquery.mobile.structure-1.4.5.min.css" />
-	<script src="../../jquery-1.11.1.min.js"></script>
-	<script src="../../jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" href="../themes/ErfurtApp1.min.css" />
+	<link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../jquery.mobile.structure-1.4.5.min.css" />
+	<script src="../jquery-1.11.1.min.js"></script>
+	<script src="../jquery.mobile-1.4.5.min.js"></script>
     
-    <script type="text/javascript" src="../../cordova.js"></script>
+    <script type="text/javascript" src="../cordova.js"></script>
     
     
 <!-- Beginn Map -->    
@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.960931, 11.014622);
+   var currentLocationMap = new google.maps.LatLng(50.979264, 11.028580);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.960931, lng: 11.014622},
+    position: {lat: 50.979264, lng: 11.028580},
     map: geolocationDetails
   	});
 
@@ -103,18 +103,22 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="kresse.jpg" width="100%" />
-    			<h3>Kressepark</h3>
-    			<p align="justify">Entdecken Sie das vielseitige Angebot im Natur- & Erlebnispark im Erfurter Süden.<br>
-Spazieren, Spielen oder Entspannen, der Kressepark ist bei Jung und Alt als Ausflugsziel gleichermaßen beliebt! Inmitten des idyllischen Kressepark-Geländes liegt das Restaurant & Café die Villa Haage. Wir haben es uns zur Aufgabe gemacht, Ihre Gaumen mit unseren kulinarischen und saisonal abgestimmten Spezialitäten zu erfreuen. Seit Langem ist die Villa Haage, der Mandala Beachclub und der Loft Club im Kressppark renommiert für Feierlichkeiten jeder Art und Größe.</p>
+                <img src="Waidspeicher.jpg" width="100%" />
+    			
+                
+    			<h3>Galerie Waidspeicher</h3>
+    			<p align="justify">Die Galerie Waidspeicher (zugehörig zu den Kunstmuseen Erfurt) präsentiert nationale und internationale zeitgenössische Kunst. Sie befindet sich in einem Renaissanceensemble mit historischem Waidspeicher im sogenannten Lateinischen Viertel der Erfurter Altstadt. Die Galerie zeigt ständig wechselnde Ausstellungen vorrangig aus den Bereichen Installation und Skulptur sowie Werke der angewandten Kunst.<br><br>
+              	<strong>Öffnungszeiten:</strong><br>
+        		Di. bis So. von 11:00 bis 18:00 Uhr<br>
+            	An jedem 1. Di. im Monat ist der Eintritt frei.</p>
 
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493617894413" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.kressepark-erfurt.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493616551960" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.galerie-waidspeicher.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
            
             
 <!-- Ausgabe Map -->            
             
             	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="50.960931, 11.014622">
+					<input type="hidden" id="end" value="50.979264, 11.028580">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
@@ -141,8 +145,8 @@ Spazieren, Spielen oder Entspannen, der Kressepark ist bei Jung und Alt als Ausf
   				<ul>
         		<li><a data-role="button" data-rel="back" data-direction="reverse">zurück</a></li>
         		<li><a data-role="button" href="#" onClick="var ref = window.open('https://www.facebook.com/ErfurtApp?fref=ts', '_blank', 'closebuttoncaption=fertig');">Facebook</a></li>
-        		<li><a href="../../Impressum.html" rel="external">Impressum</a></li>
-        		<li><a href="../../index.html" rel="external">home</a></li>
+        		<li><a href="../Impressum.html" rel="external">Impressum</a></li>
+        		<li><a href="../index.html" rel="external">home</a></li>
       			</ul>
       		</div>
   			</footer>
