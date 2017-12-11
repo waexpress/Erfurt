@@ -8,7 +8,7 @@
   <preference name="SplashScreen" value="screen" />
   <preference name="SplashScreenDelay" value="8000" />
   
-<gap:plugin name="onesignal-cordova-plugin" spec="^2.1.1" source="npm" />
+<gap:plugin name="onesignal-cordova-plugin" spec="^2.2.0" source="npm" />
 
 <!--Requires cli-6.4.0 but we recommend using the latest version. -->
 <preference name="phonegap-version" value="cli-7.0.1" />
