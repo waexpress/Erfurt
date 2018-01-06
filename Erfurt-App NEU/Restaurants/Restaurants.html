@@ -4,7 +4,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta http-equiv="Content-Security-Policy" content="default-src * gap:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
 	<title>Erfurt-App</title>
 	<link rel="stylesheet" href="../themes/ErfurtApp1.min.css" />
 	<link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
@@ -41,16 +41,6 @@ Bei einem Spaziergang durch Erfurts Innenstadt, sollten Sie aber auch unbedingt 
         
         <ul data-role="listview" data-inset="true" data-filter="true">
         
-        <li data-role="list-divider">
-            A
-        </li>
-        
-        <li data-filtertext="Abendbrot ungarisch Schornsteinbrot Spezialitäten Suppe ungarisches Bier Wein Palinka">
-                <h3>Abendbrot</h3>
-                <p align="justify"><font style="white-space:normal;">
-                <span class="adresse">Augustinerstr. 5, 99084 Erfurt </span><br>
-				<a href="Abendbrot/abendbrot.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
-        </li>
         
         <li data-role="list-divider">
             B
@@ -65,13 +55,6 @@ Bei einem Spaziergang durch Erfurts Innenstadt, sollten Sie aber auch unbedingt 
         
         <li data-role="list-divider">
             C
-        </li>
-        
-        <li data-filtertext="Café Polo Cafe Kaffee Eiscafe italienisch Frühstück Lomgdrink Getränke">
-                <h3>Café Polo</h3>
-                <p align="justify"><font style="white-space:normal;">
-                <span class="adresse">Anger 42, 99084 Erfurt </span><br>
-				<a href="Polo/polo.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
         </li>
         
         <li data-filtertext="Restaurant Pizza and Grill Charleston italienisch Grill Pizza Pasta mediteran">
@@ -90,6 +73,13 @@ Bei einem Spaziergang durch Erfurts Innenstadt, sollten Sie aber auch unbedingt 
         
         <li data-role="list-divider">
             D
+        </li>
+        
+        <li data-filtertext="Donut King Kaffee Donut Kings & Coffee">
+                <h3>Donut Kings & Coffee</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Marktstr. 34/35, 99084 Erfurt </span><br>
+				<a href="Donut/Donut.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
         </li>
         
         <li data-filtertext="Dubliner Irish Pub, Stew, Burger, Snacks, Guinness">
@@ -150,6 +140,13 @@ Bei einem Spaziergang durch Erfurts Innenstadt, sollten Sie aber auch unbedingt 
             K
         </li>
         
+        <li data-filtertext="Kressepark Villa Haage Loft Club Mandala Beachclub Restaurant Café saisonal Fisch">
+                <h3>Kressepark</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Motzstr. 8, 99094 Erfurt</span><br>
+				<a href="Kressepark/Kressepark.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
         <li data-role="list-divider">
             L
         </li>
@@ -179,7 +176,7 @@ Bei einem Spaziergang durch Erfurts Innenstadt, sollten Sie aber auch unbedingt 
         <li data-filtertext="Nerly, Cafe, Restaurant, Bar, nostalgisch, Kaffee, 20er Jahre">
                 <h3>Nerly - Cafe • Restaurant • Bar</h3>
                 <p align="justify"><font style="white-space:normal;">
-                <span class="adresse">Marktstraße 6, 99084 Erfurt</span><br>
+                <span class="adresse">Marktstraße 6, 99084 Erfurt </span><br>
 				<a href="Nerly/nerly.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
         </li>
         
@@ -216,18 +213,18 @@ Bei einem Spaziergang durch Erfurts Innenstadt, sollten Sie aber auch unbedingt 
             S
         </li>
         
-        <li data-filtertext="San Remo, Eis, Café, italienisch, Kaffee, Eisbecher">
-                <h3>Eiscafé "San Remo"</h3>
-                <p align="justify"><font style="white-space:normal;">
-                <span class="adresse">Marktstr. 21, 99084 Erfurt</span><br>
-				<a href="SanRemo/sanremo.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
-        </li>
-        
         <li data-filtertext="Schnitzler Schnitzelhaus am Dom">
                 <h3>"Schnitzler" Schnitzelhaus am Dom</h3>
                 <p align="justify"><font style="white-space:normal;">
                 <span class="adresse">Domplatz 32-33, 99084 Erfurt</span><br>
 				<a href="Schnitzler/Schnitzler.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Caféhaus Spiegler Kaffee Cafe Kuchen Tee Brot Brötchen Kuchen Torte">
+                <h3>Spieglers – Cafè am Wenigemarkt</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Wenigemarkt 20, 99084 Erfurt </span><br>
+				<a href="Spiegler/spiegler.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
         </li>
         
         <li data-role="list-divider">
@@ -245,6 +242,12 @@ Bei einem Spaziergang durch Erfurts Innenstadt, sollten Sie aber auch unbedingt 
             W
         </li>
         
+        <li data-filtertext="Wirtshaus Zum Schildchen & Zum Eisernen Handschuh Altstadt Biergarten Mittelalter historisch Rittermahl">
+                <h3>Wirtshaus "Zum Schildchen & Zum Eisernen Handschuh"</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Schildgasse 3-4, 99084 Erfurt</span><br>
+				<a href="Schildchen/Schildchen.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
         
         <li data-filtertext="Wirtshaus Christoffel Altstadt Biergarten Mittelalter historisch Rittermahl Grill Ritteressen">
                 <h3>Wirtshaus Christoffel</h3>
@@ -253,11 +256,15 @@ Bei einem Spaziergang durch Erfurts Innenstadt, sollten Sie aber auch unbedingt 
 				<a href="Christoffel/Christoffel.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
         </li>
         
-        <li data-filtertext="Weltbrot Teigtaschen gefüllt Brot">
-                <h3>WeltBrot</h3>
+        <li data-role="list-divider">
+            V
+        </li>
+        
+        <li data-filtertext="Vinho Feinkost Wein Käse Schinken Olivenöl Öl Spezialitäten Italien Portugal Spanien Honig">
+                <h3>Vinho Feinkost</h3>
                 <p align="justify"><font style="white-space:normal;">
-                <span class="adresse">Marktstr. 35, 99084 Erfurt</span><br>
-				<a href="Weltbrot/weltbrot.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+                <span class="adresse">Große Arche 2, 99084 Erfurt</span><br>
+				<a href="../Shopping/Vinho/Vinho.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
         </li>
         
         <li data-role="list-divider">

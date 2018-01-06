@@ -4,7 +4,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta http-equiv="Content-Security-Policy" content="default-src * gap:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
 	<title>Erfurt-App</title>
 	<link rel="stylesheet" href="../themes/ErfurtApp1.min.css" />
 	<link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
@@ -63,6 +63,18 @@
                 <span class="angebot">3% Rabatt auf alle Freiwahlartikel und alle apothekenpflichtigen Arzneimittel*</span><br>
                 <span class="adresse">Bahnhofstr. 40, 99084 Erfurt</span><br>
                 <span class="kleineschrift">*bei Vorlage der Erfurt-App</span><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Baby-, Kinder- & Spielwaren
+        </li>
+        <li data-filtertext="Baby Life Babyausstatter Kinderwagen Kinderbekleidung">
+                <h3>Baby-Life der Babyausstatter</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="angebot">Ab einem Wareneinkauf von 50 Euro gibt es einen Einkaufsgutschein über 5 Euro*</span><br>
+                <span class="adresse">Juri-Gagarin-Ring 41, 99084 Erfurt</span><br>
+				<a href="../Shopping/Babylife/Babylife.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br>
+				<span class="kleineschrift">*bei Vorlage der Erfurt-App, keine Barauszahlung, nur 1 Gutschein pro Kunde einlösbar</span><br></font></p>
         </li>
         
         <li data-role="list-divider">
@@ -133,22 +145,20 @@
             Essen & Trinken
         </li>
         
-        <li data-icon="false" data-filtertext="Fisch Hofladen Kressepark Erfurt Forelle Räucherfisch">
+        <li data-icon="false" data-filtertext="Fisch Hofladen Kressepark essen trinken">
                 <h3>Fisch Hofladen Kressepark Erfurt</h3>
                 <p align="justify"><font style="white-space:normal;">
                 <span class="angebot">10% auf das gesamte Verkaufssortiment*</span><br>
                 <span class="adresse">Motzstraße 8, 99084 Erfurt</span><br>
-                <a href="../Shopping/Hofladen/hofladen.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br>
                 <span class="kleineschrift">*bei Vorlage der Erfurt-App</span><br></font></p>
         </li>
         
-        <li data-icon="false" data-filtertext="Dubliner Irish Pub Guinness Bier Freibier">
-                <h3>Dubliner Irish Pub</h3>
+        <li data-icon="false" data-filtertext="Hotel Restaurant Park Cafe Isa essen trinken">
+                <h3>Hotel &amp; Restaurant Park Café "ISA"</h3>
                 <p align="justify"><font style="white-space:normal;">
-                <span class="angebot">0,5l geschenkt - das zweite Guinness geht auf uns!*</span><br>
-                <span class="adresse">Neuwerkstr. 47a, 99084 Erfurt</span><br>
-                <a href="../Restaurants/Dubliner/Dubliner.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br>
-                <span class="kleineschrift">*nur montags 17:00 - 22:00 Uhr, bei Vorlage der Erfurt-App</span><br></font></p>
+                <span class="angebot">10% Rabatt auf Speisen und Getränke*</span><br>
+                <span class="adresse">Sternberger Str. 6, 99091 Erfurt</span><br>
+                <span class="kleineschrift">*bei Vorlage der Erfurt-App</span><br></font></p>
         </li>
         
         <li data-icon="false" data-filtertext="Numa Nudelmacher Spaghetti Nudeln">
@@ -169,32 +179,20 @@
                 <p align="justify"><font style="white-space:normal;">
                 <span class="angebot">10% Rabatt auf unsere Serviceleistungen* und bis zu 20% Rabatt auf Auslaufmodelle**</span><br>
                 <span class="adresse">Johannesstr. 123, 99084 Erfurt</span><br>
-                <span class="kleineschrift">*bei Vorlage der Erfurt-App</span><br></font></p>
-        </li>
-        
-        <li data-role="list-divider">
-            Farben
-        </li>
-        
-        <li data-icon="false" data-filtertext="Farben Lehmann Farben, Tapeten Bodenbeläge Designbeläge, Laminate, Echtholzparkette, Bautenschutz, Fassadensanierung, Holzschutzlasuren, Holzdeckfarben, Industrielacke, Autolacke, Malerwerkzeuge">
-                <h3>Farben Lehmann</h3>
-                <p align="justify"><font style="white-space:normal;">
-                <span class="angebot">5% Rabatt auf das gesamte Verkaufssortiment!*</span><br>
-                <span class="adresse">Am Kühlhaus 6, 99085 Erfurt</span><br><a href="../Immobilien/Lehmann/lehmann.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br>
-                <span class="kleineschrift">*bei Vorlage der Erfurt-App</span><br></font></p>
+                <span class="kleineschrift">*bei Vorlage der Erfurt-App, **bis Ende Februar 2015</span><br></font></p>
         </li>
         
         <li data-role="list-divider">
             Fashion & Mode
         </li>
         
-        <li data-filtertext="Fashion Xquisit Store Gerry Weber, Mode, Designermode, Frauenmode, Damenmode, Taifun, Samoon Talk About">
-                <h3>Fashion Xquisit Store</h3>
+        <li data-filtertext="House of Gerry Weber, Mode, Designermode, Frauenmode, Damenmode, Taifun, Samoon">
+                <h3>House of Gerry Weber</h3>
                 <p align="justify"><font style="white-space:normal;">
-                <span class="angebot">Bei Vorlage der Erfurt-App erhalten Sie eine Gutschrift i.H.v 5 Euro*.</span><br>
+                <span class="angebot">Bei Vorlage der Erfurt-App erhalten Sie eine Gutschrift i.H.v 5 Euro.*</span><br>
                 <span class="adresse">Anger 32, 99084 Erfurt</span><br>
 				<a href="../Shopping/GerryWeber/Gerryweber.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br>
-				<span class="kleineschrift">* Ausgeschlossen ist reduzierte Ware. Die Aktion ist nicht mit anderen Aktionen kombinierbar.</span><br></font></p>
+				<span class="kleineschrift">* ausgeschlossen ist reduzierte Ware, nicht mit anderen Aktionen kombinierbar</span><br></font></p>
         </li>
         
         <li data-filtertext="Kauflust Erfurt by Anja Scheinpflug Mode Damenbekleidung Boutique Innenstadt italienisch">
@@ -231,7 +229,7 @@
         <li data-filtertext="Avenida-Therme Sauna Schwimmbad Freizeit">
                 <h3>Avenida-Therme</h3>
                 <p align="justify"><font style="white-space:normal;">
-                <span class="angebot">Mit der Erfurt-App erhalten Sie 2,00 € Nachlass pro Person auf die Standardtarife (für max. 2 Personen) oder auf die Familientarife.*</span><br>
+                <span class="angebot">Sie und eine Begleitperson erhalten 2,00 € Nachlass auf die Standardtarife oder mindestens 4,00 € Nachlass auf die Familientarife in der Thermenlandschaft und der 				Saunenwelt.*</span><br>
                 <span class="adresse">Am Stausee 1, 99448 Hohenfelden</span><br>
 				<a href="../Shopping/Avenida/Avenida.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br>
 				<span class="kleineschrift">*bei Vorlage der Erfurt-App, der Vorteil kann nur am Eingang gewährt werden, eine spätere Gewährung oder eine Rückerstattung des Vorteils ist ausgeschlossen</span><br>	</font></p>
@@ -240,7 +238,7 @@
         <li data-filtertext="Body fit Fitness Sport Freizeit">
                 <h3>Body fit</h3>
                 <p align="justify"><font style="white-space:normal;">
-                <span class="angebot">Studenten trainieren bei uns für nur 26,90 €/Monat*</span><br>
+                <span class="angebot">Studenten trainieren bei uns für nur 29,90 €/Monat*</span><br>
                 <span class="adresse">Mainzerstraße 38a, 99089 Erfurt</span><br>
 				<a href="../Shopping/Bodyfit/Bodyfit.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br>
 				<span class="kleineschrift">*bei Vorlage der Erfurt-App</span><br></font></p>
@@ -297,6 +295,16 @@
                 <span class="angebot">10% Rabatt inkl. eines Tages-Make-up*</span><br>
                 <span class="adresse">Eislebener Str. 1g, 99086 Erfurt</span><br>
 				<a href="../Shopping/Linke/Linke.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br>
+				<span class="kleineschrift">*bei Vorlage der Erfurt-App</span><br></font></p>
+        </li>
+        
+        <li data-filtertext="Friseursalon Straube Friseur Kosmetik">
+                <h3>Friseursalon Straube</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="angebot">Jeden letzten Do. im Monat frisieren wir zur alten Preisliste vom Juli 2013*<br>
+				Seniorentag: waschen + föhnen oder waschen + legen statt 17,80 Euro nur 15,00 Euro*</span><br>
+                <span class="adresse">Budapester Str. 37, 99091 Erfurt</span><br>
+				<a href="../Shopping/Straube/Straube.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br>
 				<span class="kleineschrift">*bei Vorlage der Erfurt-App</span><br></font></p>
         </li>
         
@@ -427,7 +435,18 @@
                 <span class="kleineschrift">*bei Vorlage der Erfurt-App</span><br></font></p>
         </li>
         
-        
+        <li data-role="list-divider">
+            Umzüge
+        </li>
+        <li data-filtertext="Umzug Umzüge Möbelmontage Wohnungsauflösung Erfurt Immobilien">
+                <h3>Umzüge Rothe</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="angebot">5% Rabatt auf alle Umzugsleistungen<br>
+				(ausgenommen sind Küchenplatten und Zubehör)*</span><br>
+                <span class="adresse">Käthe-Kollwitz-Str. 14, 99096 Erfurt</span><br>
+				<a href="../Dienstleistung/rothe/Rothe.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br>
+				<span class="kleineschrift">*bei Vorlage der Erfurt-App</span><br></font></p>
+        </li>
         
         
    </ul>
