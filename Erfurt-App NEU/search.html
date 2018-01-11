@@ -26,19 +26,19 @@
     </script>
     
     
+    
+    <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
-
-
-
+<link rel="stylesheet" href="tipuesearch/css/normalize.css">
 
 
 <script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
 <script type="text/javascript" src="tipuesearch/tipuesearch_content.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/css/tipuesearch.css">
 <script type="text/javascript" src="tipuesearch/tipuesearch.min.js"></script>
-
-
-
     
     
 </head>
@@ -47,41 +47,20 @@
 		
 		<div data-role="content">
     
-    		<img src="images/Erfurt_Jedermann_Logo.png" width="100%" />
-    		<p align="justify">Schon Martin Luther fand Gefallen an Thüringens Landeshauptstadt. Heute überrascht Erfurt mit einem historischen Zentrum, einer vielfältigen Kulturszene und einem der schönsten Weihnachtsmärkte Deutschlands.
-			</p>
+    		<h3>Impressum</h3>
             
-           <form action="search.html" data-ajax="false">
-<div class="tipue_search_right"><input type="text" placeholder="Suche nach..." name="q" id="tipue_search_input"></div>
+            
+            
+
+<form action="search.html" data-ajax="false">
+<div class="tipue_search_left"><img src="tipuesearch/search.png" class="tipue_search_icon"></div>
+<div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
 <div style="clear: both;"></div>
 </form>
 <div id="tipue_search_content"></div>
             
-        
-  			<div class="ui-grid-c">
-  			<div class="ui-block-a"><a href="Sehenswert/Sehenswert.html" rel="external"><img src="images/sehenswert.png" width="100%"></a></div>
-  			<div class="ui-block-b"><a href="Unterkunft/Unterkunft.html" rel="external"><img src="images/uebernachtung.png" width="100%"></a></div>
-  			<div class="ui-block-c"><a href="Dienstleistung/Dienstleistungen.html" rel="external"><img src="images/dienstleistung.png" width="100%"></a></div>
-  			<div class="ui-block-d"><a href="Stadtfuehrung/Stadtfuehrung.html" rel="external"><img src="images/stadtfuehrung.png" width="100%"></a></div>
-  			<div class="ui-block-a"><a href="Angebote/Angebote.html" rel="external"><img src="images/angebote.png" width="100%"></a></div>
-  			<div class="ui-block-b"><a href="Restaurants/Restaurants.html" rel="external"><img src="images/restaurants.png" width="100%"></a></div>
-  			<div class="ui-block-c"><a href="Parken/Parken.html" rel="external"><img src="images/parken.png" width="100%"></a></div>
-  			<div class="ui-block-d"><a href="Nahverkehr/Nahverkehr.html" rel="external"><img src="images/nahverkehr.png" width="100%"></a></div>
-  			<div class="ui-block-a"><a href="Shopping/Shopping.html" rel="external"><img src="images/einkaufen.png" width="100%"></a></div>
-  			<div class="ui-block-b"><a href="Freizeit/Freizeit.html" rel="external"><img src="images/freizeit.png" width="100%"></a></div>
-  			<div class="ui-block-c"><a href="Flughafen/Airport.html" rel="external"><img src="images/airport.png" width="100%"></a></div>
-  			<div class="ui-block-d"><a href="Immobilien/Immobilien.html" rel="external"><img src="images/immobilie.png" width="100%"></a></div>
-  			<div class="ui-block-a"><a href="#" onClick="var ref = window.open('http://www.wa-express.de/Veranstaltung/picker.html', '_blank', 'closebuttoncaption=fertig');"><img src="images/veranstaltungen.png" width="100%"></a></div>
-  			<div class="ui-block-b"><a href="#" onClick="var ref = window.open('http://www.erfurt-app.com', '_blank', 'closebuttoncaption=fertig');"><img src="images/shop.png" width="100%"></a></div>
-  			<div class="ui-block-b"><a href="Museen/Museen.html" rel="external"><img src="images/museen.png" width="100%"></a></div>
-  			<div class="ui-block-d"><a href="#" onClick="var ref = window.open('http://www.wa-express.de/job/index.html', '_blank', 'closebuttoncaption=fertig');"><img src="images/job.png" width="100%"></a></div>
-  			<div class="ui-block-a"><a href="Impressionen/templates/full-width/Impressionen.html" rel="external"><img src="images/impressionen.png" width="100%"></a></div>
-  			<div class="ui-block-b"><a href="Ausflug/Ausflugsziele.html" rel="external"><img src="images/ausflug.png" width="100%"></a></div>
-  			<div class="ui-block-b"><a href="Erfurtcard/Erfurtcard.html" rel="external"><img src="images/erfurtcard.png" width="100%"></a></div>
-  			<div class="ui-block-d"><a href="FAQ/FAQ.html" rel="external"><img src="images/faq.png" width="100%"></a></div>
-  			</div>
+            
     
-			<p>&nbsp;</p>
             
 	</div>
           
@@ -101,16 +80,8 @@
     
     <script>
 $(document).ready(function() {
-     $('#tipue_search_input').tipuesearch(
-	 {
-          'show': 9,
-          'showTime': false,
-		  'showURL': false,
-		  'descriptiveWords': 0
-     }
-	 );
+     $('#tipue_search_input').tipuesearch();
 });
 </script>
-    
 </body>
 </html>
