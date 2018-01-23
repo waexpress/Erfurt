@@ -4,7 +4,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * gap:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
 	<title>Erfurt-App</title>
 	<link rel="stylesheet" href="../themes/ErfurtApp1.min.css" />
 	<link rel="stylesheet" href="../themes/jquery.mobile.icons.min.css" />
@@ -52,6 +52,13 @@
 				<a href="escape/escape.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
         </li>
         
+        <li data-filtertext="MYJUMP Trampolinpark Thüringen Team aktiv springen Events">
+                <h3>MYJUMP Trampolinpark Thüringen</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">An der Lache 11, 99086 Erfurt</span><br>
+				<a href="Jump/jump.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
         <li data-role="list-divider">
             AIDA Schiffsspezialist
         </li>
@@ -82,7 +89,18 @@
         </li>
         
         <li data-role="list-divider">
-            Fitnessstudios
+            Entspannung
+        </li>
+        
+        <li data-filtertext="Dermakultura, Kosmetikinstitut, Beautyberater, Anti–Aging, Permanent Make-Up">
+                <h3>Dermakultura</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Schlösserstr. 11, 99084 Erfurt</span><br>
+				<a href="../Dienstleistung/Derma/derma.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Fitness
         </li>
         
         <li data-filtertext="Body fit Fitness Sport Freizeit">
@@ -90,6 +108,20 @@
                 <p align="justify"><font style="white-space:normal;">
                 <span class="adresse">Mainzerstraße 38a, 99089 Erfurt</span><br>
 				<a href="../Shopping/Bodyfit/Bodyfit.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Frau in Form Fitness Sport Freizeit">
+                <h3>Frau in Form</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Schmidtstedter Str. 23/25, 99084 Erfurt</span><br>
+				<a href="Frauinform/inform.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-filtertext="Zumba Fitness Sport Freizeit Aerobic Workout">
+                <h3>Zumba Erfurt</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Erfurter Landstraße 67, 99195 Erfurt</span><br>
+				<a href="Zumba/zumba.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
         </li>
         
         <li data-role="list-divider">
@@ -101,13 +133,6 @@
                 <p align="justify"><font style="white-space:normal;">
                 <span class="adresse">Gothaer Straße 38, 99094 Erfurt</span><br>
 				<a href="../Shopping/Ega/Ega.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
-        </li>
-        
-        <li data-filtertext="Kressepark Villa Haage Loft Club Mandala Beachclub Restaurant Café saisonal Fisch">
-                <h3>Kressepark</h3>
-                <p align="justify"><font style="white-space:normal;">
-                <span class="adresse">Motzstr. 8, 99094 Erfurt</span><br>
-				<a href="../Restaurants/Kressepark/Kressepark.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
         </li>
         
         <li data-role="list-divider">
@@ -122,6 +147,39 @@
         </li>
         
         <li data-role="list-divider">
+            Livemusik
+        </li>
+        
+        <li data-filtertext="Nerly, Cafe, Restaurant, Bar, nostalgisch, Kaffee, 20er Jahre Big Band, Bigband">
+                <h3>Nerly - Cafe • Restaurant • Bar</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Marktstraße 6, 99084 Erfurt</span><br>
+				<a href="../Restaurants/Nerly/nerly.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Messe
+        </li>
+        
+        <li data-filtertext="Messe Erfurt GmbH Veranstaltungen Ausstellungen">
+                <h3>Messe Erfurt GmbH</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Gothaer Straße 34, 99094 Erfurt</span><br>
+				<a href="Messe/messe.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
+            Reisen
+        </li>
+        
+        <li data-filtertext="familingo Reisebüro Familien Reisen Urlaub Mein Schiff Kreuzfahrten">
+                <h3>familingo - Ihr Reisebüro</h3>
+                <p align="justify"><font style="white-space:normal;">
+                <span class="adresse">Neuwerkstr. 19, 99084 Erfurt</span><br>
+				<a href="../Dienstleistung/Familingo/familingo.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+        </li>
+        
+        <li data-role="list-divider">
             Sportvereine
         </li>
         
@@ -132,22 +190,11 @@
 				<a href="BlackDragons/Dragons.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
         </li>
         
-        <li data-role="list-divider">
-            Tanzen gehen
-        </li>
-        
-        <li data-filtertext="Tanzcafe Erfurt tanzen Tanzabend Freizeit">
-                <h3>Tanzcafe Erfurt</h3>
+        <li data-filtertext="SWE Volley-Team Volleyball Sport Damen Schwarz Weiss Erfurt">
+                <h3>SWE Volley-Team</h3>
                 <p align="justify"><font style="white-space:normal;">
-                <span class="adresse">Konrad-Zuse-Str. 12, 99099 Erfurt</span><br>
-				<a href="tanzcafe/Tanzcafe.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
-        </li>
-        
-        <li data-filtertext="Presseklub Erfurt tanzen Musik Club  Disco Party Bar Cocktail Lounge Freizeit">
-                <h3>Presseklub</h3>
-                <p align="justify"><font style="white-space:normal;">
-                <span class="adresse">Dalbergsweg 1, 99084 Erfurt</span><br>
-				<a href="presseclub/presseclub.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
+                <span class="adresse">Schützenstr. 4, 99096 Erfurt</span><br>
+				<a href="SWE/swe.html" rel="external" class="ui-btn ui-btn-inline" data-role="button">weitere Infos</a><br></font></p>
         </li>
         
         <li data-role="list-divider">

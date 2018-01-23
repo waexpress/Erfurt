@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * gap:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
     
 		<title>Erfurt-App</title>
 		
@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(51.005061, 11.033010);
+   var currentLocationMap = new google.maps.LatLng(51.010899, 11.038438);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 51.005061, lng: 11.033010},
+    position: {lat: 51.010899, lng: 11.038438},
     map: geolocationDetails
   	});
 
@@ -111,8 +111,8 @@ function calculateRoute()
             <li>Aus- und Weiterbildung</li>
             <li>Firmenschulungen</li>
             <li>Aufstiegsbildung</li>
-            <li>Gewerblich-technische
-            Dienstleistungen</li></ul>
+            <li>Gewerblich-technische Dienstleistungen</li>
+            <li>Internationale Projekte</li></ul>
             Informieren Sie sich noch heute auf unserer Homepage.</p>
 
 			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+4936151807500" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.ebz-verbund.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
@@ -121,7 +121,7 @@ function calculateRoute()
 <!-- Ausgabe Map -->            
             
             	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="51.005061, 11.033010">
+					<input type="hidden" id="end" value="51.010899, 11.038438">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
