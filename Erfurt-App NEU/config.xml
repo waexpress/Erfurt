@@ -1,4 +1,4 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="de.wa-express.erfurt" version="2.2.7" versionCode="487">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="de.wa-express.erfurt" version="2.2.8" versionCode="488">
   <name>Erfurt App</name>
   <description>Schon Martin Luther fand gefallen an Thüringens Landeshauptstadt. Heute überrascht Erfurt mit einem historischen Zentrum, einer vielfältigen Kulturszene und einem der schönsten Weihnachtsmärkte Deutschlands. Die Erfurt-App ist sowohl für Erfurter als auch für Besucher Erfurts interessant. Ob Restaurants, Hotels, Veranstaltungen, Sehenswürdigkeiten, Museen oder Shopping-Tipps - in der Erfurt-App ist alles nur einen Klick entfernt.</description>
   <author href="http://www.wa-express.de" email="kontakt@wa-express.de">Weimann/Schmidt GbR</author>
