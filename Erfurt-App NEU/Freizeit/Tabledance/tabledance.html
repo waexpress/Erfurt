@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(50.977575, 11.027448);
+   var currentLocationMap = new google.maps.LatLng(50.975604, 11.018367);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 50.977575, lng: 11.027448},
+    position: {lat: 50.975604, lng: 11.018367},
     map: geolocationDetails
   	});
 
@@ -103,22 +103,19 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="nerly.png" width="100%" />
-    			<h3>Nerly - Cafe • Restaurant • Bar</h3>
-    			<p align="justify">Von der Marktstrasse aus gehen Sie durch unseren Garten in eine andere Welt. Hinter der schlichten Fassade des Gebäudes verbirgt sich die Atmosphäre der zwanziger Jahre. Bei uns sitzen Sie nicht dicht aneinander gedrängt in kleinen Räumen, sondern in der Großzügigkeit eines Salons mit liebevoll restaurierten historischen Mobiliar.<br>
-Lassen Sie sich vom Ambiente dieser Zeit verzaubern und
-genießen Sie den Aufenthalt.
-<br>
-<br>
-Wir haben Mo. - Sa. ab 17:00 Uhr geöffnet.</p>
+                <img src="deluxe.jpg" width="100%" />
+    
+    			<h3>Deluxe TABLEDANCE</h3>
+    			<p align="justify">Unsere stilvoll und modern eingerichtete Deluxe Tabledance Bar befindet sich im ehemaligen Casino am Erfuter Brühl. Hier heizen Ihnen unsere Girls und Boys so richtig ein.<br>
+Egal, ob Sie eine Location für Junggesellinnenabschiede, Junggesellenabschiede, Männerabende, Klassentreffen, Firmenfeiern, Geburtstage, Jubiläen oder sonstige Veranstaltungen suchen – auf eine gemütliche Atmosphäre können Sie sich verlassen! Selbst geschlossene Veranstaltungen sind nach vorheriger Absprache unkompliziert realisierbar. Bitte kontaktieren Sie uns, wir organisieren das gerne für Sie!</p>
 
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+493613813255" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.nerlyerfurt.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+4915203318333" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('https://www.facebook.com/deluxe.tabledance/', '_blank', 'closebuttoncaption=fertig');">Facebook</a></div>
            
             
 <!-- Ausgabe Map -->            
             
             	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="50.977575, 11.027448">
+					<input type="hidden" id="end" value="50.975604, 11.018367">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
