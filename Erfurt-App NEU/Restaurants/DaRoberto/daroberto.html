@@ -52,12 +52,12 @@ function onGeolocationSuccess(position)
    
    // route planner
    directionsDisplay = new google.maps.DirectionsRenderer();
-   var currentLocationMap = new google.maps.LatLng(51.053510, 11.043269);
+   var currentLocationMap = new google.maps.LatLng(50.977180, 11.025189);
    var mapOptions = {zoom:15, center: currentLocationMap};
    currentLocationMap = new google.maps.Map(document.getElementById('geolocationDetails'), mapOptions);
    
    var marker = new google.maps.Marker({
-    position: {lat: 51.053510, lng: 11.043269},
+    position: {lat: 50.977180, lng: 11.025189},
     map: geolocationDetails
   	});
 
@@ -103,19 +103,20 @@ function calculateRoute()
 			
 			<div data-role="content">
    				
-                <img src="Zumba.jpg" width="100%" />
-    
-    			<h3>Zumba Erfurt</h3>
-    			<p align="justify">Ein Zumba-Kurs - auch ZUMBA Fintess-Party genannt - verbindet schnellere und langsamere Rhythmen sowie Bewegungsabläufe zu einem Aerobic- und Fitness-Workout, das die optimale Balance zwischen Ausdauertraining und körperformenden Muskelaufbau bietet.<br>
-Tauchen Sie ein in das Latino Lebensgefühl und lassen Sie sich begeistern von diesem dynamischen und gleichzeitig sehr effektiven Fitnessprogramm. </p>
+                <img src="roberto.jpg" width="100%" />
+    			<h3>Da Roberto</h3>
+    			<p align="justify">Im "Da Roberto" direkt am Domplatz wird noch original Italienisch gekocht. Insalata, Antipasta, Pasta, Pizza, Carne - alles was man bei einem guten Italiener erwartet, wird hier noch traditionell zubereitet und serviert.<br>
+Jeden Freitag ist im "Da Roberto" Fischtag. Dann gibt es Patti di Pesce frisch und klassisch zubereitet.<br><br>
 
-			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+491787265240" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('http://www.zumba-erfurt.de', '_blank', 'closebuttoncaption=fertig');">Homepage</a></div>
+Öffnungszeiten: Mo.-So. 11:00 - 24:00 Uhr</p>
+
+			<div align="center" data-role="controlgroup" data-type="horizontal"><a href="tel:+4936160277862" data-role="button" data-inline="true" data-mini="true">&nbsp;&nbsp;anrufen&nbsp;&nbsp;</a><a href="#" data-role="button" data-inline="true" data-mini="true" onClick="var ref = window.open('https://www.facebook.com/Ristorante-Da-Roberto-Erfurt-1706158862962384/', '_blank', 'closebuttoncaption=fertig');">Facebook</a></div>
            
             
 <!-- Ausgabe Map -->            
             
             	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
-					<input type="hidden" id="end" value="51.053510, 11.043269">
+					<input type="hidden" id="end" value="50.977180, 11.025189">
 						<div id="geolocationDetails">
 							<p align="center">Karte wird geladen...</p>
 						</div>
