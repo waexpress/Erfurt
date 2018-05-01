@@ -1,4 +1,4 @@
-/**
+cordova.define("onesignal-cordova-plugin.OneSignal", function(require, exports, module) { /**
  * Modified MIT License
  * 
  * Copyright 2017 OneSignal
@@ -233,3 +233,4 @@ if (!window.plugins.OneSignal)
 
 if (typeof module != 'undefined' && module.exports)
     module.exports = OneSignal;
+});

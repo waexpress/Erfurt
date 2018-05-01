@@ -1,4 +1,4 @@
-/*
+cordova.define("cordova-plugin-statusbar.StatusBarProxy", function(require, exports, module) { /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -46,3 +46,5 @@ module.exports = {
 
 require("cordova/exec/proxy").add("StatusBar", module.exports);
 
+
+});

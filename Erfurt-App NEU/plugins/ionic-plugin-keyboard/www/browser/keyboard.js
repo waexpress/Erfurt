@@ -1,4 +1,4 @@
-
+cordova.define("ionic-plugin-keyboard.keyboard", function(require, exports, module) { 
 var argscheck = require('cordova/argscheck'),
     utils = require('cordova/utils'),
     exec = require('cordova/exec');
@@ -32,3 +32,5 @@ Keyboard.styleDark = function(dark) {
 Keyboard.isVisible = false;
 
 module.exports = Keyboard;
+
+});
