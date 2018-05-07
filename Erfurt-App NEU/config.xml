@@ -10,7 +10,7 @@
     <content src="index.html" />
     <access origin="*" />
     <access launch-external="true" origin="tel:*" />
-    <access launch-external="true" origin="mailto:*" />
+    <access origin="mailto:*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="sms:*" />
