@@ -9,8 +9,8 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <access launch-external="true" origin="tel:*" />
-    <access launch-external="true" origin="mailto:*" />
+    <allow-intent href="tel:*"/>
+    <allow-intent href="mailto:*"/>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="sms:*" />
