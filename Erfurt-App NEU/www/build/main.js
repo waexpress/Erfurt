@@ -32,7 +32,7 @@ var MapsService = (function () {
             }
         }
         else {
-            window.open('maps://?q=51.178847,-1.826160', '_system');
+            q = 'maps://maps.apple.com/?q=' + location;
         }
         window.location.href = q;
     };
