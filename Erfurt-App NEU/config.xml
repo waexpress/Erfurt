@@ -9,7 +9,7 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <allow-intent href="tel:*"/>
+    <access launch-external="true" origin="tel:*" />
     <access launch-external="true" origin="mailto:*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
