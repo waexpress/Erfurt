@@ -32,7 +32,7 @@ var MapsService = (function () {
             }
         }
         else {
-            q = 'maps://?q=' + location, '_system';
+            q = 'maps://?q=' + location, 'target="_system"';
         }
         window.location.href = q;
     };
