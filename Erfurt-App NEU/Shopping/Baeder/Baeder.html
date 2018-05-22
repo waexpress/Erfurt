@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="de">
+   <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * gap:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+    
+		<title>Erfurt-App</title>
+		
+		<link rel="stylesheet" href="../../themes/ErfurtApp1.min.css" />
+	<link rel="stylesheet" href="../../themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../jquery.mobile.structure-1.4.5.min.css" />
+	<script src="../../jquery-1.11.1.min.js"></script>
+	<script src="../../jquery.mobile-1.4.5.min.js"></script>
+    
+    <script type="text/javascript" src="../../cordova.js"></script>
+
+        
+    </head>
+    <body>
+		<div data-role="page">
+			
+			<div data-role="content">
+   				
+                <img src="baeder.jpg" width="100%" />
+    			<h3>Erfurter Bäder</h3>
+    			<p align="justify">Badespaß bei  jedem Wetter und zu jeder Jahreszeit können Sie in der Roland Matthes Schwimmhalle oder der Schwimmhalle Johannesplatz erleben. Beide Hallen bieten Raum für Sport und Entspannung, verfügen über moderne  Saunabereiche und gemütliche gastronomische Einrichtungen. Informationen zu Öffnungszeiten, Preisen und Ausstattung der Schwimmhallen finden Sie auf den weiterführenden Seiten.<br><br>
+    
+    			<span class="rot">Ein ganzes Jahr lang Badespaß für Groß und Klein mit der Bädercard*!<br>
+Sparen Sie - egal zu welcher Jahreszeit: 50 % Ermäßigung auf die Basistarife Schwimmen, 20 % Nachlass auf die Basistarife für Saunaangebote und Kombinationen aus Sauna und Schwimmen.<br></span>
+      			<span class="kleineschrift">* erhältlich in der R. Matthes Schwimmhalle und der Schwimmhalle Johannesplatz</span></p>
+
+				<div data-role="controlgroup" data-type="horizontal" align="center">
+				  <div align="center">
+                  	<a href="Roland.html" data-role="button" data-mini="true" rel="external">Infos zur Roland Matthes Schwimmhalle</a>
+				    <a href="Johannesplatz.html" data-role="button" data-mini="true" rel="external">Infos zur Schwimmhalle Johannesplatz</a>
+				    <a href="Stotternheim.html" data-role="button" data-mini="true" rel="external">Infos zum Strandbad Stotternheim</a>
+				    <a href="Moebisburg.html" data-role="button" data-mini="true" rel="external">Infos zum Freibad Möbisburg</a>
+				    <a href="Dreibrunnen.html" data-role="button" data-mini="true" rel="external">Infos zum Dreienbrunnenbad</a>
+				    <a href="Nordbad.html" data-role="button" data-mini="true" rel="external">Infos zum Nordbad</a>
+			      </div>
+			    </div>
+           
+            
+<!-- Ausgabe Map -->            
+            
+            	<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+                		<div id="mapDiv" style="height: 300px;"></div>
+
+
+						<script src="http://maps.google.com/maps/api/js?key=AIzaSyAPEMcihOwANhwOTYATloJCchwiiaFvMoM&sensor=false&language=de&libraries=places" type="text/javascript"></script>
+  
+						<script type="text/javascript">
+						var locations = [['R. Matthes Schwimmhalle', 50.963781, 11.038749, 1],
+										 ['Schwimmhalle Johannesplatz', 50.995928, 11.033797, 2],
+										 ['Strandbad Stotternheim', 51.050932, 11.050570, 3],
+										 ['Freibad Möbisburg', 50.924695, 10.989804, 4],
+										 ['Dreibrunnenbad', 50.962077, 11.010860, 5],
+										 ['Nordbad', 50.993095, 11.019487, 6]];
+
+						var dkit_map = new google.maps.Map(document.getElementById('mapDiv'), 
+                                     	{zoom : 10,
+                                      	center : new google.maps.LatLng(50.999, 11.02),
+                                     	 mapTypeId : google.maps.MapTypeId.ROADMAP});
+
+						var location_marker;
+						var mapWindow = new google.maps.InfoWindow();
+
+						for (var i = 0; i < locations.length; i++) 
+							{  
+   							location_marker = new google.maps.Marker({position : new google.maps.LatLng(locations[i][1], locations[i][2]), 
+                                             	map : dkit_map});
+
+   							google.maps.event.addListener(location_marker, 'click', (function(location_marker, i) 
+                                                    {
+                                                        return function() 
+                            						{
+                                                           mapWindow.setContent(locations[i][0]);
+                                                           mapWindow.open(dkit_map, location_marker);
+                                                        }
+                                                     })(location_marker, i));
+						}
+						</script>
+        		</div>
+                <br><br>
+
+			</div>
+            
+<!-- Ende Ausgabe Map -->            
+            
+            
+        	<footer id="main-footer">
+			<div data-role="navbar">
+  				<ul>
+        		<li><a data-role="button" data-rel="back" data-direction="reverse">zurück</a></li>
+        		<li><a data-role="button" href="#" onClick="var ref = window.open('https://www.facebook.com/ErfurtApp?fref=ts', '_blank', 'closebuttoncaption=fertig');">Facebook</a></li>
+        		<li><a href="../../Impressum.html" rel="external">Impressum</a></li>
+        		<li><a href="../../index.html" rel="external">home</a></li>
+      			</ul>
+      		</div>
+  			</footer>
+        
+</div>
+		
+		
+		
+	</body>
+</html>
