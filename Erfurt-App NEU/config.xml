@@ -7,7 +7,7 @@
     <author email="info@appseed.io" href="http://appseed.io/">
       AppSeed Applications
     </author>
-    <content src="index.html" />
+    <content src="www/index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
