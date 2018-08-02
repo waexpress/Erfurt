@@ -20,7 +20,11 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
            id="cordova-plugin-inappbrowser"
+<<<<<<< HEAD
       version="1.4.0">
+=======
+      version="1.7.2">
+>>>>>>> origin/master
 
     <name>InAppBrowser</name>
     <description>Cordova InAppBrowser Plugin</description>
@@ -40,7 +44,11 @@
             <clobbers target="window.open" />
         </js-module>
         <config-file target="res/xml/config.xml" parent="/*">
+<<<<<<< HEAD
             <feature name="InAppBrowser"> 
+=======
+            <feature name="InAppBrowser">
+>>>>>>> origin/master
                 <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser"/>
             </feature>
         </config-file>
@@ -74,7 +82,11 @@
             <clobbers target="window.open" />
         </js-module>
         <config-file target="res/xml/config.xml" parent="/*">
+<<<<<<< HEAD
             <feature name="InAppBrowser"> 
+=======
+            <feature name="InAppBrowser">
+>>>>>>> origin/master
                 <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser"/>
             </feature>
         </config-file>
@@ -82,24 +94,40 @@
         <source-file src="src/amazon/InAppBrowser.java" target-dir="src/org/apache/cordova/inappbrowser" />
         <source-file src="src/android/InAppBrowserDialog.java" target-dir="src/org/apache/cordova/inappbrowser" />
         <source-file src="src/amazon/InAppChromeClient.java" target-dir="src/org/apache/cordova/inappbrowser" />
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> origin/master
         <!--  drawable src/android/resources -->
         <resource-file src="src/android/res/drawable-hdpi/ic_action_next_item.png" target="res/drawable-hdpi/ic_action_next_item.png" />
         <resource-file src="src/android/res/drawable-mdpi/ic_action_next_item.png" target="res/drawable-mdpi/ic_action_next_item.png" />
         <resource-file src="src/android/res/drawable-xhdpi/ic_action_next_item.png" target="res/drawable-xhdpi/ic_action_next_item.png" />
         <resource-file src="src/android/res/drawable-xxhdpi/ic_action_next_item.png" target="res/drawable-xxhdpi/ic_action_next_item.png" />
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> origin/master
         <resource-file src="src/android/res/drawable-hdpi/ic_action_previous_item.png" target="res/drawable-hdpi/ic_action_previous_item.png" />
         <resource-file src="src/android/res/drawable-mdpi/ic_action_previous_item.png" target="res/drawable-mdpi/ic_action_previous_item.png" />
         <resource-file src="src/android/res/drawable-xhdpi/ic_action_previous_item.png" target="res/drawable-xhdpi/ic_action_previous_item.png" />
         <resource-file src="src/android/res/drawable-xxhdpi/ic_action_previous_item.png" target="res/drawable-xxhdpi/ic_action_previous_item.png" />
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> origin/master
         <resource-file src="src/android/res/drawable-hdpi/ic_action_remove.png" target="res/drawable-hdpi/ic_action_remove.png" />
         <resource-file src="src/android/res/drawable-mdpi/ic_action_remove.png" target="res/drawable-mdpi/ic_action_remove.png" />
         <resource-file src="src/android/res/drawable-xhdpi/ic_action_remove.png" target="res/drawable-xhdpi/ic_action_remove.png" />
         <resource-file src="src/android/res/drawable-xxhdpi/ic_action_remove.png" target="res/drawable-xxhdpi/ic_action_remove.png" />
     </platform>
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> origin/master
     <!-- ubuntu -->
     <platform name="ubuntu">
         <js-module src="www/inappbrowser.js" name="inappbrowser">
@@ -118,19 +146,49 @@
         <js-module src="www/inappbrowser.js" name="inappbrowser">
             <clobbers target="cordova.InAppBrowser.open" />
             <clobbers target="window.open" />
+<<<<<<< HEAD
         </js-module>  
         <config-file target="config.xml" parent="/*">
             <feature name="InAppBrowser">
                 <param name="ios-package" value="CDVInAppBrowser" /> 
+=======
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="InAppBrowser">
+                <param name="ios-package" value="CDVInAppBrowser" />
+>>>>>>> origin/master
             </feature>
         </config-file>
 
         <header-file src="src/ios/CDVInAppBrowser.h" />
 	    <source-file src="src/ios/CDVInAppBrowser.m" />
+<<<<<<< HEAD
 	    
 	    <framework src="CoreGraphics.framework" />
     </platform>
 
+=======
+
+	    <framework src="CoreGraphics.framework" />
+    </platform>
+
+    <!-- osx -->
+    <platform name="osx">
+        <js-module src="www/inappbrowser.js" name="inappbrowser">
+            <clobbers target="cordova.InAppBrowser.open" />
+            <clobbers target="window.open" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="InAppBrowser">
+                <param name="osx-package" value="CDVInAppBrowser" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/osx/CDVInAppBrowser.h" />
+        <source-file src="src/osx/CDVInAppBrowser.m" />
+    </platform>
+
+>>>>>>> origin/master
     <!-- wp7 -->
     <platform name="wp7">
         <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
@@ -159,7 +217,11 @@
         <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
             <Capability Name="ID_CAP_NETWORKING"/>
         </config-file>
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> origin/master
         <js-module src="www/inappbrowser.js" name="inappbrowser">
             <clobbers target="cordova.InAppBrowser.open" />
             <clobbers target="window.open" />
@@ -195,11 +257,19 @@
             <clobbers target="window.open" />
         </js-module>
         <js-module src="src/windows/InAppBrowserProxy.js" name="InAppBrowserProxy">
+<<<<<<< HEAD
             <merges target="" />
         </js-module>
         <asset src="www/inappbrowser.css" target="css/inappbrowser.css" />
     </platform>
   
+=======
+            <runs />
+        </js-module>
+        <asset src="www/inappbrowser.css" target="css/inappbrowser.css" />
+    </platform>
+
+>>>>>>> origin/master
     <!-- firefoxos -->
     <platform name="firefoxos">
         <config-file target="config.xml" parent="/*">
@@ -210,7 +280,11 @@
             <clobbers target="window.open" />
         </js-module>
         <js-module src="src/firefoxos/InAppBrowserProxy.js" name="InAppBrowserProxy">
+<<<<<<< HEAD
             <merges target="" />
+=======
+            <runs />
+>>>>>>> origin/master
         </js-module>
     </platform>
 
@@ -221,7 +295,11 @@
             <clobbers target="window.open" />
         </js-module>
         <js-module src="src/browser/InAppBrowserProxy.js" name="InAppBrowserProxy">
+<<<<<<< HEAD
             <merges target="" />
+=======
+            <runs />
+>>>>>>> origin/master
         </js-module>
     </platform>
 </plugin>

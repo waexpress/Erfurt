@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
     "SystemConfiguration.framework": 1,
+=======
+>>>>>>> origin/master
     "CoreLocation.framework": 1,
     "WebKit.framework": 1,
     "libz.tbd": 1

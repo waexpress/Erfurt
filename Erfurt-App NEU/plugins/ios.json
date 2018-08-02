@@ -7,6 +7,7 @@
     "files": {}
   },
   "installed_plugins": {
+<<<<<<< HEAD
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "io.appseed.businessdirectory2"
     },
@@ -31,11 +32,44 @@
     },
     "cordova-plugin-wkwebview-engine": {
       "PACKAGE_NAME": "io.appseed.businessdirectory2"
+=======
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.appseed.erfurtapp"
+    },
+    "cordova-plugin-geolocation": {
+      "GEOLOCATION_USAGE_DESCRIPTION": "This app uses your location",
+      "PACKAGE_NAME": "io.appseed.erfurtapp"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "io.appseed.erfurtapp"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "io.appseed.erfurtapp"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "io.appseed.erfurtapp"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.appseed.erfurtapp"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "io.appseed.erfurtapp"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.appseed.erfurtapp"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "io.appseed.erfurtapp"
+>>>>>>> origin/master
     }
   },
   "dependent_plugins": {
     "cordova-plugin-compat": {
+<<<<<<< HEAD
       "PACKAGE_NAME": "io.appseed.businessdirectory2"
+=======
+      "PACKAGE_NAME": "io.appseed.erfurtapp"
+>>>>>>> origin/master
     }
   }
 }

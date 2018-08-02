@@ -16,5 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.
 */
+<<<<<<< HEAD
 var d = document.getElementById("header");
 d.innerHTML = "Script file successfully injected";
+=======
+var d = document.getElementById('header');
+d.innerHTML = 'Script file successfully injected';
+>>>>>>> origin/master

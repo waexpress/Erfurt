@@ -32,7 +32,11 @@ var IABExecs = {
         if (browserWrap) {
             browserWrap.parentNode.removeChild(browserWrap);
             browserWrap = null;
+<<<<<<< HEAD
             if (typeof(win) == "function") win({type:'exit'});
+=======
+            if (typeof (win) === 'function') win({type: 'exit'});
+>>>>>>> origin/master
         }
     },
 
@@ -43,6 +47,7 @@ var IABExecs = {
         console.error('[FirefoxOS] show not implemented');
     },
 
+<<<<<<< HEAD
     open: function (win, lose, args) {
         var strUrl = args[0],
             target = args[1],
@@ -55,6 +60,24 @@ var IABExecs = {
             if (tup[1] == 'yes') {
                 tup[1] = true;
             } else if (tup[1] == 'no') {
+=======
+    hide: function (win, lose) {
+        console.error('[FirefoxOS] hide not implemented');
+    },
+
+    open: function (win, lose, args) {
+        var strUrl = args[0];
+        var target = args[1];
+        var features_string = args[2] || 'location=yes'; // location=yes is default
+        var features = {};
+
+        var features_list = features_string.split(',');
+        features_list.forEach(function (feature) {
+            var tup = feature.split('=');
+            if (tup[1] === 'yes') {
+                tup[1] = true;
+            } else if (tup[1] === 'no') {
+>>>>>>> origin/master
                 tup[1] = false;
             } else {
                 var number = parseInt(tup[1]);
@@ -64,8 +87,12 @@ var IABExecs = {
             }
             features[tup[0]] = tup[1];
         });
+<<<<<<< HEAD
 
         function updateIframeSizeNoLocation() {
+=======
+        function updateIframeSizeNoLocation () {
+>>>>>>> origin/master
             browserWrap.style.width = window.innerWidth + 'px';
             browserWrap.style.height = window.innerHeight + 'px';
             browserWrap.style.zIndex = '999999999';
@@ -113,7 +140,11 @@ var IABExecs = {
 
             var checkForwardBackward = function () {
                 var backReq = browserElem.getCanGoBack();
+<<<<<<< HEAD
                 backReq.onsuccess = function() {
+=======
+                backReq.onsuccess = function () {
+>>>>>>> origin/master
                     if (this.result) {
                         back.classList.remove('disabled');
                     } else {
@@ -121,7 +152,11 @@ var IABExecs = {
                     }
                 };
                 var forwardReq = browserElem.getCanGoForward();
+<<<<<<< HEAD
                 forwardReq.onsuccess = function() {
+=======
+                forwardReq.onsuccess = function () {
+>>>>>>> origin/master
                     if (this.result) {
                         forward.classList.remove('disabled');
                     } else {
@@ -154,6 +189,7 @@ var IABExecs = {
             browserWrap.appendChild(browserElem);
             document.body.appendChild(browserWrap);
 
+<<<<<<< HEAD
             //we use mozbrowserlocationchange instead of mozbrowserloadstart to get the url
             browserElem.addEventListener('mozbrowserlocationchange', function(e){
                 win({
@@ -169,6 +205,23 @@ var IABExecs = {
             }, false);
             browserElem.addEventListener('mozbrowserclose', function(e){
                 win({type:'exit'});
+=======
+            // we use mozbrowserlocationchange instead of mozbrowserloadstart to get the url
+            browserElem.addEventListener('mozbrowserlocationchange', function (e) {
+                win({
+                    type: 'loadstart',
+                    url: e.detail
+                });
+            }, false);
+            browserElem.addEventListener('mozbrowserloadend', function (e) {
+                win({type: 'loadstop'});
+            }, false);
+            browserElem.addEventListener('mozbrowsererror', function (e) {
+                win({type: 'loaderror'});
+            }, false);
+            browserElem.addEventListener('mozbrowserclose', function (e) {
+                win({type: 'exit'});
+>>>>>>> origin/master
             }, false);
         } else {
             window.location = strUrl;

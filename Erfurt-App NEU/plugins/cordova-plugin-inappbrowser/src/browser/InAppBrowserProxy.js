@@ -29,6 +29,7 @@ var browserWrap,
     forwardButton,
     closeButton;
 
+<<<<<<< HEAD
 function attachNavigationEvents(element, callback) {
     var onError = function () {
         callback({ type: "loaderror", url: this.contentWindow.location}, {keepCallback: true});
@@ -44,12 +45,49 @@ function attachNavigationEvents(element, callback) {
 
     element.addEventListener("error", onError);
     element.addEventListener("abort", onError);
+=======
+function attachNavigationEvents (element, callback) {
+    var onError = function () {
+        try {
+            callback({ type: 'loaderror', url: this.contentWindow.location.href }, {keepCallback: true}); // eslint-disable-line standard/no-callback-literal
+        } catch (err) {
+            // blocked by CORS :\
+            callback({ type: 'loaderror', url: null }, {keepCallback: true}); // eslint-disable-line standard/no-callback-literal
+        }
+    };
+
+    element.addEventListener('pageshow', function () {
+        try {
+            callback({ type: 'loadstart', url: this.contentWindow.location.href }, {keepCallback: true}); // eslint-disable-line standard/no-callback-literal
+        } catch (err) {
+            // blocked by CORS :\
+            callback({ type: 'loadstart', url: null }, {keepCallback: true}); // eslint-disable-line standard/no-callback-literal
+        }
+    });
+
+    element.addEventListener('load', function () {
+        try {
+            callback({ type: 'loadstop', url: this.contentWindow.location.href }, {keepCallback: true}); // eslint-disable-line standard/no-callback-literal
+        } catch (err) {
+            // blocked by CORS :\
+            callback({ type: 'loadstop', url: null }, {keepCallback: true}); // eslint-disable-line standard/no-callback-literal
+        }
+    });
+
+    element.addEventListener('error', onError);
+    element.addEventListener('abort', onError);
+>>>>>>> origin/master
 }
 
 var IAB = {
     close: function (win, lose) {
         if (browserWrap) {
+<<<<<<< HEAD
             if (win) win({ type: "exit" });
+=======
+            // use the "open" function callback so that the exit event is fired properly
+            if (IAB._win) IAB._win({ type: 'exit' });
+>>>>>>> origin/master
 
             browserWrap.parentNode.removeChild(browserWrap);
             browserWrap = null;
@@ -59,11 +97,16 @@ var IAB = {
 
     show: function (win, lose) {
         if (browserWrap) {
+<<<<<<< HEAD
             browserWrap.style.display = "block";
+=======
+            browserWrap.style.display = 'block';
+>>>>>>> origin/master
         }
     },
 
     open: function (win, lose, args) {
+<<<<<<< HEAD
         var strUrl = args[0],
             target = args[1],
             features = args[2];
@@ -86,12 +129,42 @@ var IAB = {
                 browserWrap.onclick = function () {
                     setTimeout(function () {
                         IAB.close(win);
+=======
+        var strUrl = args[0];
+        var target = args[1];
+        var features = args[2];
+
+        IAB._win = win;
+
+        if (target === '_self' || !target) {
+            window.location = strUrl;
+        } else if (target === '_system') {
+            modulemapper.getOriginalSymbol(window, 'window.open').call(window, strUrl, '_blank');
+        } else {
+            // "_blank" or anything else
+            if (!browserWrap) {
+                browserWrap = document.createElement('div');
+                browserWrap.style.position = 'absolute';
+                browserWrap.style.top = '0';
+                browserWrap.style.left = '0';
+                browserWrap.style.boxSizing = 'border-box';
+                browserWrap.style.borderWidth = '40px';
+                browserWrap.style.width = '100vw';
+                browserWrap.style.height = '100vh';
+                browserWrap.style.borderStyle = 'solid';
+                browserWrap.style.borderColor = 'rgba(0,0,0,0.25)';
+
+                browserWrap.onclick = function () {
+                    setTimeout(function () {
+                        IAB.close();
+>>>>>>> origin/master
                     }, 0);
                 };
 
                 document.body.appendChild(browserWrap);
             }
 
+<<<<<<< HEAD
             if (features.indexOf("hidden=yes") !== -1) {
                 browserWrap.style.display = "none";
             }
@@ -109,10 +182,31 @@ var IAB = {
                 navigationButtonsDiv.style.height = "60px";
                 navigationButtonsDiv.style.backgroundColor = "#404040";
                 navigationButtonsDiv.style.zIndex = "999";
+=======
+            if (features.indexOf('hidden=yes') !== -1) {
+                browserWrap.style.display = 'none';
+            }
+
+            popup = document.createElement('iframe');
+            popup.style.borderWidth = '0px';
+            popup.style.width = '100%';
+
+            browserWrap.appendChild(popup);
+
+            if (features.indexOf('location=yes') !== -1 || features.indexOf('location') === -1) {
+                popup.style.height = 'calc(100% - 60px)';
+                popup.style.marginBottom = '-4px';
+
+                navigationButtonsDiv = document.createElement('div');
+                navigationButtonsDiv.style.height = '60px';
+                navigationButtonsDiv.style.backgroundColor = '#404040';
+                navigationButtonsDiv.style.zIndex = '999';
+>>>>>>> origin/master
                 navigationButtonsDiv.onclick = function (e) {
                     e.cancelBubble = true;
                 };
 
+<<<<<<< HEAD
                 navigationButtonsDivInner = document.createElement("div");
                 navigationButtonsDivInner.style.paddingTop = "10px";
                 navigationButtonsDivInner.style.height = "50px";
@@ -120,10 +214,20 @@ var IAB = {
                 navigationButtonsDivInner.style.margin = "0 auto";
                 navigationButtonsDivInner.style.backgroundColor = "#404040";
                 navigationButtonsDivInner.style.zIndex = "999";
+=======
+                navigationButtonsDivInner = document.createElement('div');
+                navigationButtonsDivInner.style.paddingTop = '10px';
+                navigationButtonsDivInner.style.height = '50px';
+                navigationButtonsDivInner.style.width = '160px';
+                navigationButtonsDivInner.style.margin = '0 auto';
+                navigationButtonsDivInner.style.backgroundColor = '#404040';
+                navigationButtonsDivInner.style.zIndex = '999';
+>>>>>>> origin/master
                 navigationButtonsDivInner.onclick = function (e) {
                     e.cancelBubble = true;
                 };
 
+<<<<<<< HEAD
 
                 backButton = document.createElement("button");
                 backButton.style.width = "40px";
@@ -158,6 +262,39 @@ var IAB = {
                 closeButton.addEventListener("click", function (e) {
                     setTimeout(function () {
                         IAB.close(win);
+=======
+                backButton = document.createElement('button');
+                backButton.style.width = '40px';
+                backButton.style.height = '40px';
+                backButton.style.borderRadius = '40px';
+
+                backButton.innerHTML = '←';
+                backButton.addEventListener('click', function (e) {
+                    if (popup.canGoBack) { popup.goBack(); }
+                });
+
+                forwardButton = document.createElement('button');
+                forwardButton.style.marginLeft = '20px';
+                forwardButton.style.width = '40px';
+                forwardButton.style.height = '40px';
+                forwardButton.style.borderRadius = '40px';
+
+                forwardButton.innerHTML = '→';
+                forwardButton.addEventListener('click', function (e) {
+                    if (popup.canGoForward) { popup.goForward(); }
+                });
+
+                closeButton = document.createElement('button');
+                closeButton.style.marginLeft = '20px';
+                closeButton.style.width = '40px';
+                closeButton.style.height = '40px';
+                closeButton.style.borderRadius = '40px';
+
+                closeButton.innerHTML = '✖';
+                closeButton.addEventListener('click', function (e) {
+                    setTimeout(function () {
+                        IAB.close();
+>>>>>>> origin/master
                     }, 0);
                 });
 
@@ -172,7 +309,11 @@ var IAB = {
 
                 browserWrap.appendChild(navigationButtonsDiv);
             } else {
+<<<<<<< HEAD
                 popup.style.height = "100%";
+=======
+                popup.style.height = '100%';
+>>>>>>> origin/master
             }
 
             // start listening for navigation events
@@ -183,8 +324,13 @@ var IAB = {
     },
 
     injectScriptCode: function (win, fail, args) {
+<<<<<<< HEAD
         var code = args[0],
             hasCallback = args[1];
+=======
+        var code = args[0];
+        var hasCallback = args[1];
+>>>>>>> origin/master
 
         if (browserWrap && popup) {
             try {
@@ -192,7 +338,11 @@ var IAB = {
                 if (hasCallback) {
                     win([]);
                 }
+<<<<<<< HEAD
             } catch(e) {
+=======
+            } catch (e) {
+>>>>>>> origin/master
                 console.error('Error occured while trying to injectScriptCode: ' + JSON.stringify(e));
             }
         }
@@ -204,7 +354,11 @@ var IAB = {
         if (fail) {
             fail(msg);
         }
+<<<<<<< HEAD
     }, 
+=======
+    },
+>>>>>>> origin/master
 
     injectStyleCode: function (win, fail, args) {
         var msg = 'Browser cordova-plugin-inappbrowser injectStyleCode is not yet implemented';
@@ -225,4 +379,8 @@ var IAB = {
 
 module.exports = IAB;
 
+<<<<<<< HEAD
 require("cordova/exec/proxy").add("InAppBrowser", module.exports);
+=======
+require('cordova/exec/proxy').add('InAppBrowser', module.exports);
+>>>>>>> origin/master

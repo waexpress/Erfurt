@@ -19,6 +19,7 @@
  *
 */
 
+<<<<<<< HEAD
 /* jshint -W061 */
 /* global oxide */
 
@@ -28,5 +29,15 @@ oxide.addMessageHandler("EXECUTE", function(msg) {
         msg.reply({result: eval(code)});
     } catch(e) {
         msg.error("Code threw exception: \"" + e + "\"");
+=======
+/* global oxide */
+
+oxide.addMessageHandler('EXECUTE', function (msg) {
+    var code = msg.args.code;
+    try {
+        msg.reply({result: eval(code)}); // eslint-disable-line no-eval
+    } catch (e) {
+        msg.error('Code threw exception: "' + e + '"');
+>>>>>>> origin/master
     }
 });

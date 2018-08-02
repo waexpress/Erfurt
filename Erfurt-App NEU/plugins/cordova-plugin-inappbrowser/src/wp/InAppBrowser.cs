@@ -131,6 +131,24 @@ namespace WPCordovaClassLib.Cordova.Commands
             }
         }
 
+<<<<<<< HEAD
+=======
+        public void hide(string options)
+        {
+            string[] args = JSON.JsonHelper.Deserialize<string[]>(options);
+
+
+            if (browser != null)
+            {
+                Deployment.Current.Dispatcher.BeginInvoke(() =>
+                {
+                    browser.Visibility = Visibility.Collapsed;
+                    AppBar.IsVisible = false;
+                });
+            }
+        }
+
+>>>>>>> origin/master
         public void injectScriptCode(string options)
         {
             string[] args = JSON.JsonHelper.Deserialize<string[]>(options);

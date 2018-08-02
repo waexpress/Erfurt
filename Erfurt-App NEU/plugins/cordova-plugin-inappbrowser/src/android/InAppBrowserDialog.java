@@ -21,7 +21,10 @@ package org.apache.cordova.inappbrowser;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+<<<<<<< HEAD
 import android.util.Log;
+=======
+>>>>>>> origin/master
 
 import org.json.JSONException;
 import org.json.JSONObject;

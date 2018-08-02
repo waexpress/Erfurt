@@ -29,6 +29,10 @@
 #define    kInAppBrowserToolbarBarPositionTop @"top"
 
 #define    TOOLBAR_HEIGHT 44.0
+<<<<<<< HEAD
+=======
+#define    STATUSBAR_HEIGHT 20.0
+>>>>>>> origin/master
 #define    LOCATIONBAR_HEIGHT 21.0
 #define    FOOTER_HEIGHT ((TOOLBAR_HEIGHT) + (LOCATIONBAR_HEIGHT))
 
@@ -47,6 +51,14 @@
     _callbackIdPattern = nil;
 }
 
+<<<<<<< HEAD
+=======
+- (id)settingForKey:(NSString*)key
+{
+    return [self.commandDelegate.settings objectForKey:[key lowercaseString]];
+}
+
+>>>>>>> origin/master
 - (void)onReset
 {
     [self close:nil];
@@ -137,8 +149,21 @@
     }
 
     if (self.inAppBrowserViewController == nil) {
+<<<<<<< HEAD
         NSString* originalUA = [CDVUserAgentUtil originalUserAgent];
         self.inAppBrowserViewController = [[CDVInAppBrowserViewController alloc] initWithUserAgent:originalUA prevUserAgent:[self.commandDelegate userAgent] browserOptions: browserOptions];
+=======
+        NSString* userAgent = [CDVUserAgentUtil originalUserAgent];
+        NSString* overrideUserAgent = [self settingForKey:@"OverrideUserAgent"];
+        NSString* appendUserAgent = [self settingForKey:@"AppendUserAgent"];
+        if(overrideUserAgent){
+            userAgent = overrideUserAgent;
+        }
+        if(appendUserAgent){
+            userAgent = [userAgent stringByAppendingString: appendUserAgent];
+        }
+        self.inAppBrowserViewController = [[CDVInAppBrowserViewController alloc] initWithUserAgent:userAgent prevUserAgent:[self.commandDelegate userAgent] browserOptions: browserOptions];
+>>>>>>> origin/master
         self.inAppBrowserViewController.navigationDelegate = self;
 
         if ([self.viewController conformsToProtocol:@protocol(CDVScreenOrientationDelegate)]) {
@@ -218,13 +243,52 @@
                                    initWithRootViewController:self.inAppBrowserViewController];
     nav.orientationDelegate = self.inAppBrowserViewController;
     nav.navigationBarHidden = YES;
+<<<<<<< HEAD
+=======
+    nav.modalPresentationStyle = self.inAppBrowserViewController.modalPresentationStyle;
+>>>>>>> origin/master
 
     __weak CDVInAppBrowser* weakSelf = self;
 
     // Run later to avoid the "took a long time" log message.
     dispatch_async(dispatch_get_main_queue(), ^{
         if (weakSelf.inAppBrowserViewController != nil) {
+<<<<<<< HEAD
             [weakSelf.viewController presentViewController:nav animated:YES completion:nil];
+=======
+            CGRect frame = [[UIScreen mainScreen] bounds];
+            UIWindow *tmpWindow = [[UIWindow alloc] initWithFrame:frame];
+            UIViewController *tmpController = [[UIViewController alloc] init];
+            [tmpWindow setRootViewController:tmpController];
+            [tmpWindow setWindowLevel:UIWindowLevelNormal];
+
+            [tmpWindow makeKeyAndVisible];
+            [tmpController presentViewController:nav animated:YES completion:nil];
+        }
+    });
+}
+
+- (void)hide:(CDVInvokedUrlCommand*)command
+{
+    if (self.inAppBrowserViewController == nil) {
+        NSLog(@"Tried to hide IAB after it was closed.");
+        return;
+
+
+    }
+    if (_previousStatusBarStyle == -1) {
+        NSLog(@"Tried to hide IAB while already hidden");
+        return;
+    }
+
+    _previousStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
+
+    // Run later to avoid the "took a long time" log message.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.inAppBrowserViewController != nil) {
+            _previousStatusBarStyle = -1;
+            [self.inAppBrowserViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+>>>>>>> origin/master
         }
     });
 }
@@ -248,11 +312,16 @@
 
 - (void)openInSystem:(NSURL*)url
 {
+<<<<<<< HEAD
     if ([[UIApplication sharedApplication] canOpenURL:url]) {
         [[UIApplication sharedApplication] openURL:url];
     } else { // handle any custom schemes to plugins
         [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
     }
+=======
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
+    [[UIApplication sharedApplication] openURL:url];
+>>>>>>> origin/master
 }
 
 // This is a helper method for the inject{Script|Style}{Code|File} API calls, which
@@ -390,7 +459,11 @@
             [self.commandDelegate sendPluginResult:pluginResult callbackId:scriptCallbackId];
             return NO;
         }
+<<<<<<< HEAD
     } 
+=======
+    }
+>>>>>>> origin/master
     //if is an app store link, let the system handle it, otherwise it fails to load it
     else if ([[ url scheme] isEqualToString:@"itms-appss"] || [[ url scheme] isEqualToString:@"itms-apps"]) {
         [theWebView stopLoading];
@@ -481,7 +554,11 @@
 #else
         _webViewDelegate = [[CDVWebViewDelegate alloc] initWithDelegate:self];
 #endif
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> origin/master
         [self createViews];
     }
 
@@ -1006,11 +1083,19 @@
 
 - (void) viewDidLoad {
 
+<<<<<<< HEAD
     CGRect frame = [UIApplication sharedApplication].statusBarFrame;
 
     // simplified from: http://stackoverflow.com/a/25669695/219684
 
     UIToolbar* bgToolbar = [[UIToolbar alloc] initWithFrame:[self invertFrameIfNeeded:frame]];
+=======
+    CGRect statusBarFrame = [self invertFrameIfNeeded:[UIApplication sharedApplication].statusBarFrame];
+    statusBarFrame.size.height = STATUSBAR_HEIGHT;
+    // simplified from: http://stackoverflow.com/a/25669695/219684
+
+    UIToolbar* bgToolbar = [[UIToolbar alloc] initWithFrame:statusBarFrame];
+>>>>>>> origin/master
     bgToolbar.barStyle = UIBarStyleDefault;
     [bgToolbar setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     [self.view addSubview:bgToolbar];

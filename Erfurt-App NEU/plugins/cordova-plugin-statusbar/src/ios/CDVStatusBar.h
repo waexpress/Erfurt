@@ -30,6 +30,10 @@
 }
 
 @property (atomic, assign) BOOL statusBarOverlaysWebView;
+<<<<<<< HEAD
+=======
+@property (atomic, assign) BOOL statusBarVisible;
+>>>>>>> origin/master
 
 - (void) overlaysWebView:(CDVInvokedUrlCommand*)command;
 

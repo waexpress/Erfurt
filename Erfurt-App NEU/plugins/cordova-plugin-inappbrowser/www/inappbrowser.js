@@ -19,7 +19,11 @@
  *
 */
 
+<<<<<<< HEAD
 (function() {
+=======
+(function () {
+>>>>>>> origin/master
     // special patch to correctly work on Ripple emulator (CB-9760)
     if (window.parent && !!window.parent.ripple) { // https://gist.github.com/triceam/4658021
         module.exports = window.open.bind(window); // fallback to default window.open behaviour
@@ -31,6 +35,7 @@
     var modulemapper = require('cordova/modulemapper');
     var urlutil = require('cordova/urlutil');
 
+<<<<<<< HEAD
     function InAppBrowser() {
        this.channels = {
             'loadstart': channel.create('loadstart'),
@@ -38,6 +43,15 @@
             'loaderror' : channel.create('loaderror'),
             'exit' : channel.create('exit')
        };
+=======
+    function InAppBrowser () {
+        this.channels = {
+            'loadstart': channel.create('loadstart'),
+            'loadstop': channel.create('loadstop'),
+            'loaderror': channel.create('loaderror'),
+            'exit': channel.create('exit')
+        };
+>>>>>>> origin/master
     }
 
     InAppBrowser.prototype = {
@@ -47,44 +61,80 @@
             }
         },
         close: function (eventname) {
+<<<<<<< HEAD
             exec(null, null, "InAppBrowser", "close", []);
         },
         show: function (eventname) {
           exec(null, null, "InAppBrowser", "show", []);
         },
         addEventListener: function (eventname,f) {
+=======
+            exec(null, null, 'InAppBrowser', 'close', []);
+        },
+        show: function (eventname) {
+            exec(null, null, 'InAppBrowser', 'show', []);
+        },
+        hide: function (eventname) {
+            exec(null, null, 'InAppBrowser', 'hide', []);
+        },
+        addEventListener: function (eventname, f) {
+>>>>>>> origin/master
             if (eventname in this.channels) {
                 this.channels[eventname].subscribe(f);
             }
         },
+<<<<<<< HEAD
         removeEventListener: function(eventname, f) {
+=======
+        removeEventListener: function (eventname, f) {
+>>>>>>> origin/master
             if (eventname in this.channels) {
                 this.channels[eventname].unsubscribe(f);
             }
         },
 
+<<<<<<< HEAD
         executeScript: function(injectDetails, cb) {
             if (injectDetails.code) {
                 exec(cb, null, "InAppBrowser", "injectScriptCode", [injectDetails.code, !!cb]);
             } else if (injectDetails.file) {
                 exec(cb, null, "InAppBrowser", "injectScriptFile", [injectDetails.file, !!cb]);
+=======
+        executeScript: function (injectDetails, cb) {
+            if (injectDetails.code) {
+                exec(cb, null, 'InAppBrowser', 'injectScriptCode', [injectDetails.code, !!cb]);
+            } else if (injectDetails.file) {
+                exec(cb, null, 'InAppBrowser', 'injectScriptFile', [injectDetails.file, !!cb]);
+>>>>>>> origin/master
             } else {
                 throw new Error('executeScript requires exactly one of code or file to be specified');
             }
         },
 
+<<<<<<< HEAD
         insertCSS: function(injectDetails, cb) {
             if (injectDetails.code) {
                 exec(cb, null, "InAppBrowser", "injectStyleCode", [injectDetails.code, !!cb]);
             } else if (injectDetails.file) {
                 exec(cb, null, "InAppBrowser", "injectStyleFile", [injectDetails.file, !!cb]);
+=======
+        insertCSS: function (injectDetails, cb) {
+            if (injectDetails.code) {
+                exec(cb, null, 'InAppBrowser', 'injectStyleCode', [injectDetails.code, !!cb]);
+            } else if (injectDetails.file) {
+                exec(cb, null, 'InAppBrowser', 'injectStyleFile', [injectDetails.file, !!cb]);
+>>>>>>> origin/master
             } else {
                 throw new Error('insertCSS requires exactly one of code or file to be specified');
             }
         }
     };
 
+<<<<<<< HEAD
     module.exports = function(strUrl, strWindowName, strWindowFeatures, callbacks) {
+=======
+    module.exports = function (strUrl, strWindowName, strWindowFeatures, callbacks) {
+>>>>>>> origin/master
         // Don't catch calls that write to existing frames (e.g. named iframes).
         if (window.frames && window.frames[strWindowName]) {
             var origOpenFunc = modulemapper.getOriginalSymbol(window, 'open');
@@ -99,6 +149,7 @@
             iab.addEventListener(callbackName, callbacks[callbackName]);
         }
 
+<<<<<<< HEAD
         var cb = function(eventname) {
            iab._eventHandler(eventname);
         };
@@ -106,6 +157,15 @@
         strWindowFeatures = strWindowFeatures || "";
 
         exec(cb, cb, "InAppBrowser", "open", [strUrl, strWindowName, strWindowFeatures]);
+=======
+        var cb = function (eventname) {
+            iab._eventHandler(eventname);
+        };
+
+        strWindowFeatures = strWindowFeatures || '';
+
+        exec(cb, cb, 'InAppBrowser', 'open', [strUrl, strWindowName, strWindowFeatures]);
+>>>>>>> origin/master
         return iab;
     };
 })();

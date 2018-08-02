@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "_from": "cordova-plugin-geolocation@^2.4.3",
   "_id": "cordova-plugin-geolocation@2.4.3",
   "_inBundle": false,
@@ -14,22 +15,72 @@
     "rawSpec": "^2.4.3",
     "saveSpec": null,
     "fetchSpec": "^2.4.3"
+=======
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-geolocation@^2.4.3",
+        "scope": null,
+        "escapedName": "cordova-plugin-geolocation",
+        "name": "cordova-plugin-geolocation",
+        "rawSpec": "^2.4.3",
+        "spec": ">=2.4.3 <3.0.0",
+        "type": "range"
+      },
+      "/Users/sofia/Documents/business-directory-alexschmidt"
+    ]
+  ],
+  "_from": "cordova-plugin-geolocation@>=2.4.3 <3.0.0",
+  "_id": "cordova-plugin-geolocation@2.4.3",
+  "_inCache": true,
+  "_location": "/cordova-plugin-geolocation",
+  "_nodeVersion": "6.10.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-geolocation-2.4.3.tgz_1493685640809_0.01689610001631081"
+  },
+  "_npmUser": {
+    "name": "filmaj",
+    "email": "maj.fil@gmail.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-geolocation@^2.4.3",
+    "scope": null,
+    "escapedName": "cordova-plugin-geolocation",
+    "name": "cordova-plugin-geolocation",
+    "rawSpec": "^2.4.3",
+    "spec": ">=2.4.3 <3.0.0",
+    "type": "range"
+>>>>>>> origin/master
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
+<<<<<<< HEAD
   "_resolved": "https://registry.npmjs.org/cordova-plugin-geolocation/-/cordova-plugin-geolocation-2.4.3.tgz",
   "_shasum": "1dd00023d1f1a2ce330f8767ed08f7b738fe7184",
   "_spec": "cordova-plugin-geolocation@^2.4.3",
   "_where": "/Users/axel/project",
+=======
+  "_resolved": "http://registry.npmjs.org/cordova-plugin-geolocation/-/cordova-plugin-geolocation-2.4.3.tgz",
+  "_shasum": "1dd00023d1f1a2ce330f8767ed08f7b738fe7184",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-geolocation@^2.4.3",
+  "_where": "/Users/sofia/Documents/business-directory-alexschmidt",
+>>>>>>> origin/master
   "author": {
     "name": "Apache Software Foundation"
   },
   "bugs": {
     "url": "https://github.com/apache/cordova-plugin-geolocation/issues"
   },
+<<<<<<< HEAD
   "bundleDependencies": false,
+=======
+>>>>>>> origin/master
   "cordova": {
     "id": "cordova-plugin-geolocation",
     "platforms": [
@@ -45,11 +96,23 @@
       "firefoxos"
     ]
   },
+<<<<<<< HEAD
   "deprecated": false,
+=======
+  "dependencies": {},
+>>>>>>> origin/master
   "description": "Cordova Geolocation Plugin",
   "devDependencies": {
     "jshint": "^2.6.0"
   },
+<<<<<<< HEAD
+=======
+  "directories": {},
+  "dist": {
+    "shasum": "1dd00023d1f1a2ce330f8767ed08f7b738fe7184",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-geolocation/-/cordova-plugin-geolocation-2.4.3.tgz"
+  },
+>>>>>>> origin/master
   "engines": {
     "cordovaDependencies": {
       "3.0.0": {
@@ -74,7 +137,39 @@
     "cordova-firefoxos"
   ],
   "license": "Apache-2.0",
+<<<<<<< HEAD
   "name": "cordova-plugin-geolocation",
+=======
+  "maintainers": [
+    {
+      "name": "bowserj",
+      "email": "bowserj@apache.org"
+    },
+    {
+      "name": "csantanapr",
+      "email": "csantana23@gmail.com"
+    },
+    {
+      "name": "filmaj",
+      "email": "maj.fil@gmail.com"
+    },
+    {
+      "name": "purplecabbage",
+      "email": "purplecabbage@gmail.com"
+    },
+    {
+      "name": "shazron",
+      "email": "shazron@gmail.com"
+    },
+    {
+      "name": "stevegill",
+      "email": "stevengill97@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-geolocation",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+>>>>>>> origin/master
   "repository": {
     "type": "git",
     "url": "git+https://github.com/apache/cordova-plugin-geolocation.git"

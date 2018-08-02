@@ -21,9 +21,15 @@ description: Control the splash screen for your app.
 #         under the License.
 -->
 
+<<<<<<< HEAD
 |Android 4.4|Android 5.1|Android 6.0|iOS 9.3|iOS 10.0|Windows 10 Store|Travis CI|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android-4.4,PLUGIN=cordova-plugin-splashscreen)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android-4.4,PLUGIN=cordova-plugin-splashscreen/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android-5.1,PLUGIN=cordova-plugin-splashscreen)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android-5.1,PLUGIN=cordova-plugin-splashscreen/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android-6.0,PLUGIN=cordova-plugin-splashscreen)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android-6.0,PLUGIN=cordova-plugin-splashscreen/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios-9.3,PLUGIN=cordova-plugin-splashscreen)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios-9.3,PLUGIN=cordova-plugin-splashscreen/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios-10.0,PLUGIN=cordova-plugin-splashscreen)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios-10.0,PLUGIN=cordova-plugin-splashscreen/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-splashscreen)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-splashscreen/)|[![Build Status](https://travis-ci.org/apache/cordova-plugin-splashscreen.svg?branch=master)](https://travis-ci.org/apache/cordova-plugin-splashscreen)|
+=======
+|AppVeyor|Travis CI|
+|:-:|:-:|
+|[![Build status](https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-splashscreen?branch=master)](https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-splashscreen)|[![Build Status](https://travis-ci.org/apache/cordova-plugin-splashscreen.svg?branch=master)](https://travis-ci.org/apache/cordova-plugin-splashscreen)|
+>>>>>>> origin/master
 
 # cordova-plugin-splashscreen
 
@@ -41,11 +47,16 @@ Report issues with this plugin on the [Apache Cordova issue tracker][Apache Cord
 
 ## Supported Platforms
 
+<<<<<<< HEAD
 - Amazon Fire OS
 - Android
 - BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
+=======
+- Android
+- iOS
+>>>>>>> origin/master
 - Windows (`cordova-windows` version >= 4.4.0 is required)
 - Browser
 
@@ -81,10 +92,18 @@ If you choose to use legacy launch images, you will use the following syntax in 
 
 Technically the filename for the `src` attribute can be anything you want; the filenames are used because they match what will be used when your project is compiled. The width and height attributes determine which launch images are displayed on which devices as follows:
 
+<<<<<<< HEAD
 |    width    |    height    |    device (orientation)   |
 |:-----------:|:------------:|:-------------------------:|
 |     320     |      480     | All non-retina iPhones and iPods |
 |     640     |      960     | iPhone 4/4s/5/5s (portrait)      |
+=======
+|    width    |    height    |    device (orientation)          |
+|:-----------:|:------------:|:--------------------------------:|
+|     320     |      480     | All non-retina iPhones and iPods |
+|     640     |      960     | iPhone 4/4s (portrait)           |
+|     640     |     1136     | iPhone 5/5s/SE (portrait)        |
+>>>>>>> origin/master
 |     750     |     1334     | iPhone 6/6s/7 (portrait)         |
 |    1242     |     2208     | iPhone 6+/6s+/7+ (portrait)      |
 |    2208     |     1242     | iPhone 6+/6s+/7+ (landscape)     |
@@ -352,12 +371,15 @@ projectRoot
     <splash src="res/screen/windows/splashscreenphone.png" width="1152" height="1920"/>
 </platform>-->
 
+<<<<<<< HEAD
 <platform name="blackberry10">
     <!-- Add a rim:splash element for each resolution and locale you wish -->
     <!-- http://developer.blackberry.com/html5/documentation/rim_splash_element.html -->
     <rim:splash src="res/screen/blackberry/splashscreen.png"/>
 </platform>
 
+=======
+>>>>>>> origin/master
 <preference name="SplashScreenDelay" value="10000" />
 ```
 
@@ -435,6 +457,10 @@ In your `config.xml`, you can add the following preferences:
 ```xml
 <preference name="SplashMaintainAspectRatio" value="true|false" />
 <preference name="SplashShowOnlyFirstTime" value="true|false" />
+<<<<<<< HEAD
+=======
+<preference name="SplashScreenSpinnerColor" value="white" />
+>>>>>>> origin/master
 ```
 
 "SplashMaintainAspectRatio" preference is optional. If set to true, splash screen drawable is not stretched to fit screen, but instead simply "covers" the screen, like CSS "background-size:cover". This is very useful when splash screen images cannot be distorted in any way, for example when they contain scenery or text. This setting works best with images that have large margins (safe areas) that can be safely cropped on screens with different aspect ratios.
@@ -443,6 +469,11 @@ The plugin reloads splash drawable whenever orientation changes, so you can spec
 
 "SplashShowOnlyFirstTime" preference is also optional and defaults to `true`. When set to `true` splash screen will only appear on application launch. However, if you plan to use `navigator.app.exitApp()` to close application and force splash screen appear on next launch, you should set this property to `false` (this also applies to closing the App with Back button).
 
+<<<<<<< HEAD
+=======
+"SplashScreenSpinnerColor" preference is also optional and is ignored when not set. Setting it to a valid color name or HEX color code will change the color of the spinner on Android 5.0+ devices.
+
+>>>>>>> origin/master
 ### Browser Quirks
 
 You can use the following preferences in your `config.xml`:
@@ -450,6 +481,10 @@ You can use the following preferences in your `config.xml`:
 ```xml
 <platform name="browser">
     <preference name="SplashScreen" value="/images/browser/splashscreen.jpg" /> <!-- defaults to "/img/logo.png" -->
+<<<<<<< HEAD
+=======
+    <preference name="AutoHideSplashScreen" value="true" /> <!-- defaults to "true" -->
+>>>>>>> origin/master
     <preference name="SplashScreenDelay" value="3000" /> <!-- defaults to "3000" -->
     <preference name="SplashScreenBackgroundColor" value="green" /> <!-- defaults to "#464646" -->
     <preference name="ShowSplashScreen" value="false" /> <!-- defaults to "true" -->
@@ -494,7 +529,11 @@ navigator.splashscreen.hide();
 ```
 
 
+<<<<<<< HEAD
 ### BlackBerry 10, WP8, iOS Quirk
+=======
+### iOS Quirk
+>>>>>>> origin/master
 
 The `config.xml` file's `AutoHideSplashScreen` setting must be
 `false`. To delay hiding the splash screen for two seconds, add a

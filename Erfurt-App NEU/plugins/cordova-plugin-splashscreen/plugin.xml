@@ -20,7 +20,11 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
            id="cordova-plugin-splashscreen"
+<<<<<<< HEAD
       version="4.0.3">
+=======
+      version="5.0.2">
+>>>>>>> origin/master
     <name>Splashscreen</name>
     <description>Cordova Splashscreen Plugin</description>
     <license>Apache 2.0</license>
@@ -49,6 +53,7 @@
         <source-file src="src/android/SplashScreen.java" target-dir="src/org/apache/cordova/splashscreen" />
     </platform>
 
+<<<<<<< HEAD
     <!-- amazon-fireos -->
     <platform name="amazon-fireos">
         <config-file target="res/xml/config.xml" parent="/*">
@@ -66,6 +71,8 @@
         <source-file src="src/ubuntu/splashscreen.cpp" />
     </platform>
 
+=======
+>>>>>>> origin/master
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
@@ -83,6 +90,7 @@
 	    <framework src="CoreGraphics.framework" />
     </platform>
 
+<<<<<<< HEAD
     <!-- blackberry10 -->
     <platform name="blackberry10">
         <source-file src="src/blackberry10/index.js" target-dir="SplashScreen" />
@@ -112,6 +120,8 @@
         </js-module>
     </platform>
 
+=======
+>>>>>>> origin/master
     <!-- windows -->
     <platform name="windows">
         <js-module src="www/windows/SplashScreenProxy.js" name="SplashScreenProxy">
@@ -119,6 +129,7 @@
         </js-module>
     </platform>
 
+<<<<<<< HEAD
     <!-- tizen -->
     <platform name="tizen">
         <js-module src="src/tizen/SplashScreenProxy.js" name="SplashScreenProxy">
@@ -126,6 +137,8 @@
         </js-module>
     </platform>
 
+=======
+>>>>>>> origin/master
     <!-- browser -->
     <platform name="browser">
         <js-module src="src/browser/SplashScreenProxy.js" name="SplashScreenProxy">

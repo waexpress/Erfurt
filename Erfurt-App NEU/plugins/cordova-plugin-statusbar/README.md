@@ -21,9 +21,15 @@ description: Control the device status bar.
 #         under the License.
 -->
 
+<<<<<<< HEAD
 |Android|iOS| Windows 8.1 Store | Windows 8.1 Phone | Windows 10 Store | Travis CI |
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-statusbar)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-statusbar/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-statusbar)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-statusbar/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-statusbar)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-statusbar/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-statusbar)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-statusbar/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-statusbar)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-statusbar/)|[![Build Status](https://travis-ci.org/apache/cordova-plugin-statusbar.svg?branch=master)](https://travis-ci.org/apache/cordova-plugin-statusbar)|
+=======
+|AppVeyor|Travis CI|
+|:-:|:-:|
+|[![Build status](https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-statusbar?branch=master)](https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-statusbar)|[![Build Status](https://travis-ci.org/apache/cordova-plugin-statusbar.svg?branch=master)](https://travis-ci.org/apache/cordova-plugin-statusbar)|
+>>>>>>> origin/master
 
 # cordova-plugin-statusbar
 
@@ -32,7 +38,11 @@ StatusBar
 
 > The `StatusBar` object provides some functions to customize the iOS and Android StatusBar.
 
+<<<<<<< HEAD
 :warning: Report issues on the [Apache Cordova issue tracker](https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20%28Open%2C%20%22In%20Progress%22%2C%20Reopened%29%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Plugin%20Statusbar%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC)
+=======
+:warning: Report issues on the [Apache Cordova issue tracker](https://issues.apache.org/jira/issues/?jql=project%20%3D%20CB%20AND%20status%20in%20(Open%2C%20%22In%20Progress%22%2C%20Reopened)%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22cordova-plugin-statusbar%22%20ORDER%20BY%20priority%20DESC%2C%20summary%20ASC%2C%20updatedDate%20DESC)
+>>>>>>> origin/master
 
 
 ## Installation
@@ -65,6 +75,13 @@ Preferences
 
         <preference name="StatusBarStyle" value="lightcontent" />
 
+<<<<<<< HEAD
+=======
+- __StatusBarDefaultScrollToTop__ (boolean, defaults to false). On iOS 7, allows the Cordova WebView to use default scroll-to-top behavior. Defaults to false so you can listen to the "statusTap" event (described below) and customize the behavior instead.
+
+        <preference name="StatusBarDefaultScrollToTop" value="false" />
+
+>>>>>>> origin/master
 ### Android Quirks
 The Android 5+ guidelines specify using a different color for the statusbar than your main app color (unlike the uniform statusbar color of many iOS 7+ apps), so you may want to set the statusbar color at runtime instead via `StatusBar.backgroundColorByHexString` or `StatusBar.backgroundColorByName`. One way to do that would be:
 ```js
@@ -118,6 +135,7 @@ Events
 
 - statusTap
 
+<<<<<<< HEAD
 Permissions
 -----------
 
@@ -127,6 +145,8 @@ Permissions
                 <param name="ios-package" value="CDVStatusBar" onload="true" />
             </feature>
 
+=======
+>>>>>>> origin/master
 StatusBar.overlaysWebView
 =================
 
@@ -163,6 +183,10 @@ Supported Platforms
 -------------------
 
 - iOS
+<<<<<<< HEAD
+=======
+- Android 6+ 
+>>>>>>> origin/master
 - Windows Phone 7
 - Windows Phone 8
 - Windows Phone 8.1
@@ -179,6 +203,10 @@ Supported Platforms
 -------------------
 
 - iOS
+<<<<<<< HEAD
+=======
+- Android 6+ 
+>>>>>>> origin/master
 - Windows Phone 7
 - Windows Phone 8
 - Windows Phone 8.1
@@ -195,6 +223,10 @@ Supported Platforms
 -------------------
 
 - iOS
+<<<<<<< HEAD
+=======
+- Android 6+ 
+>>>>>>> origin/master
 - Windows Phone 7
 - Windows Phone 8
 - Windows Phone 8.1
@@ -211,6 +243,10 @@ Supported Platforms
 -------------------
 
 - iOS
+<<<<<<< HEAD
+=======
+- Android 6+ 
+>>>>>>> origin/master
 - Windows Phone 7
 - Windows Phone 8
 - Windows Phone 8.1

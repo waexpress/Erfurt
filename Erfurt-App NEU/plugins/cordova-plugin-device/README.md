@@ -21,9 +21,15 @@ description: Get device information.
 #         under the License.
 -->
 
+<<<<<<< HEAD
 |Android|iOS| Windows 8.1 Store | Windows 8.1 Phone | Windows 10 Store | Travis CI |
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-device)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=android,PLUGIN=cordova-plugin-device/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-device)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=ios,PLUGIN=cordova-plugin-device/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-device)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-store,PLUGIN=cordova-plugin-device/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-device)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-8.1-phone,PLUGIN=cordova-plugin-device/)|[![Build Status](http://cordova-ci.cloudapp.net:8080/buildStatus/icon?job=cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-device)](http://cordova-ci.cloudapp.net:8080/job/cordova-periodic-build/PLATFORM=windows-10-store,PLUGIN=cordova-plugin-device/)|[![Build Status](https://travis-ci.org/apache/cordova-plugin-device.svg?branch=master)](https://travis-ci.org/apache/cordova-plugin-device)|
+=======
+|AppVeyor|Travis CI|
+|:-:|:-:|
+|[![Build status](https://ci.appveyor.com/api/projects/status/github/apache/cordova-plugin-device?branch=master)](https://ci.appveyor.com/project/ApacheSoftwareFoundation/cordova-plugin-device)|[![Build Status](https://travis-ci.org/apache/cordova-plugin-device.svg?branch=master)](https://travis-ci.org/apache/cordova-plugin-device)|
+>>>>>>> origin/master
 
 # cordova-plugin-device
 
@@ -61,6 +67,7 @@ Get the version of Cordova running on the device.
 
 ### Supported Platforms
 
+<<<<<<< HEAD
 - Amazon Fire OS
 - Android
 - BlackBerry 10
@@ -69,6 +76,11 @@ Get the version of Cordova running on the device.
 - iOS
 - Tizen
 - Windows Phone 7 and 8
+=======
+- Android
+- Browser
+- iOS
+>>>>>>> origin/master
 - Windows
 - OSX
 
@@ -81,11 +93,16 @@ different across versions of the same product.
 ### Supported Platforms
 
 - Android
+<<<<<<< HEAD
 - BlackBerry 10
 - Browser
 - iOS
 - Tizen
 - Windows Phone 7 and 8
+=======
+- Browser
+- iOS
+>>>>>>> origin/master
 - Windows
 - OSX
 
@@ -107,6 +124,7 @@ var model = device.model;
 
 - Gets the [product name](http://developer.android.com/reference/android/os/Build.html#PRODUCT) instead of the [model name](http://developer.android.com/reference/android/os/Build.html#MODEL), which is often the production code name. For example, the Nexus One returns `Passion`, and Motorola Droid returns `voles`.
 
+<<<<<<< HEAD
 ### Tizen Quirks
 
 - Returns the device model assigned by the vendor, for example, `TIZEN`
@@ -115,6 +133,8 @@ var model = device.model;
 
 - Returns the device model specified by the manufacturer. For example, the Samsung Focus returns `SGH-i917`.
 
+=======
+>>>>>>> origin/master
 ## device.platform
 
 Get the device's operating system name.
@@ -125,12 +145,17 @@ var string = device.platform;
 ### Supported Platforms
 
 - Android
+<<<<<<< HEAD
 - BlackBerry 10
 - Browser
 - Firefox OS
 - iOS
 - Tizen
 - Windows Phone 7 and 8
+=======
+- Browser
+- iOS
+>>>>>>> origin/master
 - Windows
 - OSX
 
@@ -148,6 +173,7 @@ var string = device.platform;
 var devicePlatform = device.platform;
 ```
 
+<<<<<<< HEAD
 ### Windows Phone 7 Quirks
 
 Windows Phone 7 devices report the platform as `WinCE`.
@@ -156,6 +182,8 @@ Windows Phone 7 devices report the platform as `WinCE`.
 
 Windows Phone 8 devices report the platform as `Win32NT`.
 
+=======
+>>>>>>> origin/master
 ## device.uuid
 
 Get the device's Universally Unique Identifier ([UUID](http://en.wikipedia.org/wiki/Universally_Unique_Identifier)).
@@ -171,10 +199,14 @@ The details of how a UUID is generated are determined by the device manufacturer
 ### Supported Platforms
 
 - Android
+<<<<<<< HEAD
 - BlackBerry 10
 - iOS
 - Tizen
 - Windows Phone 7 and 8
+=======
+- iOS
+>>>>>>> origin/master
 - Windows
 - OSX
 
@@ -206,6 +238,7 @@ The UUID will be the same if app is restored from a backup or iCloud as it is sa
 
 The `uuid` on OSX is generated automatically if it does not exist yet and is stored in the `standardUserDefaults` in the `CDVUUID` property.
 
+<<<<<<< HEAD
 ### Windows Phone 7 and 8 Quirks
 
 The `uuid` for Windows Phone 7 requires the permission
@@ -214,6 +247,8 @@ property soon.  If the capability is not available, the application
 generates a persistent guid that is maintained for the duration of the
 application's installation on the device.
 
+=======
+>>>>>>> origin/master
 ## device.version
 
 Get the operating system version.
@@ -223,11 +258,16 @@ Get the operating system version.
 ### Supported Platforms
 
 - Android 2.1+
+<<<<<<< HEAD
 - BlackBerry 10
 - Browser
 - iOS
 - Tizen
 - Windows Phone 7 and 8
+=======
+- Browser
+- iOS
+>>>>>>> origin/master
 - Windows
 - OSX
 
@@ -261,9 +301,13 @@ Get the device's manufacturer.
 ### Supported Platforms
 
 - Android
+<<<<<<< HEAD
 - BlackBerry 10
 - iOS
 - Windows Phone 7 and 8
+=======
+- iOS
+>>>>>>> origin/master
 - Windows
 
 ### Quick Example
@@ -287,6 +331,7 @@ var isSim = device.isVirtual;
 ### Supported Platforms
 
 - Android 2.1+
+<<<<<<< HEAD
 - iOS
 - Windows Phone 8
 - Windows
@@ -295,6 +340,16 @@ var isSim = device.isVirtual;
 ### OSX Quirk
 
 The `isVirtual` property on OS X always returns false.
+=======
+- Browser
+- iOS
+- Windows
+- OSX
+
+### OSX and Browser Quirk
+
+The `isVirtual` property on OS X and Browser always returns false.
+>>>>>>> origin/master
 
 ## device.serial
 

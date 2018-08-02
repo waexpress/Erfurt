@@ -46,6 +46,10 @@ public:
 public slots:
     void open(int cb, int, const QString &url, const QString &windowName, const QString &windowFeatures);
     void show(int, int);
+<<<<<<< HEAD
+=======
+    void hide(int, int);
+>>>>>>> origin/master
     void close(int, int);
     void injectStyleFile(int cb, int, const QString&, bool);
     void injectStyleCode(int cb, int, const QString&, bool);

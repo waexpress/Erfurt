@@ -97,20 +97,33 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
 
 -(void)statusBarDidChangeFrame:(NSNotification*)notification
 {
+<<<<<<< HEAD
     //add a small delay for iOS 7 ( 0.1 seconds )
     __weak CDVStatusBar* weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+=======
+    //add a small delay ( 0.1 seconds ) or statusbar size will be wrong
+    __weak CDVStatusBar* weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [weakSelf resizeStatusBarBackgroundView];
+>>>>>>> origin/master
         [weakSelf resizeWebView];
     });
 }
 
 - (void)pluginInitialize
 {
+<<<<<<< HEAD
     BOOL isiOS7 = (IsAtLeastiOSVersion(@"7.0"));
 
     // init
     NSNumber* uiviewControllerBasedStatusBarAppearance = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"UIViewControllerBasedStatusBarAppearance"];
     _uiviewControllerBasedStatusBarAppearance = (uiviewControllerBasedStatusBarAppearance == nil || [uiviewControllerBasedStatusBarAppearance boolValue]) && isiOS7;
+=======
+    // init
+    NSNumber* uiviewControllerBasedStatusBarAppearance = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"UIViewControllerBasedStatusBarAppearance"];
+    _uiviewControllerBasedStatusBarAppearance = (uiviewControllerBasedStatusBarAppearance == nil || [uiviewControllerBasedStatusBarAppearance boolValue]);
+>>>>>>> origin/master
 
     // observe the statusBarHidden property
     [[UIApplication sharedApplication] addObserver:self forKeyPath:@"statusBarHidden" options:NSKeyValueObservingOptionNew context:NULL];
@@ -137,8 +150,19 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
         [self setStatusBarStyle:[self settingForKey:setting]];
     }
 
+<<<<<<< HEAD
     // blank scroll view to intercept status bar taps
     self.webView.scrollView.scrollsToTop = NO;
+=======
+    setting  = @"StatusBarDefaultScrollToTop";
+    if ([self settingForKey:setting]) {
+        self.webView.scrollView.scrollsToTop = [(NSNumber*)[self settingForKey:setting] boolValue];
+    } else {
+        self.webView.scrollView.scrollsToTop = NO;
+    }
+ 
+    // blank scroll view to intercept status bar taps
+>>>>>>> origin/master
     UIScrollView *fakeScrollView = [[UIScrollView alloc] initWithFrame:UIScreen.mainScreen.bounds];
     fakeScrollView.delegate = self;
     fakeScrollView.scrollsToTop = YES;
@@ -146,6 +170,11 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
     [self.viewController.view sendSubviewToBack:fakeScrollView]; // Send it to the very back of the view heirarchy
     fakeScrollView.contentSize = CGSizeMake(UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height * 2.0f); // Make the scroll view longer than the screen itself
     fakeScrollView.contentOffset = CGPointMake(0.0f, UIScreen.mainScreen.bounds.size.height); // Scroll down so a tap will take scroll view back to the top
+<<<<<<< HEAD
+=======
+
+    _statusBarVisible = ![UIApplication sharedApplication].isStatusBarHidden;
+>>>>>>> origin/master
 }
 
 - (void)onReset {
@@ -197,14 +226,18 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
         statusBarFrame.origin.y = 0;
     }
 
+<<<<<<< HEAD
     statusBarFrame = [self invertFrameIfNeeded:statusBarFrame];
 
+=======
+>>>>>>> origin/master
     _statusBarBackgroundView = [[UIView alloc] initWithFrame:statusBarFrame];
     _statusBarBackgroundView.backgroundColor = _statusBarBackgroundColor;
     _statusBarBackgroundView.autoresizingMask = (UIViewAutoresizingFlexibleWidth  | UIViewAutoresizingFlexibleBottomMargin);
     _statusBarBackgroundView.autoresizesSubviews = YES;
 }
 
+<<<<<<< HEAD
 - (CGRect) invertFrameIfNeeded:(CGRect)rect {
     // landscape is where (width > height). On iOS < 8, we need to invert since frames are
     // always in Portrait context. Do not run this on ios 8 or above to avoid breaking ipad pro multitask layout
@@ -225,6 +258,15 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
         return;
     }
     
+=======
+- (void) setStatusBarOverlaysWebView:(BOOL)statusBarOverlaysWebView
+{
+    // we only care about the latest iOS version or a change in setting
+    if (statusBarOverlaysWebView == _statusBarOverlaysWebView) {
+        return;
+    }
+
+>>>>>>> origin/master
     _statusBarOverlaysWebView = statusBarOverlaysWebView;
 
     [self resizeWebView];
@@ -308,22 +350,30 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
 
 - (void) styleBlackTranslucent:(CDVInvokedUrlCommand*)command
 {
+<<<<<<< HEAD
     #if __IPHONE_OS_VERSION_MAX_ALLOWED < 70000
     # define TRANSLUCENT_STYLE UIStatusBarStyleBlackTranslucent
     #else
     # define TRANSLUCENT_STYLE UIStatusBarStyleLightContent
     #endif
     [self setStyleForStatusBar:TRANSLUCENT_STYLE];
+=======
+    [self setStyleForStatusBar:UIStatusBarStyleLightContent];
+>>>>>>> origin/master
 }
 
 - (void) styleBlackOpaque:(CDVInvokedUrlCommand*)command
 {
+<<<<<<< HEAD
     #if __IPHONE_OS_VERSION_MAX_ALLOWED < 70000
     # define OPAQUE_STYLE UIStatusBarStyleBlackOpaque
     #else
     # define OPAQUE_STYLE UIStatusBarStyleLightContent
     #endif
     [self setStyleForStatusBar:OPAQUE_STYLE];
+=======
+    [self setStyleForStatusBar:UIStatusBarStyleLightContent];
+>>>>>>> origin/master
 }
 
 - (void) backgroundColorByName:(CDVInvokedUrlCommand*)command
@@ -379,16 +429,27 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
 
 - (void) hide:(CDVInvokedUrlCommand*)command
 {
+<<<<<<< HEAD
+=======
+    _statusBarVisible = NO;
+>>>>>>> origin/master
     UIApplication* app = [UIApplication sharedApplication];
 
     if (!app.isStatusBarHidden)
     {
+<<<<<<< HEAD
         
         [self hideStatusBar];
 
         if (IsAtLeastiOSVersion(@"7.0")) {
             [_statusBarBackgroundView removeFromSuperview];
         }
+=======
+
+        [self hideStatusBar];
+
+        [_statusBarBackgroundView removeFromSuperview];
+>>>>>>> origin/master
 
         [self resizeWebView];
 
@@ -411,10 +472,15 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
 
 - (void) show:(CDVInvokedUrlCommand*)command
 {
+<<<<<<< HEAD
+=======
+    _statusBarVisible = YES;
+>>>>>>> origin/master
     UIApplication* app = [UIApplication sharedApplication];
 
     if (app.isStatusBarHidden)
     {
+<<<<<<< HEAD
         BOOL isIOS7 = (IsAtLeastiOSVersion(@"7.0"));
 
         [self showStatusBar];
@@ -435,6 +501,18 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
                 [self.webView.superview addSubview:_statusBarBackgroundView];
 
             }
+=======
+        [self showStatusBar];
+        [self resizeWebView];
+
+        if (!self.statusBarOverlaysWebView) {
+
+            // there is a possibility that when the statusbar was hidden, it was in a different orientation
+            // from the current one. Therefore we need to expand the statusBarBackgroundView as well to the
+            // statusBar's current size
+            [self resizeStatusBarBackgroundView];
+            [self.webView.superview addSubview:_statusBarBackgroundView];
+>>>>>>> origin/master
 
         }
 
@@ -442,6 +520,7 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
     }
 }
 
+<<<<<<< HEAD
 -(void)resizeWebView
 {
     BOOL isIOS7 = (IsAtLeastiOSVersion(@"7.0"));
@@ -488,6 +567,53 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
         CGRect bounds = [[UIScreen mainScreen] applicationFrame];
         self.viewController.view.frame = bounds;
     }
+=======
+-(void)resizeStatusBarBackgroundView {
+    CGRect statusBarFrame = [UIApplication sharedApplication].statusBarFrame;
+    CGRect sbBgFrame = _statusBarBackgroundView.frame;
+    sbBgFrame.size = statusBarFrame.size;
+    _statusBarBackgroundView.frame = sbBgFrame;
+}
+
+-(void)resizeWebView
+{
+    BOOL isIOS11 = (IsAtLeastiOSVersion(@"11.0"));
+
+    CGRect bounds = [self.viewController.view.window bounds];
+    if (CGRectEqualToRect(bounds, CGRectZero)) {
+        bounds = [[UIScreen mainScreen] bounds];
+    }
+
+    self.viewController.view.frame = bounds;
+
+    self.webView.frame = bounds;
+
+    CGRect statusBarFrame = [UIApplication sharedApplication].statusBarFrame;
+    CGRect frame = self.webView.frame;
+    CGFloat height = statusBarFrame.size.height;
+
+    if (!self.statusBarOverlaysWebView) {
+        frame.origin.y = height;
+    } else {
+        frame.origin.y = height >= 20 ? height - 20 : 0;
+        if (isIOS11) {
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 110000
+            if (@available(iOS 11.0, *)) {
+                float safeAreaTop = self.webView.safeAreaInsets.top;
+                if (height >= safeAreaTop && safeAreaTop >0) {
+                    // Sometimes when in-call/recording/hotspot larger status bar is present, the safeAreaTop is 40 but we want frame.origin.y to be 20
+                    frame.origin.y = safeAreaTop == 40 ? 20 : height - safeAreaTop;
+                } else {
+                    frame.origin.y = 0;
+                }
+            }
+#endif
+        }
+    }
+    frame.size.height -= frame.origin.y;
+    self.webView.frame = frame;
+    
+>>>>>>> origin/master
 }
 
 - (void) dealloc

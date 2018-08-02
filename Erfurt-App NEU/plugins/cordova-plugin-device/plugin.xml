@@ -22,7 +22,11 @@
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-device"
+<<<<<<< HEAD
     version="1.1.4">
+=======
+    version="2.0.2">
+>>>>>>> origin/master
     <name>Device</name>
     <description>Cordova Device Plugin</description>
     <license>Apache 2.0</license>
@@ -34,6 +38,7 @@
         <clobbers target="device" />
     </js-module>
 
+<<<<<<< HEAD
     <!-- firefoxos -->
     <platform name="firefoxos">
         <config-file target="config.xml" parent="/*">
@@ -54,6 +59,8 @@
         </js-module>
     </platform>
 
+=======
+>>>>>>> origin/master
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
@@ -65,6 +72,7 @@
         <source-file src="src/android/Device.java" target-dir="src/org/apache/cordova/device" />
     </platform>
 
+<<<<<<< HEAD
     <!-- amazon-fireos -->
     <platform name="amazon-fireos">
         <config-file target="res/xml/config.xml" parent="/*">
@@ -85,6 +93,8 @@
         </js-module>
     </platform>
 
+=======
+>>>>>>> origin/master
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
@@ -97,6 +107,7 @@
         <source-file src="src/ios/CDVDevice.m" />
     </platform>
 
+<<<<<<< HEAD
     <!-- blackberry10 -->
     <platform name="blackberry10">
         <source-file src="src/blackberry10/index.js" target-dir="Device" />
@@ -142,6 +153,12 @@
     <platform name="windows">
         <js-module src="src/windows/DeviceProxy.js" name="DeviceProxy">
             <merges target="" />
+=======
+    <!-- windows -->
+    <platform name="windows">
+        <js-module src="src/windows/DeviceProxy.js" name="DeviceProxy">
+            <runs />
+>>>>>>> origin/master
         </js-module>
     </platform>
 

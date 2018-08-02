@@ -40,6 +40,10 @@
 - (void)close:(CDVInvokedUrlCommand*)command;
 - (void)injectScriptCode:(CDVInvokedUrlCommand*)command;
 - (void)show:(CDVInvokedUrlCommand*)command;
+<<<<<<< HEAD
+=======
+- (void)hide:(CDVInvokedUrlCommand*)command;
+>>>>>>> origin/master
 
 @end
 
