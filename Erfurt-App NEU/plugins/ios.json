@@ -1,0 +1,41 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "io.appseed.businessdirectory2"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "io.appseed.businessdirectory2"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.appseed.businessdirectory2"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "io.appseed.businessdirectory2"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.appseed.businessdirectory2"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.appseed.businessdirectory2"
+    },
+    "cordova-plugin-geolocation": {
+      "GEOLOCATION_USAGE_DESCRIPTION": "This app uses your location",
+      "PACKAGE_NAME": "io.appseed.businessdirectory2"
+    },
+    "cordova-plugin-wkwebview-engine": {
+      "PACKAGE_NAME": "io.appseed.businessdirectory2"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "io.appseed.businessdirectory2"
+    }
+  }
+}
