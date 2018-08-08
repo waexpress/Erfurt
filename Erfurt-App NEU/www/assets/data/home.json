@@ -1,0 +1,50 @@
+{
+  "picture": "assets/img/placeholder.png",
+  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et elit vel arcu sollicitudin sollicitudin. Nullam ultricies blandit justo, vitae congue nisl varius vitae. Nulla rhoncus, nisl ac molestie aliquam, turpis eros condimentum odio, id finibus turpis nunc et purus.",
+  "categories" : {
+     "-KFmR066qUtvVv9IaBrq" : {
+       "name" : "Movie Theatres",
+       "picture": "assets/img/placeholder.png"
+     },
+     "-KFmRyJu07Y6dVlVbdh9" : {
+       "name" : "Drink",
+       "picture": "assets/img/placeholder.png"
+     },
+     "-KFoWA2ujTJ8Zb8JbaoZ" : {
+       "name" : "Healthcare",
+       "picture": "assets/img/placeholder.png"
+     },
+     "-KHKN0MiysoAodCMlYW_" : {
+       "name" : "Food",
+       "picture": "assets/img/placeholder.png"
+     },
+     "-KLYHKBftksPjoSHOEQ_" : {
+       "name" : "Shop",
+       "picture": "assets/img/placeholder.png"
+     },
+     "-KlTGCqAeyNPvncPooTx" : {
+       "name" : "Hotels",
+       "picture": "assets/img/placeholder.png"
+     },
+     "-KoqbaE7I3QeM6J3WW77" : {
+       "name" : "Museums",
+       "picture": "assets/img/placeholder.png"
+     },
+     "-KptZiPM9upG-JiAqXR6" : {
+       "name" : "Galleries",
+       "picture": "assets/img/placeholder.png"
+     },
+     "-KLYHeyNPvjoSHOEqAAP" : {
+       "name" : "Discount",
+       "picture": "assets/img/placeholder.png"
+     },
+     "-KFHYeyNPvjoSTGCft7I" : {
+       "name" : "Sports",
+       "picture": "assets/img/placeholder.png"
+     },
+     "-u9jdk2ftksPjoSHOEQ_" : {
+       "name" : "Pet & Animal",
+       "picture": "assets/img/placeholder.png"
+     }
+   }
+}
