@@ -71,7 +71,7 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="orientation" value="default" />
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
-    <engine name="ios" spec="^4.5.4" />
+    <engine name="ios" spec="4.5.4" />
     <plugin name="cordova-plugin-statusbar" spec="^2.4.2" />
     <plugin name="cordova-plugin-inappbrowser" spec="^1.7.2" />
     <plugin name="cordova-plugin-geolocation" spec="^2.4.3">
