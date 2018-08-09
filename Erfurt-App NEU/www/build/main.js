@@ -4461,12 +4461,12 @@ var apiUrl = 'assets/data/data.json';
 // export const apiUrl = 'http://appseed.io.s3.amazonaws.com/mobile-apps/conference/data.json';
 var mapApiKey = 'AIzaSyAICFcc8EqgpMaytQEuPkcYAFaCFQXNfRo';
 var firebaseConfig = {
-    apiKey: 'AIzaSyDYkZgfFxLKK3CxmH0r2Gqq4HYTh-5riYk',
-    authDomain: 'business-directory-ax-schmidt.firebaseapp.com',
-    databaseURL: 'https://business-directory-ax-schmidt.firebaseio.com',
-    projectId: 'business-directory-ax-schmidt',
-    storageBucket: 'business-directory-ax-schmidt.appspot.com',
-    messagingSenderId: '585144438267'
+    apiKey: 'AIzaSyAhVT28iyGqz8Th81tqL5Yf985OcvP937g',
+    authDomain: 'erfurtapp.firebaseapp.com',
+    databaseURL: 'https://erfurtapp.firebaseio.com',
+    projectId: 'erfurtapp',
+    storageBucket: 'erfurtapp.appspot.com',
+    messagingSenderId: '519061033035'
 };
 var backendlessConfig = {
     appId: '23A8662E-FEFD-1784-FF25-94058263E100',
