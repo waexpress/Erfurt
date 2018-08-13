@@ -1,50 +1,50 @@
 {
-  "picture": "assets/img/placeholder.png",
-  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et elit vel arcu sollicitudin sollicitudin. Nullam ultricies blandit justo, vitae congue nisl varius vitae. Nulla rhoncus, nisl ac molestie aliquam, turpis eros condimentum odio, id finibus turpis nunc et purus.",
+  "picture": "assets/img/jedermann.png",
+  "text": "Schon Martin Luther fand Gefallen an Thüringens Landeshauptstadt. Heute überrascht Erfurt mit einem historischen Zentrum, einer vielfältigen Kulturszene und einem der schönsten Weihnachtsmärkte Deutschlands.",
   "categories" : {
-     "-KFmR066qUtvVv9IaBrq" : {
-       "name" : "Movie Theatres",
-       "picture": "assets/img/placeholder.png"
+     "Sehenswert" : {
+       "name" : "Sehenswert",
+       "picture": "assets/img/sehenswert.png"
      },
-     "-KFmRyJu07Y6dVlVbdh9" : {
-       "name" : "Drink",
-       "picture": "assets/img/placeholder.png"
+     "Unterkunft" : {
+       "name" : "Unterkunft",
+       "picture": "assets/img/unterkunft.png"
      },
-     "-KFoWA2ujTJ8Zb8JbaoZ" : {
-       "name" : "Healthcare",
-       "picture": "assets/img/placeholder.png"
+     "Dienstleistungen" : {
+       "name" : "Dienstleistungen",
+       "picture": "assets/img/dienstleistungen.png"
      },
-     "-KHKN0MiysoAodCMlYW_" : {
-       "name" : "Food",
-       "picture": "assets/img/placeholder.png"
+     "Angebote" : {
+       "name" : "Angebote",
+       "picture": "assets/img/angebote.png"
      },
-     "-KLYHKBftksPjoSHOEQ_" : {
-       "name" : "Shop",
-       "picture": "assets/img/placeholder.png"
+     "Essen" : {
+       "name" : "Essen & Trinken",
+       "picture": "assets/img/essenundtrinken.png"
      },
-     "-KlTGCqAeyNPvncPooTx" : {
-       "name" : "Hotels",
-       "picture": "assets/img/placeholder.png"
+     "Einkaufen" : {
+       "name" : "Einkaufen",
+       "picture": "assets/img/einkaufen.png"
      },
-     "-KoqbaE7I3QeM6J3WW77" : {
-       "name" : "Museums",
-       "picture": "assets/img/placeholder.png"
+     "Freizeit" : {
+       "name" : "Freizeit",
+       "picture": "assets/img/freizeit.png"
      },
-     "-KptZiPM9upG-JiAqXR6" : {
-       "name" : "Galleries",
-       "picture": "assets/img/placeholder.png"
+     "Parken" : {
+       "name" : "Parken",
+       "picture": "assets/img/parken.png"
      },
-     "-KLYHeyNPvjoSHOEqAAP" : {
-       "name" : "Discount",
-       "picture": "assets/img/placeholder.png"
+     "Museen" : {
+       "name" : "Museen",
+       "picture": "assets/img/museen.png"
      },
-     "-KFHYeyNPvjoSTGCft7I" : {
-       "name" : "Sports",
-       "picture": "assets/img/placeholder.png"
+     "Immobilien" : {
+       "name" : "Immobilien",
+       "picture": "assets/img/immobilien.png"
      },
-     "-u9jdk2ftksPjoSHOEQ_" : {
-       "name" : "Pet & Animal",
-       "picture": "assets/img/placeholder.png"
+     "Ausflugsziele" : {
+       "name" : "Ausflugsziele",
+       "picture": "assets/img/ausflugsziele.png"
      }
    }
 }

@@ -4,32 +4,32 @@
       "isBusiness": true,
       "name": "Flughafen Erfurt-Weimar",
       "key": "Flughafen",
-      "picture": "assets/img/placeholder.png"
+      "picture": "assets/img/flughafen.png"
     },
     {
       "isBusiness": true,
-      "name": "Flights",
-      "key": "d3aa8016-2e61-4abf-8a76-210e7a373680",
-      "picture": "assets/img/placeholder.png"
+      "name": "Nahverkehr",
+      "key": "Nahverkehr",
+      "picture": "assets/img/nahverkehr.png"
     },
     {
       "isAction": true,
-      "name": "Calendar",
-      "key": "3f7784e2-6ff4-43bb-8da2-07fd2afef467",
-      "picture": "assets/img/placeholder.png",
-      "url": "http://appseed.io/"
+      "name": "Veranstaltungen",
+      "key": "Veranstaltungen",
+      "picture": "assets/img/veranstaltungen.png",
+      "url": "https://www.wa-express.de/Veranstaltung/picker.html"
     },
     {
       "isAction": true,
-      "name": "Helpdesk",
-      "key": "93ac0fd1-8cc0-4352-901d-bd4fdc269c7a",
-      "picture": "assets/img/placeholder.png",
-      "url": "https://appseed.desk.com/customer/portal/emails/new"
+      "name": "Karriere",
+      "key": "Karriere",
+      "picture": "assets/img/karriere.png",
+      "url": "https://www.facebook.com/pg/ErfurtApp/jobs/"
     },
     {
       "isSlideshow": true,
-      "name": "Slideshow",
-      "picture": "assets/img/placeholder.png"
+      "name": "Impressionen",
+      "picture": "assets/img/impressionen.png"
     }
   ]
 }
