@@ -21,10 +21,18 @@
     <preference name="android-minSdkVersion" value="19" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashMaintainAspectRatio" value="true" />
-    <preference name="FadeSplashScreenDuration" value="300" />
+    <preference name="FadeSplashScreenDuration" value="1000" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreenDelay" value="10000" />
+	
+	
+	
+	<preference name="AutoHideSplashScreen" value="false" />
+ 	<preference name="ShowSplashScreen" value="true" />
+ 	<preference name="ShowSplashScreenSpinner" value="false" />
+ 	<preference name="FadeSplashScreen" value="true" />
+	
 	
 	<plugin name="onesignal-cordova-plugin" spec="^2.4.1" source="npm" />
 
