@@ -126,7 +126,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var OpenHoursService = (function () {
     function OpenHoursService() {
-        this.dayNames = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'];
+        this.dayNames = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
     }
     // *****************************************************************
     OpenHoursService.prototype.getOpenHours = function (openHours) {
