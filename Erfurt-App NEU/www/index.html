@@ -6,7 +6,7 @@
     (function(w){var i=w.Ionic=w.Ionic||{};i.version='3.9.2';i.angular='5.0.1';i.staticDir='build/';})(window);
   </script>
 		<meta charset="UTF-8">
-		<title>Business directory app</title>
+		<title>Erfurt-App</title>
 		<meta name="viewport" content="width=device-width, height=device-height, viewport-fit=cover, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="format-detection" content="telephone=no">
 		<meta name="msapplication-tap-highlight" content="no">
@@ -27,6 +27,40 @@
 			 * }
 			 */
 		</script>
+        
+        
+        
+        <script type="text/javascript" src="cordova.js">// Wait for device API libraries to load
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+    // device APIs are available
+    function onDeviceReady() {
+        alert("device ready event occured");
+    }</script>
+        
+        
+        
+        <script>
+			document.addEventListener('deviceready', function () {
+  // Enable to debug issues.
+  // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+  
+  var notificationOpenedCallback = function(jsonData) {
+    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+  };
+
+  window.plugins.OneSignal
+    .startInit("971d115a-ad05-4a9b-b6a2-971dc9ada326", "175787334223")
+    .handleNotificationOpened(notificationOpenedCallback)
+    .endInit();
+  
+  // Call syncHashedEmail anywhere in your app if you have the user's email.
+  // This improves the effectiveness of OneSignal's "best-time" notification scheduling feature.
+  // window.plugins.OneSignal.syncHashedEmail(userEmail);
+}, false);
+		</script>
+        
 
 		<link href="build/main.css" rel="stylesheet">
 
