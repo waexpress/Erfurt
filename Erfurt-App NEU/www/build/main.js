@@ -564,6 +564,13 @@ var BusinessesService = (function () {
         this.currentBusiness = business;
     };
     BusinessesService.prototype.getCurrent = function () {
+        var _this = this;
+        var origins = [];
+        origins.push(this.currentBusiness.officeLocation);
+        this.distanceService.getDistancesToOrigins(origins)
+            .then(function (distances) {
+            _this.currentBusiness.distance = distances[0];
+        });
         return this.currentBusiness;
     };
     BusinessesService = __decorate([
@@ -1409,8 +1416,8 @@ var AddReviewPage = (function () {
     AddReviewPage.prototype.addReview = function () {
         if (!this.review.author || !this.review.comment) {
             var alert_1 = this.alertCtrl.create({
-                title: 'Validation',
-                subTitle: 'Author and comment fields are required',
+                title: 'Achtung',
+                subTitle: 'Bitte Namen und Kommentar eintragen',
                 buttons: ['OK']
             });
             alert_1.present();
@@ -1424,7 +1431,7 @@ var AddReviewPage = (function () {
     };
     AddReviewPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-add-review',template:/*ion-inline-start:"/Users/axel/erfurtapp/src/pages/reviews/add-review.html"*/'<ion-header>\n	<ion-toolbar>\n		<ion-buttons start>\n			<button ion-button (click)="dismiss()">Abbruch</button>\n		</ion-buttons>\n\n		<ion-title>\n			Kommentar hinzufügen\n		</ion-title>\n\n	</ion-toolbar>\n</ion-header>\n\n<ion-content>\n	<ion-list>\n\n		<ion-item>\n			<ion-label floating>Name</ion-label>\n			<ion-input type="text" [(ngModel)]="review.author"></ion-input>\n		</ion-item>\n\n		<ion-item>\n			<ion-label floating>Kommentar</ion-label>\n			<ion-textarea rows="6" type="text" [(ngModel)]="review.comment"></ion-textarea>\n		</ion-item>\n\n		<!--<ion-item>-->\n		<!--<ion-label>Rating</ion-label>-->\n\n		<!---->\n		<!--</ion-item>-->\n\n	</ion-list>\n\n	<div padding>\n		<span>Bewertung</span>\n		<rating [(ngModel)]="review.rate" nullable="true"></rating>\n	</div>\n\n	<div padding>\n		<button ion-button color="primary" block (click)="addReview()">Absenden</button>\n	</div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/axel/erfurtapp/src/pages/reviews/add-review.html"*/
+            selector: 'page-add-review',template:/*ion-inline-start:"/Users/axel/erfurtapp/src/pages/reviews/add-review.html"*/'<ion-header>\n	<ion-toolbar>\n		<ion-buttons start>\n			<button ion-button (click)="dismiss()">Abbruch</button>\n		</ion-buttons>\n\n		<ion-title>\n			Kommentar hinzufügen\n		</ion-title>\n\n	</ion-toolbar>\n</ion-header>\n\n<ion-content>\n	<ion-list>\n\n		<ion-item>\n			<ion-label floating>Name</ion-label>\n			<ion-input type="text" [(ngModel)]="review.author"></ion-input>\n		</ion-item>\n\n		<ion-item>\n			<ion-label floating>Kommentar (max. 70 Zeichen)</ion-label>\n			<ion-textarea rows="6" type="text" [(ngModel)]="review.comment"></ion-textarea>\n		</ion-item>\n\n		<!--<ion-item>-->\n		<!--<ion-label>Rating</ion-label>-->\n\n		<!---->\n		<!--</ion-item>-->\n\n	</ion-list>\n\n	<div padding>\n		<span>Bewertung</span>\n		<rating [(ngModel)]="review.rate" nullable="true"></rating>\n	</div>\n\n	<div padding>\n		<button ion-button color="primary" block (click)="addReview()">Absenden</button>\n	</div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/axel/erfurtapp/src/pages/reviews/add-review.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ViewController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
