@@ -99,7 +99,8 @@
     <plugin name="cordova-plugin-statusbar" spec="^2.4.2" />
     <plugin name="cordova-plugin-inappbrowser" spec="^1.7.2" />
     <plugin name="cordova-plugin-geolocation" spec="^2.4.3">
-        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="Diese App nutzt Ihre Position" />
+        <variable name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="Darf Erfurt-App auf Ihren Standort zugreifen wenn Sie die App nutzen? Die Anwendung nutzt Ihre Position für die Umgebungssuche und zur Navigation." />
+        <variable name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="Darf Erfurt-App auf Ihren Standort zugreifen wenn Sie die App nutzen? Die Anwendung nutzt Ihre Position für die Umgebungssuche und zur Navigation." />
     </plugin>
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <plugin name="cordova-plugin-device" spec="^2.0.2" />
