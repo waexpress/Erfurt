@@ -523,8 +523,8 @@ var BusinessesService = (function () {
     };
     BusinessesService.prototype.getBusinesses = function () {
         var _this = this;
-        var shouldCache = true;
-        if (shouldCache || !this.businesses) {
+        var shouldCache = false;
+        if (!shouldCache || !this.businesses) {
             return Promise.all([this.data.getBusinesses(), this.data.getCategories()])
                 .then(function (_a) {
                 var businesses = _a[0], categories = _a[1];
@@ -546,6 +546,9 @@ var BusinessesService = (function () {
                 return businesses;
             });
         }
+        if (shouldCache && this.businesses) {
+            this.setDistance(this.businesses);
+        }
         return Promise.resolve(this.businesses);
     };
     BusinessesService.prototype.setDistance = function (businesses) {
@@ -555,6 +558,7 @@ var BusinessesService = (function () {
         businesses = __WEBPACK_IMPORTED_MODULE_1_lodash__["map"](businesses, function (business) { return business; });
         this.distanceService.getDistancesToOrigins(origins)
             .then(function (distances) {
+            console.log('distances: ', distances);
             __WEBPACK_IMPORTED_MODULE_1_lodash__["each"](businesses, function (business, index) {
                 business.distance = distances[index];
             });
