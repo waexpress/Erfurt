@@ -487,8 +487,8 @@ var BusinessesService = (function () {
         var _this = this;
         if (orderBy === void 0) { orderBy = 'name'; }
         filter = filter ? filter.toLowerCase() : filter;
-        return this.getBusinesses().then(function () {
-            var businesses = __WEBPACK_IMPORTED_MODULE_1_lodash__["filter"](_this.businesses, function (business) {
+        return this.getBusinesses().then(function (businesses) {
+            businesses = __WEBPACK_IMPORTED_MODULE_1_lodash__["filter"](_this.businesses, function (business) {
                 return (!filter || (business.name.toLowerCase().indexOf(filter) >= 0 || business.keyword.toLowerCase().indexOf(filter) >= 0))
                     && (!showFavorites || business.isInFavorites)
                     && (!categoryId || (business.category && business.category.includes(categoryId)));
@@ -523,8 +523,8 @@ var BusinessesService = (function () {
     };
     BusinessesService.prototype.getBusinesses = function () {
         var _this = this;
-        var shouldCache = false;
-        if (!shouldCache || !this.businesses) {
+        var shouldCache = true;
+        if (shouldCache || !this.businesses) {
             return Promise.all([this.data.getBusinesses(), this.data.getCategories()])
                 .then(function (_a) {
                 var businesses = _a[0], categories = _a[1];
@@ -542,12 +542,11 @@ var BusinessesService = (function () {
                     });
                     business.categoryNames = categoryNames;
                 });
-                _this.setDistance(businesses);
-                return businesses;
+                return _this.setDistance(businesses).then(function (businesses) {
+                    return businesses;
+                });
+                //return businesses;
             });
-        }
-        if (shouldCache && this.businesses) {
-            this.setDistance(this.businesses);
         }
         return Promise.resolve(this.businesses);
     };
@@ -556,25 +555,18 @@ var BusinessesService = (function () {
             return business.officeLocation;
         });
         businesses = __WEBPACK_IMPORTED_MODULE_1_lodash__["map"](businesses, function (business) { return business; });
-        this.distanceService.getDistancesToOrigins(origins)
+        return this.distanceService.getDistancesToOrigins(origins)
             .then(function (distances) {
-            console.log('distances: ', distances);
             __WEBPACK_IMPORTED_MODULE_1_lodash__["each"](businesses, function (business, index) {
                 business.distance = distances[index];
             });
+            return businesses;
         });
     };
     BusinessesService.prototype.setCurrent = function (business) {
         this.currentBusiness = business;
     };
     BusinessesService.prototype.getCurrent = function () {
-        var _this = this;
-        var origins = [];
-        origins.push(this.currentBusiness.officeLocation);
-        this.distanceService.getDistancesToOrigins(origins)
-            .then(function (distances) {
-            _this.currentBusiness.distance = distances[0];
-        });
         return this.currentBusiness;
     };
     BusinessesService = __decorate([
