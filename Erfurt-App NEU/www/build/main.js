@@ -487,8 +487,8 @@ var BusinessesService = (function () {
         var _this = this;
         if (orderBy === void 0) { orderBy = 'name'; }
         filter = filter ? filter.toLowerCase() : filter;
-        return this.getBusinesses().then(function (businesses) {
-            businesses = __WEBPACK_IMPORTED_MODULE_1_lodash__["filter"](_this.businesses, function (business) {
+        return this.getBusinesses().then(function () {
+            var businesses = __WEBPACK_IMPORTED_MODULE_1_lodash__["filter"](_this.businesses, function (business) {
                 return (!filter || (business.name.toLowerCase().indexOf(filter) >= 0 || business.keyword.toLowerCase().indexOf(filter) >= 0))
                     && (!showFavorites || business.isInFavorites)
                     && (!categoryId || (business.category && business.category.includes(categoryId)));
@@ -542,10 +542,8 @@ var BusinessesService = (function () {
                     });
                     business.categoryNames = categoryNames;
                 });
-                return _this.setDistance(businesses).then(function (businesses) {
-                    return businesses;
-                });
-                //return businesses;
+                _this.setDistance(businesses);
+                return businesses;
             });
         }
         return Promise.resolve(this.businesses);
@@ -555,18 +553,24 @@ var BusinessesService = (function () {
             return business.officeLocation;
         });
         businesses = __WEBPACK_IMPORTED_MODULE_1_lodash__["map"](businesses, function (business) { return business; });
-        return this.distanceService.getDistancesToOrigins(origins)
+        this.distanceService.getDistancesToOrigins(origins)
             .then(function (distances) {
             __WEBPACK_IMPORTED_MODULE_1_lodash__["each"](businesses, function (business, index) {
                 business.distance = distances[index];
             });
-            return businesses;
         });
     };
     BusinessesService.prototype.setCurrent = function (business) {
         this.currentBusiness = business;
     };
     BusinessesService.prototype.getCurrent = function () {
+        var _this = this;
+        var origins = [];
+        origins.push(this.currentBusiness.officeLocation);
+        this.distanceService.getDistancesToOrigins(origins)
+            .then(function (distances) {
+            _this.currentBusiness.distance = distances[0];
+        });
         return this.currentBusiness;
     };
     BusinessesService = __decorate([
@@ -1372,7 +1376,7 @@ var ReviewsPage = (function () {
     };
     ReviewsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-reviews',template:/*ion-inline-start:"/Users/axel/erfurtapp/src/pages/reviews/reviews.html"*/'<ion-header>\n	<ion-navbar color="primary">\n		<button ion-button menuToggle>\n			<ion-icon name="menu"></ion-icon>\n		</button>\n		<ion-title>Bewertungen</ion-title>\n\n		<ion-buttons end>\n			<button class="clear-filter" ion-button icon-only (click)="addReview()">\n				<ion-icon name=add></ion-icon>\n			</button>\n		</ion-buttons>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<ion-list>\n		<ion-item *ngFor="let review of reviews | orderBy : [\'-date\']">\n			{{review.author}}\n			<p>{{review.comment}}</p>\n			<ion-note item-end class="review-date">{{review.date | date}}</ion-note>\n\n			<rating [ngModel]="review.rate" readOnly="true"></rating>\n\n		</ion-item>\n	</ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/axel/erfurtapp/src/pages/reviews/reviews.html"*/
+            selector: 'page-reviews',template:/*ion-inline-start:"/Users/axel/erfurtapp/src/pages/reviews/reviews.html"*/'<ion-header>\n	<ion-navbar color="primary">\n		<button ion-button menuToggle>\n			<ion-icon name="menu"></ion-icon>\n		</button>\n		<ion-title>Bewertungen</ion-title>\n\n		<ion-buttons end>\n			<button class="clear-filter" ion-button icon-only (click)="addReview()">\n				<ion-icon name=add></ion-icon>\n			</button>\n		</ion-buttons>\n	</ion-navbar>\n</ion-header>\n\n<ion-content>\n	<ion-list>\n		<ion-item *ngFor="let review of reviews | orderBy : [\'-date\']">\n			{{review.author}}\n			<p text-wrap>{{review.comment}}</p>\n			<ion-note item-end class="review-date">{{review.date | date}}</ion-note>\n\n			<rating [ngModel]="review.rate" readOnly="true"></rating>\n\n		</ion-item>\n	</ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/axel/erfurtapp/src/pages/reviews/reviews.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__services_reviews_service__["a" /* ReviewsService */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */],
